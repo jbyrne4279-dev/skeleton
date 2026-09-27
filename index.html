@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lume — AI that gets results</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#" class="logo"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 2v20M2 12h20M4.9 4.9l14.2 14.2M19.1 4.9 4.9 19.1"/></g></svg>Lume</a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+    <nav class="menu" id="menu">
+      <div class="dd"><button class="dd-btn">Products <i class="chev"></i></button>
+        <div class="dd-panel"><p class="dd-h">Platform</p><a href="#features">AI Agents</a><a href="#features">Analytics</a><a href="#features">Automation</a><p class="dd-h">Developers</p><a href="#">API</a><a href="#">Integrations</a></div></div>
+      <div class="dd"><button class="dd-btn">Solutions <i class="chev"></i></button>
+        <div class="dd-panel"><p class="dd-h">By team</p><a href="#">Marketing</a><a href="#">Engineering</a><a href="#">Sales</a><p class="dd-h">By size</p><a href="#">Startups</a><a href="#">Enterprise</a></div></div>
+      <div class="dd"><button class="dd-btn">Resources <i class="chev"></i></button>
+        <div class="dd-panel"><p class="dd-h">Learn</p><a href="#">Documentation</a><a href="#">Guides</a><a href="#faq">FAQ</a><p class="dd-h">Community</p><a href="#">Changelog</a></div></div>
+      <div class="dd"><button class="dd-btn">Company <i class="chev"></i></button>
+        <div class="dd-panel"><p class="dd-h">About</p><a href="#">About Us</a><a href="#">Careers</a><p class="dd-h">Content</p><a href="#">Blog</a><a href="#" data-contact>Contact</a></div></div>
+      <div class="dd"><button class="dd-btn">Pricing <i class="chev"></i></button>
+        <div class="dd-panel"><p class="dd-h">Plans</p><a href="#pricing">Free</a><a href="#pricing">Pro</a><a href="#pricing">Sales</a></div></div>
+      <span class="sep"></span>
+      <button class="icon-btn" id="theme" aria-label="Toggle theme"><svg viewBox="0 0 24 24" width="16" height="16"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg></button>
+      <button class="btn btn-ghost sm" data-contact>Contact Sales</button>
+      <a class="btn btn-dark sm" href="#hero-email">Try Lume</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero container">
+  <div class="hero-copy reveal">
+    <h1>AI that thinks, does, and gets results for you.</h1>
+    <p class="lead">Accelerate your productivity with AI that understands context, generates insights, and helps you accomplish more—safely and securely.</p>
+    <button class="btn btn-ghost google" id="google"><svg width="14" height="14" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9 3.5l6.7-6.7C35.6 2.4 30.2 0 24 0 14.6 0 6.6 5.4 2.7 13.2l7.8 6C12.4 13.7 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 3-2.3 5.5-4.8 7.2l7.5 5.8c4.4-4 7.1-10 7.1-17.5z"/><path fill="#FBBC05" d="M10.5 28.8A14.5 14.5 0 0 1 9.5 24c0-1.7.3-3.3.8-4.8l-7.8-6A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.8l7.9-6z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.5-5.8c-2.1 1.4-4.9 2.3-8.4 2.3-6.3 0-11.6-4.2-13.5-10l-7.9 6C6.6 42.6 14.6 48 24 48z"/></svg>Sign in with Google</button>
+    <div class="or"><span>or</span></div>
+    <form class="email-row" id="hero-form" novalidate>
+      <input type="email" id="hero-email" placeholder="Enter your email" required>
+      <button class="btn btn-dark">Continue with email</button>
+    </form>
+    <p class="form-msg" id="hero-msg"></p>
+    <div class="proof">
+      <div class="avatars"><span>JD</span><span>SA</span><span>MK</span></div>
+      <span><b>5,000+</b> <em>users</em></span>
+      <span class="stars">★★★★★ <em>5.0</em></span>
+      <span class="powered"><i style="background:#e8805d"></i><i style="background:#555"></i><i style="background:#6b8cff"></i><i style="background:#333"></i><em>Powered by AI</em></span>
+    </div>
+  </div>
+  <div class="hero-art reveal">
+    <svg viewBox="0 0 400 410" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs>
+        <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d9693c"/><stop offset="1" stop-color="#c2552b"/></linearGradient>
+        <linearGradient id="wood" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#9c4d22"/><stop offset=".5" stop-color="#c67a43"/><stop offset="1" stop-color="#8e421b"/></linearGradient>
+      </defs>
+      <rect width="400" height="410" fill="url(#bg)"/>
+      <g fill="url(#wood)" stroke="#7a3714" stroke-opacity=".35">
+        <path d="M30 330 L230 300 L400 330 L400 410 L30 410Z"/>
+        <path d="M60 260 L240 235 L390 260 L390 330 L60 330Z"/>
+        <path d="M110 200 L260 180 L380 200 L380 262 L110 262Z"/>
+      </g>
+      <g class="orb"><circle cx="300" cy="130" r="58" fill="#ffd9bf" opacity=".25"/><circle cx="300" cy="130" r="38" fill="#ffe8d6" opacity=".55"/><circle cx="300" cy="130" r="20" fill="#fff"/></g>
+      <path id="trail" class="trail" d="M10 20 C 120 10, 200 60, 170 140 S 60 260, 90 330 S 300 360, 395 300" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="3 9" stroke-linecap="round"/>
+    </svg>
+  </div>
+</section>
+
+<section class="section container" id="features">
+  <div class="head reveal"><h2>Everything you need to succeed</h2><p>Powerful features designed to help you work smarter, not harder. Everything you need in one place.</p></div>
+  <div class="feat">
+    <div class="feat-screen reveal">
+      <div class="screen" id="screen"></div>
+    </div>
+    <div class="acc reveal" id="feat-acc">
+      <div class="acc-item open" data-i="0"><button><span class="fi">◎</span>Advanced Analytics<i class="chev"></i></button><div class="acc-body"><div><p>Get deep insights into your data with powerful analytics tools. Track metrics, visualize trends, and make data-driven decisions with ease.</p></div></div></div>
+      <div class="acc-item" data-i="1"><button><span class="fi">◉</span>Smart Automation<i class="chev"></i></button><div class="acc-body"><div><p>Automate repetitive tasks and workflows. Set up triggers, conditions, and actions to streamline your processes and save time.</p></div></div></div>
+      <div class="acc-item" data-i="2"><button><span class="fi">↘</span>Team Collaboration<i class="chev"></i></button><div class="acc-body"><div><p>Share agents, prompts and results with your team. Comment, assign and work together in real time across every project.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section container" id="pricing">
+  <div class="head reveal"><h2>Simple, transparent pricing</h2><p>Choose your plan and adjust anytime. All plans include a 14-day free trial with full access.</p>
+    <div class="toggle" id="billing"><button class="on" data-b="m">Monthly</button><button data-b="y">Yearly <small>−20%</small></button></div></div>
+  <div class="plans">
+    <article class="plan reveal"><h3>Free</h3><p class="sub">Perfect for individuals exploring AI</p><div class="price"><span class="amt">Free</span></div><button class="btn btn-dark block" data-plan="Free">Get Started</button>
+      <ul><li>1 AI Agent</li><li>5K API calls/mo</li><li>Community support</li><li>Basic templates</li><li>Email notifications</li></ul></article>
+    <article class="plan reveal"><h3>Pro</h3><p class="sub">For teams scaling AI workflows</p><div class="price"><span class="amt" data-m="49" data-y="39">$49</span><span class="per">/month</span></div><button class="btn btn-dark block" data-plan="Pro">Start Free Trial</button>
+      <ul><li>5 AI Agents</li><li>Unlimited API calls</li><li>Priority support 24/7</li><li>Advanced analytics</li><li>Custom workflows</li><li>Team collaboration</li><li>Premium templates</li><li>Webhook integrations</li></ul></article>
+    <article class="plan reveal"><h3>Sales</h3><p class="sub">Custom solutions for enterprises</p><div class="price"><span class="amt" data-m="299" data-y="239">$299</span><span class="per">/month</span></div><button class="btn btn-dark block" data-contact>Contact Sales</button>
+      <ul><li>Unlimited Agents</li><li>Dedicated support</li><li>Custom AI training</li><li>99.9% SLA guarantee</li><li>Advanced security</li><li>White-label options</li><li>On-premise deployment</li><li>Custom integrations</li></ul></article>
+  </div>
+  <p class="note">Prices shown do not include applicable tax. * Usage limits apply.</p>
+</section>
+
+<section class="section container narrow" id="faq">
+  <div class="head reveal"><h2>Frequently asked questions</h2><p>Everything you need to know about the product and billing. Can't find the answer you're looking for? <a href="#" data-contact>Contact us.</a></p></div>
+  <div class="faq" id="faq-list"></div>
+</section>
+</main>
+
+<footer class="container footer">
+  <div class="f-brand"><svg viewBox="0 0 24 24" width="20" height="20"><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 2v20M2 12h20M4.9 4.9l14.2 14.2M19.1 4.9 4.9 19.1"/></g></svg><strong>Lume</strong><p>We are a team of developers who are passionate about creating amazing experiences with AI.</p></div>
+  <div><h4>Product</h4><a href="#features">Features</a><a href="#pricing">Pricing</a><a href="#">Integrations</a><a href="#">API</a></div>
+  <div><h4>Company</h4><a href="#">About</a><a href="#">Careers</a><a href="#" data-contact>Contact</a><a href="#">Privacy</a></div>
+  <div class="f-news"><h4>Stay updated</h4><p>Get the latest updates on AI agents and productivity tools.</p>
+    <form class="news" id="news-form" novalidate><input type="email" placeholder="Enter your email" required><button aria-label="Subscribe">→</button></form><small id="news-msg">No spam. Unsubscribe anytime.</small></div>
+  <div class="f-bottom"><span>© <span id="yr"></span> Lume. All rights reserved.</span><span><a href="#">Terms</a><a href="#">Privacy</a><a href="#">Cookies</a></span></div>
+</footer>
+
+<dialog id="modal"><form method="dialog" class="modal" id="modal-form">
+  <button class="x" value="cancel" formnovalidate aria-label="Close">×</button>
+  <h3 id="modal-title">Contact Sales</h3><p class="sub" id="modal-sub">Tell us about your team and we'll be in touch within one business day.</p>
+  <label>Name<input name="name" required></label>
+  <label>Work email<input name="email" type="email" required></label>
+  <label id="msg-label">Message<textarea name="message" rows="3"></textarea></label>
+  <button class="btn btn-dark block" value="ok">Submit</button>
+</form></dialog>
+<div class="toast" id="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>
