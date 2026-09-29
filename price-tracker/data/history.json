@@ -5,3841 +5,3841 @@
    "date": "2026-07-14",
    "retailer": "next",
    "category": "t-shirts",
-   "count": 19,
-   "avg": 11.26,
-   "median": 10.5
+   "count": 13,
+   "avg": 13.05,
+   "median": 12.49
   },
   {
    "date": "2026-07-14",
    "retailer": "next",
    "category": "shirts",
-   "count": 12,
-   "avg": 25.23,
-   "median": 26
+   "count": 13,
+   "avg": 24.15,
+   "median": 24.99
   },
   {
    "date": "2026-07-14",
    "retailer": "next",
    "category": "hoodies",
+   "count": 13,
+   "avg": 29.9,
+   "median": 31
+  },
+  {
+   "date": "2026-07-14",
+   "retailer": "next",
+   "category": "jumpers",
+   "count": 11,
+   "avg": 37.75,
+   "median": 37.5
+  },
+  {
+   "date": "2026-07-14",
+   "retailer": "next",
+   "category": "sweatshirts",
    "count": 15,
-   "avg": 28.13,
+   "avg": 27.99,
    "median": 28
   },
   {
    "date": "2026-07-14",
    "retailer": "next",
-   "category": "jumpers",
-   "count": 18,
-   "avg": 34.38,
-   "median": 35.495000000000005
-  },
-  {
-   "date": "2026-07-14",
-   "retailer": "next",
-   "category": "sweatshirts",
-   "count": 18,
-   "avg": 29.5,
-   "median": 30.99
-  },
-  {
-   "date": "2026-07-14",
-   "retailer": "next",
    "category": "coats",
-   "count": 17,
-   "avg": 82.67,
-   "median": 87.99
+   "count": 12,
+   "avg": 73.52,
+   "median": 70.745
   },
   {
    "date": "2026-07-14",
    "retailer": "next",
    "category": "jeans",
-   "count": 15,
-   "avg": 28.76,
-   "median": 30.49
-  },
-  {
-   "date": "2026-07-14",
-   "retailer": "next",
-   "category": "joggers",
-   "count": 16,
-   "avg": 24.04,
-   "median": 24.74
-  },
-  {
-   "date": "2026-07-14",
-   "retailer": "next",
-   "category": "socks",
-   "count": 17,
-   "avg": 3.92,
-   "median": 2.9
-  },
-  {
-   "date": "2026-07-14",
-   "retailer": "next",
-   "category": "underwear",
-   "count": 13,
-   "avg": 5.55,
-   "median": 5.75
-  },
-  {
-   "date": "2026-07-14",
-   "retailer": "mands",
-   "category": "t-shirts",
-   "count": 15,
-   "avg": 15.65,
-   "median": 17
-  },
-  {
-   "date": "2026-07-14",
-   "retailer": "mands",
-   "category": "shirts",
-   "count": 16,
-   "avg": 27.38,
-   "median": 29.994999999999997
-  },
-  {
-   "date": "2026-07-14",
-   "retailer": "mands",
-   "category": "hoodies",
-   "count": 14,
-   "avg": 33.98,
-   "median": 35
-  },
-  {
-   "date": "2026-07-14",
-   "retailer": "mands",
-   "category": "jumpers",
-   "count": 14,
-   "avg": 36.6,
-   "median": 35.745000000000005
-  },
-  {
-   "date": "2026-07-14",
-   "retailer": "mands",
-   "category": "sweatshirts",
-   "count": 12,
-   "avg": 27.39,
-   "median": 25.244999999999997
-  },
-  {
-   "date": "2026-07-14",
-   "retailer": "mands",
-   "category": "coats",
-   "count": 16,
-   "avg": 101.47,
-   "median": 106.75
-  },
-  {
-   "date": "2026-07-14",
-   "retailer": "mands",
-   "category": "jeans",
-   "count": 15,
-   "avg": 31.44,
-   "median": 31.49
-  },
-  {
-   "date": "2026-07-14",
-   "retailer": "mands",
-   "category": "joggers",
-   "count": 12,
-   "avg": 24.36,
-   "median": 25.494999999999997
-  },
-  {
-   "date": "2026-07-14",
-   "retailer": "mands",
-   "category": "socks",
-   "count": 17,
-   "avg": 6.46,
-   "median": 2.83
-  },
-  {
-   "date": "2026-07-14",
-   "retailer": "mands",
-   "category": "underwear",
-   "count": 15,
-   "avg": 4.65,
-   "median": 4.4
-  },
-  {
-   "date": "2026-07-14",
-   "retailer": "hm",
-   "category": "t-shirts",
-   "count": 17,
-   "avg": 11.11,
-   "median": 10.5
-  },
-  {
-   "date": "2026-07-14",
-   "retailer": "hm",
-   "category": "shirts",
-   "count": 18,
-   "avg": 23.35,
-   "median": 24.74
-  },
-  {
-   "date": "2026-07-14",
-   "retailer": "hm",
-   "category": "hoodies",
-   "count": 17,
-   "avg": 20.27,
-   "median": 20.5
-  },
-  {
-   "date": "2026-07-14",
-   "retailer": "hm",
-   "category": "jumpers",
-   "count": 15,
-   "avg": 27.45,
+   "count": 7,
+   "avg": 31.07,
    "median": 28.99
   },
   {
    "date": "2026-07-14",
+   "retailer": "next",
+   "category": "joggers",
+   "count": 14,
+   "avg": 25.49,
+   "median": 23.994999999999997
+  },
+  {
+   "date": "2026-07-14",
+   "retailer": "next",
+   "category": "socks",
+   "count": 14,
+   "avg": 4.24,
+   "median": 2.735
+  },
+  {
+   "date": "2026-07-14",
+   "retailer": "next",
+   "category": "underwear",
+   "count": 8,
+   "avg": 5.19,
+   "median": 5.08
+  },
+  {
+   "date": "2026-07-14",
+   "retailer": "mands",
+   "category": "t-shirts",
+   "count": 16,
+   "avg": 14.31,
+   "median": 13.995000000000001
+  },
+  {
+   "date": "2026-07-14",
+   "retailer": "mands",
+   "category": "shirts",
+   "count": 13,
+   "avg": 25.47,
+   "median": 25
+  },
+  {
+   "date": "2026-07-14",
+   "retailer": "mands",
+   "category": "hoodies",
+   "count": 15,
+   "avg": 32.15,
+   "median": 34.49
+  },
+  {
+   "date": "2026-07-14",
+   "retailer": "mands",
+   "category": "jumpers",
+   "count": 14,
+   "avg": 40.15,
+   "median": 40.745000000000005
+  },
+  {
+   "date": "2026-07-14",
+   "retailer": "mands",
+   "category": "sweatshirts",
+   "count": 11,
+   "avg": 29.37,
+   "median": 31.99
+  },
+  {
+   "date": "2026-07-14",
+   "retailer": "mands",
+   "category": "coats",
+   "count": 15,
+   "avg": 89.56,
+   "median": 97
+  },
+  {
+   "date": "2026-07-14",
+   "retailer": "mands",
+   "category": "jeans",
+   "count": 12,
+   "avg": 30.35,
+   "median": 26.99
+  },
+  {
+   "date": "2026-07-14",
+   "retailer": "mands",
+   "category": "joggers",
+   "count": 16,
+   "avg": 23.68,
+   "median": 23.494999999999997
+  },
+  {
+   "date": "2026-07-14",
+   "retailer": "mands",
+   "category": "socks",
+   "count": 12,
+   "avg": 2.86,
+   "median": 3.035
+  },
+  {
+   "date": "2026-07-14",
+   "retailer": "mands",
+   "category": "underwear",
+   "count": 10,
+   "avg": 4.74,
+   "median": 4.79
+  },
+  {
+   "date": "2026-07-14",
+   "retailer": "hm",
+   "category": "t-shirts",
+   "count": 11,
+   "avg": 10.41,
+   "median": 10.49
+  },
+  {
+   "date": "2026-07-14",
+   "retailer": "hm",
+   "category": "shirts",
+   "count": 14,
+   "avg": 20.12,
+   "median": 20.25
+  },
+  {
+   "date": "2026-07-14",
+   "retailer": "hm",
+   "category": "hoodies",
+   "count": 13,
+   "avg": 20.62,
+   "median": 20.99
+  },
+  {
+   "date": "2026-07-14",
+   "retailer": "hm",
+   "category": "jumpers",
+   "count": 18,
+   "avg": 28.64,
+   "median": 30.5
+  },
+  {
+   "date": "2026-07-14",
    "retailer": "hm",
    "category": "sweatshirts",
-   "count": 15,
-   "avg": 18.73,
-   "median": 19.49
+   "count": 18,
+   "avg": 18.21,
+   "median": 18.25
   },
   {
    "date": "2026-07-14",
    "retailer": "hm",
    "category": "coats",
-   "count": 13,
-   "avg": 57.72,
+   "count": 16,
+   "avg": 65.7,
    "median": 53
   },
   {
    "date": "2026-07-14",
    "retailer": "hm",
    "category": "jeans",
-   "count": 16,
-   "avg": 25.02,
-   "median": 25.994999999999997
+   "count": 13,
+   "avg": 22.98,
+   "median": 24.49
   },
   {
    "date": "2026-07-14",
    "retailer": "hm",
    "category": "joggers",
-   "count": 16,
-   "avg": 19.74,
-   "median": 21.994999999999997
+   "count": 14,
+   "avg": 20.16,
+   "median": 20.25
   },
   {
    "date": "2026-07-14",
    "retailer": "hm",
    "category": "socks",
-   "count": 17,
-   "avg": 3.96,
-   "median": 2.33
+   "count": 15,
+   "avg": 2.86,
+   "median": 1.8
   },
   {
    "date": "2026-07-14",
    "retailer": "hm",
    "category": "underwear",
-   "count": 16,
-   "avg": 3.63,
+   "count": 17,
+   "avg": 3.37,
    "median": 3.5
   },
   {
    "date": "2026-07-14",
    "retailer": "primark",
    "category": "t-shirts",
-   "count": 13,
-   "avg": 3.61,
-   "median": 3.49
+   "count": 10,
+   "avg": 3.58,
+   "median": 3.495
   },
   {
    "date": "2026-07-14",
    "retailer": "primark",
    "category": "shirts",
-   "count": 13,
-   "avg": 10.74,
-   "median": 10.99
+   "count": 12,
+   "avg": 11.88,
+   "median": 11.995000000000001
   },
   {
    "date": "2026-07-14",
    "retailer": "primark",
    "category": "hoodies",
-   "count": 17,
-   "avg": 13.06,
-   "median": 12.5
+   "count": 13,
+   "avg": 12.87,
+   "median": 12.99
   },
   {
    "date": "2026-07-14",
    "retailer": "primark",
    "category": "jumpers",
-   "count": 14,
-   "avg": 13.59,
-   "median": 12.5
+   "count": 10,
+   "avg": 13.5,
+   "median": 13.995000000000001
   },
   {
    "date": "2026-07-14",
    "retailer": "primark",
    "category": "sweatshirts",
-   "count": 13,
-   "avg": 10.56,
-   "median": 11.49
+   "count": 14,
+   "avg": 10.43,
+   "median": 10.245000000000001
   },
   {
    "date": "2026-07-14",
    "retailer": "primark",
    "category": "coats",
    "count": 14,
-   "avg": 37.2,
-   "median": 35.495000000000005
+   "avg": 35.26,
+   "median": 38.25
   },
   {
    "date": "2026-07-14",
    "retailer": "primark",
    "category": "jeans",
-   "count": 13,
-   "avg": 13.33,
-   "median": 14.49
+   "count": 14,
+   "avg": 12.77,
+   "median": 12.25
   },
   {
    "date": "2026-07-14",
    "retailer": "primark",
    "category": "joggers",
-   "count": 15,
-   "avg": 9.78,
-   "median": 9.99
+   "count": 12,
+   "avg": 10,
+   "median": 9.995000000000001
   },
   {
    "date": "2026-07-14",
    "retailer": "primark",
    "category": "socks",
-   "count": 16,
-   "avg": 1.5,
-   "median": 1.135
+   "count": 13,
+   "avg": 1.63,
+   "median": 1.17
   },
   {
    "date": "2026-07-14",
    "retailer": "primark",
    "category": "underwear",
-   "count": 13,
-   "avg": 2.28,
-   "median": 2.13
+   "count": 14,
+   "avg": 1.93,
+   "median": 1.89
   },
   {
    "date": "2026-07-21",
    "retailer": "next",
    "category": "t-shirts",
-   "count": 19,
-   "avg": 11.39,
-   "median": 10.5
+   "count": 13,
+   "avg": 13.61,
+   "median": 12.49
   },
   {
    "date": "2026-07-21",
    "retailer": "next",
    "category": "shirts",
-   "count": 12,
-   "avg": 25.92,
-   "median": 26
+   "count": 13,
+   "avg": 23.4,
+   "median": 24.99
   },
   {
    "date": "2026-07-21",
    "retailer": "next",
    "category": "hoodies",
+   "count": 13,
+   "avg": 29.64,
+   "median": 31
+  },
+  {
+   "date": "2026-07-21",
+   "retailer": "next",
+   "category": "jumpers",
+   "count": 11,
+   "avg": 38.86,
+   "median": 37.5
+  },
+  {
+   "date": "2026-07-21",
+   "retailer": "next",
+   "category": "sweatshirts",
    "count": 15,
-   "avg": 28.96,
+   "avg": 28.68,
    "median": 28
   },
   {
    "date": "2026-07-21",
    "retailer": "next",
-   "category": "jumpers",
-   "count": 18,
-   "avg": 34.6,
-   "median": 35.495000000000005
-  },
-  {
-   "date": "2026-07-21",
-   "retailer": "next",
-   "category": "sweatshirts",
-   "count": 18,
-   "avg": 30.27,
-   "median": 30.99
-  },
-  {
-   "date": "2026-07-21",
-   "retailer": "next",
    "category": "coats",
-   "count": 17,
-   "avg": 80.31,
-   "median": 87.99
+   "count": 12,
+   "avg": 74.12,
+   "median": 70.745
   },
   {
    "date": "2026-07-21",
    "retailer": "next",
    "category": "jeans",
-   "count": 15,
-   "avg": 29.72,
-   "median": 30.49
-  },
-  {
-   "date": "2026-07-21",
-   "retailer": "next",
-   "category": "joggers",
-   "count": 16,
-   "avg": 24.77,
-   "median": 24.74
-  },
-  {
-   "date": "2026-07-21",
-   "retailer": "next",
-   "category": "socks",
-   "count": 17,
-   "avg": 4.08,
-   "median": 2.9
-  },
-  {
-   "date": "2026-07-21",
-   "retailer": "next",
-   "category": "underwear",
-   "count": 13,
-   "avg": 5.7,
-   "median": 5.75
-  },
-  {
-   "date": "2026-07-21",
-   "retailer": "mands",
-   "category": "t-shirts",
-   "count": 15,
-   "avg": 15.23,
-   "median": 17
-  },
-  {
-   "date": "2026-07-21",
-   "retailer": "mands",
-   "category": "shirts",
-   "count": 16,
-   "avg": 27.44,
-   "median": 29.994999999999997
-  },
-  {
-   "date": "2026-07-21",
-   "retailer": "mands",
-   "category": "hoodies",
-   "count": 14,
-   "avg": 32.73,
-   "median": 35
-  },
-  {
-   "date": "2026-07-21",
-   "retailer": "mands",
-   "category": "jumpers",
-   "count": 14,
-   "avg": 37.73,
-   "median": 35.745000000000005
-  },
-  {
-   "date": "2026-07-21",
-   "retailer": "mands",
-   "category": "sweatshirts",
-   "count": 12,
-   "avg": 25.88,
-   "median": 25.244999999999997
-  },
-  {
-   "date": "2026-07-21",
-   "retailer": "mands",
-   "category": "coats",
-   "count": 16,
-   "avg": 102.05,
-   "median": 106.75
-  },
-  {
-   "date": "2026-07-21",
-   "retailer": "mands",
-   "category": "jeans",
-   "count": 15,
-   "avg": 31.86,
-   "median": 31.49
-  },
-  {
-   "date": "2026-07-21",
-   "retailer": "mands",
-   "category": "joggers",
-   "count": 12,
-   "avg": 24.92,
-   "median": 25.494999999999997
-  },
-  {
-   "date": "2026-07-21",
-   "retailer": "mands",
-   "category": "socks",
-   "count": 17,
-   "avg": 6.29,
-   "median": 2.83
-  },
-  {
-   "date": "2026-07-21",
-   "retailer": "mands",
-   "category": "underwear",
-   "count": 15,
-   "avg": 4.65,
-   "median": 4.4
-  },
-  {
-   "date": "2026-07-21",
-   "retailer": "hm",
-   "category": "t-shirts",
-   "count": 17,
-   "avg": 10.73,
-   "median": 10.5
-  },
-  {
-   "date": "2026-07-21",
-   "retailer": "hm",
-   "category": "shirts",
-   "count": 18,
-   "avg": 22.95,
-   "median": 24.74
-  },
-  {
-   "date": "2026-07-21",
-   "retailer": "hm",
-   "category": "hoodies",
-   "count": 17,
-   "avg": 21.21,
-   "median": 20.5
-  },
-  {
-   "date": "2026-07-21",
-   "retailer": "hm",
-   "category": "jumpers",
-   "count": 15,
-   "avg": 27.13,
+   "count": 7,
+   "avg": 31.91,
    "median": 28.99
   },
   {
    "date": "2026-07-21",
+   "retailer": "next",
+   "category": "joggers",
+   "count": 14,
+   "avg": 24.59,
+   "median": 23.994999999999997
+  },
+  {
+   "date": "2026-07-21",
+   "retailer": "next",
+   "category": "socks",
+   "count": 14,
+   "avg": 4.09,
+   "median": 2.735
+  },
+  {
+   "date": "2026-07-21",
+   "retailer": "next",
+   "category": "underwear",
+   "count": 8,
+   "avg": 5.19,
+   "median": 5.08
+  },
+  {
+   "date": "2026-07-21",
+   "retailer": "mands",
+   "category": "t-shirts",
+   "count": 16,
+   "avg": 14.41,
+   "median": 13.995000000000001
+  },
+  {
+   "date": "2026-07-21",
+   "retailer": "mands",
+   "category": "shirts",
+   "count": 13,
+   "avg": 25.86,
+   "median": 25
+  },
+  {
+   "date": "2026-07-21",
+   "retailer": "mands",
+   "category": "hoodies",
+   "count": 15,
+   "avg": 31.65,
+   "median": 34.49
+  },
+  {
+   "date": "2026-07-21",
+   "retailer": "mands",
+   "category": "jumpers",
+   "count": 14,
+   "avg": 40.17,
+   "median": 40.745000000000005
+  },
+  {
+   "date": "2026-07-21",
+   "retailer": "mands",
+   "category": "sweatshirts",
+   "count": 11,
+   "avg": 30.48,
+   "median": 31.99
+  },
+  {
+   "date": "2026-07-21",
+   "retailer": "mands",
+   "category": "coats",
+   "count": 15,
+   "avg": 89.81,
+   "median": 97
+  },
+  {
+   "date": "2026-07-21",
+   "retailer": "mands",
+   "category": "jeans",
+   "count": 12,
+   "avg": 29.73,
+   "median": 26.99
+  },
+  {
+   "date": "2026-07-21",
+   "retailer": "mands",
+   "category": "joggers",
+   "count": 16,
+   "avg": 23.62,
+   "median": 23.494999999999997
+  },
+  {
+   "date": "2026-07-21",
+   "retailer": "mands",
+   "category": "socks",
+   "count": 12,
+   "avg": 2.82,
+   "median": 3.035
+  },
+  {
+   "date": "2026-07-21",
+   "retailer": "mands",
+   "category": "underwear",
+   "count": 10,
+   "avg": 4.53,
+   "median": 4.79
+  },
+  {
+   "date": "2026-07-21",
+   "retailer": "hm",
+   "category": "t-shirts",
+   "count": 11,
+   "avg": 10.44,
+   "median": 10.49
+  },
+  {
+   "date": "2026-07-21",
+   "retailer": "hm",
+   "category": "shirts",
+   "count": 14,
+   "avg": 20.48,
+   "median": 20.25
+  },
+  {
+   "date": "2026-07-21",
+   "retailer": "hm",
+   "category": "hoodies",
+   "count": 13,
+   "avg": 21,
+   "median": 20.99
+  },
+  {
+   "date": "2026-07-21",
+   "retailer": "hm",
+   "category": "jumpers",
+   "count": 18,
+   "avg": 28.86,
+   "median": 30.5
+  },
+  {
+   "date": "2026-07-21",
    "retailer": "hm",
    "category": "sweatshirts",
-   "count": 15,
-   "avg": 19.19,
-   "median": 19.49
+   "count": 18,
+   "avg": 18.13,
+   "median": 18.25
   },
   {
    "date": "2026-07-21",
    "retailer": "hm",
    "category": "coats",
-   "count": 13,
-   "avg": 57.81,
+   "count": 16,
+   "avg": 66.23,
    "median": 53
   },
   {
    "date": "2026-07-21",
    "retailer": "hm",
    "category": "jeans",
+   "count": 13,
+   "avg": 23.68,
+   "median": 24.49
+  },
+  {
+   "date": "2026-07-21",
+   "retailer": "hm",
+   "category": "joggers",
+   "count": 14,
+   "avg": 19.68,
+   "median": 20.25
+  },
+  {
+   "date": "2026-07-21",
+   "retailer": "hm",
+   "category": "socks",
+   "count": 15,
+   "avg": 2.9,
+   "median": 1.8
+  },
+  {
+   "date": "2026-07-21",
+   "retailer": "hm",
+   "category": "underwear",
+   "count": 17,
+   "avg": 3.36,
+   "median": 3.5
+  },
+  {
+   "date": "2026-07-21",
+   "retailer": "primark",
+   "category": "t-shirts",
+   "count": 10,
+   "avg": 3.76,
+   "median": 3.495
+  },
+  {
+   "date": "2026-07-21",
+   "retailer": "primark",
+   "category": "shirts",
+   "count": 12,
+   "avg": 12.27,
+   "median": 11.995000000000001
+  },
+  {
+   "date": "2026-07-21",
+   "retailer": "primark",
+   "category": "hoodies",
+   "count": 13,
+   "avg": 12.77,
+   "median": 12.99
+  },
+  {
+   "date": "2026-07-21",
+   "retailer": "primark",
+   "category": "jumpers",
+   "count": 10,
+   "avg": 14.06,
+   "median": 13.995000000000001
+  },
+  {
+   "date": "2026-07-21",
+   "retailer": "primark",
+   "category": "sweatshirts",
+   "count": 14,
+   "avg": 10.17,
+   "median": 10.245000000000001
+  },
+  {
+   "date": "2026-07-21",
+   "retailer": "primark",
+   "category": "coats",
+   "count": 14,
+   "avg": 35.4,
+   "median": 38.25
+  },
+  {
+   "date": "2026-07-21",
+   "retailer": "primark",
+   "category": "jeans",
+   "count": 14,
+   "avg": 13.12,
+   "median": 12.25
+  },
+  {
+   "date": "2026-07-21",
+   "retailer": "primark",
+   "category": "joggers",
+   "count": 12,
+   "avg": 9.91,
+   "median": 9.995000000000001
+  },
+  {
+   "date": "2026-07-21",
+   "retailer": "primark",
+   "category": "socks",
+   "count": 13,
+   "avg": 1.65,
+   "median": 1.17
+  },
+  {
+   "date": "2026-07-21",
+   "retailer": "primark",
+   "category": "underwear",
+   "count": 14,
+   "avg": 1.86,
+   "median": 1.89
+  },
+  {
+   "date": "2026-07-28",
+   "retailer": "next",
+   "category": "t-shirts",
+   "count": 13,
+   "avg": 13.35,
+   "median": 12.49
+  },
+  {
+   "date": "2026-07-28",
+   "retailer": "next",
+   "category": "shirts",
+   "count": 13,
+   "avg": 23.33,
+   "median": 24.99
+  },
+  {
+   "date": "2026-07-28",
+   "retailer": "next",
+   "category": "hoodies",
+   "count": 13,
+   "avg": 29.29,
+   "median": 31
+  },
+  {
+   "date": "2026-07-28",
+   "retailer": "next",
+   "category": "jumpers",
+   "count": 11,
+   "avg": 37.69,
+   "median": 37.5
+  },
+  {
+   "date": "2026-07-28",
+   "retailer": "next",
+   "category": "sweatshirts",
+   "count": 15,
+   "avg": 28.85,
+   "median": 28
+  },
+  {
+   "date": "2026-07-28",
+   "retailer": "next",
+   "category": "coats",
+   "count": 12,
+   "avg": 71.36,
+   "median": 70.745
+  },
+  {
+   "date": "2026-07-28",
+   "retailer": "next",
+   "category": "jeans",
+   "count": 7,
+   "avg": 31.77,
+   "median": 28.99
+  },
+  {
+   "date": "2026-07-28",
+   "retailer": "next",
+   "category": "joggers",
+   "count": 14,
+   "avg": 25.38,
+   "median": 23.994999999999997
+  },
+  {
+   "date": "2026-07-28",
+   "retailer": "next",
+   "category": "socks",
+   "count": 14,
+   "avg": 4.25,
+   "median": 2.735
+  },
+  {
+   "date": "2026-07-28",
+   "retailer": "next",
+   "category": "underwear",
+   "count": 8,
+   "avg": 5.16,
+   "median": 5.08
+  },
+  {
+   "date": "2026-07-28",
+   "retailer": "mands",
+   "category": "t-shirts",
+   "count": 16,
+   "avg": 13.76,
+   "median": 13.995000000000001
+  },
+  {
+   "date": "2026-07-28",
+   "retailer": "mands",
+   "category": "shirts",
+   "count": 13,
+   "avg": 26.59,
+   "median": 25
+  },
+  {
+   "date": "2026-07-28",
+   "retailer": "mands",
+   "category": "hoodies",
+   "count": 15,
+   "avg": 32.24,
+   "median": 34.49
+  },
+  {
+   "date": "2026-07-28",
+   "retailer": "mands",
+   "category": "jumpers",
+   "count": 14,
+   "avg": 41.4,
+   "median": 40.745000000000005
+  },
+  {
+   "date": "2026-07-28",
+   "retailer": "mands",
+   "category": "sweatshirts",
+   "count": 11,
+   "avg": 29.58,
+   "median": 31.99
+  },
+  {
+   "date": "2026-07-28",
+   "retailer": "mands",
+   "category": "coats",
+   "count": 15,
+   "avg": 92.5,
+   "median": 97
+  },
+  {
+   "date": "2026-07-28",
+   "retailer": "mands",
+   "category": "jeans",
+   "count": 12,
+   "avg": 29.22,
+   "median": 26.99
+  },
+  {
+   "date": "2026-07-28",
+   "retailer": "mands",
+   "category": "joggers",
+   "count": 16,
+   "avg": 23.64,
+   "median": 23.494999999999997
+  },
+  {
+   "date": "2026-07-28",
+   "retailer": "mands",
+   "category": "socks",
+   "count": 12,
+   "avg": 2.81,
+   "median": 3.035
+  },
+  {
+   "date": "2026-07-28",
+   "retailer": "mands",
+   "category": "underwear",
+   "count": 10,
+   "avg": 4.68,
+   "median": 4.79
+  },
+  {
+   "date": "2026-07-28",
+   "retailer": "hm",
+   "category": "t-shirts",
+   "count": 11,
+   "avg": 10.09,
+   "median": 10.49
+  },
+  {
+   "date": "2026-07-28",
+   "retailer": "hm",
+   "category": "shirts",
+   "count": 14,
+   "avg": 21.21,
+   "median": 20.25
+  },
+  {
+   "date": "2026-07-28",
+   "retailer": "hm",
+   "category": "hoodies",
+   "count": 13,
+   "avg": 20.65,
+   "median": 20.99
+  },
+  {
+   "date": "2026-07-28",
+   "retailer": "hm",
+   "category": "jumpers",
+   "count": 18,
+   "avg": 28.29,
+   "median": 30.5
+  },
+  {
+   "date": "2026-07-28",
+   "retailer": "hm",
+   "category": "sweatshirts",
+   "count": 18,
+   "avg": 17.88,
+   "median": 18.25
+  },
+  {
+   "date": "2026-07-28",
+   "retailer": "hm",
+   "category": "coats",
+   "count": 16,
+   "avg": 65.51,
+   "median": 53
+  },
+  {
+   "date": "2026-07-28",
+   "retailer": "hm",
+   "category": "jeans",
+   "count": 13,
+   "avg": 23.46,
+   "median": 24.49
+  },
+  {
+   "date": "2026-07-28",
+   "retailer": "hm",
+   "category": "joggers",
+   "count": 14,
+   "avg": 20.63,
+   "median": 20.25
+  },
+  {
+   "date": "2026-07-28",
+   "retailer": "hm",
+   "category": "socks",
+   "count": 15,
+   "avg": 3.01,
+   "median": 1.8
+  },
+  {
+   "date": "2026-07-28",
+   "retailer": "hm",
+   "category": "underwear",
+   "count": 17,
+   "avg": 3.52,
+   "median": 3.5
+  },
+  {
+   "date": "2026-07-28",
+   "retailer": "primark",
+   "category": "t-shirts",
+   "count": 10,
+   "avg": 3.67,
+   "median": 3.495
+  },
+  {
+   "date": "2026-07-28",
+   "retailer": "primark",
+   "category": "shirts",
+   "count": 12,
+   "avg": 12.46,
+   "median": 11.995000000000001
+  },
+  {
+   "date": "2026-07-28",
+   "retailer": "primark",
+   "category": "hoodies",
+   "count": 13,
+   "avg": 13.02,
+   "median": 12.99
+  },
+  {
+   "date": "2026-07-28",
+   "retailer": "primark",
+   "category": "jumpers",
+   "count": 10,
+   "avg": 14.3,
+   "median": 13.995000000000001
+  },
+  {
+   "date": "2026-07-28",
+   "retailer": "primark",
+   "category": "sweatshirts",
+   "count": 14,
+   "avg": 10.64,
+   "median": 10.245000000000001
+  },
+  {
+   "date": "2026-07-28",
+   "retailer": "primark",
+   "category": "coats",
+   "count": 14,
+   "avg": 35.73,
+   "median": 38.25
+  },
+  {
+   "date": "2026-07-28",
+   "retailer": "primark",
+   "category": "jeans",
+   "count": 14,
+   "avg": 12.86,
+   "median": 12.25
+  },
+  {
+   "date": "2026-07-28",
+   "retailer": "primark",
+   "category": "joggers",
+   "count": 12,
+   "avg": 10.06,
+   "median": 9.995000000000001
+  },
+  {
+   "date": "2026-07-28",
+   "retailer": "primark",
+   "category": "socks",
+   "count": 13,
+   "avg": 1.6,
+   "median": 1.17
+  },
+  {
+   "date": "2026-07-28",
+   "retailer": "primark",
+   "category": "underwear",
+   "count": 14,
+   "avg": 1.96,
+   "median": 1.89
+  },
+  {
+   "date": "2026-08-04",
+   "retailer": "next",
+   "category": "t-shirts",
+   "count": 13,
+   "avg": 13.18,
+   "median": 12.49
+  },
+  {
+   "date": "2026-08-04",
+   "retailer": "next",
+   "category": "shirts",
+   "count": 13,
+   "avg": 23.46,
+   "median": 24.99
+  },
+  {
+   "date": "2026-08-04",
+   "retailer": "next",
+   "category": "hoodies",
+   "count": 13,
+   "avg": 29.67,
+   "median": 31
+  },
+  {
+   "date": "2026-08-04",
+   "retailer": "next",
+   "category": "jumpers",
+   "count": 11,
+   "avg": 37.69,
+   "median": 37.5
+  },
+  {
+   "date": "2026-08-04",
+   "retailer": "next",
+   "category": "sweatshirts",
+   "count": 15,
+   "avg": 27.73,
+   "median": 28
+  },
+  {
+   "date": "2026-08-04",
+   "retailer": "next",
+   "category": "coats",
+   "count": 12,
+   "avg": 74.64,
+   "median": 70.745
+  },
+  {
+   "date": "2026-08-04",
+   "retailer": "next",
+   "category": "jeans",
+   "count": 7,
+   "avg": 31.51,
+   "median": 28.99
+  },
+  {
+   "date": "2026-08-04",
+   "retailer": "next",
+   "category": "joggers",
+   "count": 14,
+   "avg": 24.58,
+   "median": 23.994999999999997
+  },
+  {
+   "date": "2026-08-04",
+   "retailer": "next",
+   "category": "socks",
+   "count": 14,
+   "avg": 4.15,
+   "median": 2.735
+  },
+  {
+   "date": "2026-08-04",
+   "retailer": "next",
+   "category": "underwear",
+   "count": 8,
+   "avg": 5.1,
+   "median": 5.08
+  },
+  {
+   "date": "2026-08-04",
+   "retailer": "mands",
+   "category": "t-shirts",
+   "count": 16,
+   "avg": 14.08,
+   "median": 13.995000000000001
+  },
+  {
+   "date": "2026-08-04",
+   "retailer": "mands",
+   "category": "shirts",
+   "count": 13,
+   "avg": 25.71,
+   "median": 25
+  },
+  {
+   "date": "2026-08-04",
+   "retailer": "mands",
+   "category": "hoodies",
+   "count": 15,
+   "avg": 32.6,
+   "median": 34.49
+  },
+  {
+   "date": "2026-08-04",
+   "retailer": "mands",
+   "category": "jumpers",
+   "count": 14,
+   "avg": 40.57,
+   "median": 40.745000000000005
+  },
+  {
+   "date": "2026-08-04",
+   "retailer": "mands",
+   "category": "sweatshirts",
+   "count": 11,
+   "avg": 29.6,
+   "median": 31.99
+  },
+  {
+   "date": "2026-08-04",
+   "retailer": "mands",
+   "category": "coats",
+   "count": 15,
+   "avg": 91.73,
+   "median": 97
+  },
+  {
+   "date": "2026-08-04",
+   "retailer": "mands",
+   "category": "jeans",
+   "count": 12,
+   "avg": 30.34,
+   "median": 26.99
+  },
+  {
+   "date": "2026-08-04",
+   "retailer": "mands",
+   "category": "joggers",
+   "count": 16,
+   "avg": 22.85,
+   "median": 23.494999999999997
+  },
+  {
+   "date": "2026-08-04",
+   "retailer": "mands",
+   "category": "socks",
+   "count": 12,
+   "avg": 2.87,
+   "median": 3.035
+  },
+  {
+   "date": "2026-08-04",
+   "retailer": "mands",
+   "category": "underwear",
+   "count": 10,
+   "avg": 4.61,
+   "median": 4.79
+  },
+  {
+   "date": "2026-08-04",
+   "retailer": "hm",
+   "category": "t-shirts",
+   "count": 11,
+   "avg": 10.15,
+   "median": 10.49
+  },
+  {
+   "date": "2026-08-04",
+   "retailer": "hm",
+   "category": "shirts",
+   "count": 14,
+   "avg": 21.43,
+   "median": 20.25
+  },
+  {
+   "date": "2026-08-04",
+   "retailer": "hm",
+   "category": "hoodies",
+   "count": 13,
+   "avg": 21.65,
+   "median": 20.99
+  },
+  {
+   "date": "2026-08-04",
+   "retailer": "hm",
+   "category": "jumpers",
+   "count": 18,
+   "avg": 28.78,
+   "median": 30.5
+  },
+  {
+   "date": "2026-08-04",
+   "retailer": "hm",
+   "category": "sweatshirts",
+   "count": 18,
+   "avg": 18.15,
+   "median": 18.25
+  },
+  {
+   "date": "2026-08-04",
+   "retailer": "hm",
+   "category": "coats",
+   "count": 16,
+   "avg": 66.85,
+   "median": 53
+  },
+  {
+   "date": "2026-08-04",
+   "retailer": "hm",
+   "category": "jeans",
+   "count": 13,
+   "avg": 23.22,
+   "median": 24.49
+  },
+  {
+   "date": "2026-08-04",
+   "retailer": "hm",
+   "category": "joggers",
+   "count": 14,
+   "avg": 20.66,
+   "median": 20.25
+  },
+  {
+   "date": "2026-08-04",
+   "retailer": "hm",
+   "category": "socks",
+   "count": 15,
+   "avg": 2.92,
+   "median": 1.8
+  },
+  {
+   "date": "2026-08-04",
+   "retailer": "hm",
+   "category": "underwear",
+   "count": 17,
+   "avg": 3.45,
+   "median": 3.5
+  },
+  {
+   "date": "2026-08-04",
+   "retailer": "primark",
+   "category": "t-shirts",
+   "count": 10,
+   "avg": 3.61,
+   "median": 3.495
+  },
+  {
+   "date": "2026-08-04",
+   "retailer": "primark",
+   "category": "shirts",
+   "count": 12,
+   "avg": 12.29,
+   "median": 11.995000000000001
+  },
+  {
+   "date": "2026-08-04",
+   "retailer": "primark",
+   "category": "hoodies",
+   "count": 13,
+   "avg": 12.85,
+   "median": 12.99
+  },
+  {
+   "date": "2026-08-04",
+   "retailer": "primark",
+   "category": "jumpers",
+   "count": 10,
+   "avg": 13.89,
+   "median": 13.995000000000001
+  },
+  {
+   "date": "2026-08-04",
+   "retailer": "primark",
+   "category": "sweatshirts",
+   "count": 14,
+   "avg": 10.25,
+   "median": 10.245000000000001
+  },
+  {
+   "date": "2026-08-04",
+   "retailer": "primark",
+   "category": "coats",
+   "count": 14,
+   "avg": 35.65,
+   "median": 38.25
+  },
+  {
+   "date": "2026-08-04",
+   "retailer": "primark",
+   "category": "jeans",
+   "count": 14,
+   "avg": 13.28,
+   "median": 12.25
+  },
+  {
+   "date": "2026-08-04",
+   "retailer": "primark",
+   "category": "joggers",
+   "count": 12,
+   "avg": 10.09,
+   "median": 9.995000000000001
+  },
+  {
+   "date": "2026-08-04",
+   "retailer": "primark",
+   "category": "socks",
+   "count": 13,
+   "avg": 1.63,
+   "median": 1.17
+  },
+  {
+   "date": "2026-08-04",
+   "retailer": "primark",
+   "category": "underwear",
+   "count": 14,
+   "avg": 1.94,
+   "median": 1.89
+  },
+  {
+   "date": "2026-08-11",
+   "retailer": "next",
+   "category": "t-shirts",
+   "count": 13,
+   "avg": 13.49,
+   "median": 12.49
+  },
+  {
+   "date": "2026-08-11",
+   "retailer": "next",
+   "category": "shirts",
+   "count": 13,
+   "avg": 23.43,
+   "median": 24.99
+  },
+  {
+   "date": "2026-08-11",
+   "retailer": "next",
+   "category": "hoodies",
+   "count": 13,
+   "avg": 30.12,
+   "median": 31
+  },
+  {
+   "date": "2026-08-11",
+   "retailer": "next",
+   "category": "jumpers",
+   "count": 11,
+   "avg": 37.62,
+   "median": 37.5
+  },
+  {
+   "date": "2026-08-11",
+   "retailer": "next",
+   "category": "sweatshirts",
+   "count": 15,
+   "avg": 28.02,
+   "median": 28
+  },
+  {
+   "date": "2026-08-11",
+   "retailer": "next",
+   "category": "coats",
+   "count": 12,
+   "avg": 71.2,
+   "median": 70.745
+  },
+  {
+   "date": "2026-08-11",
+   "retailer": "next",
+   "category": "jeans",
+   "count": 7,
+   "avg": 30.85,
+   "median": 28.99
+  },
+  {
+   "date": "2026-08-11",
+   "retailer": "next",
+   "category": "joggers",
+   "count": 14,
+   "avg": 24.9,
+   "median": 23.994999999999997
+  },
+  {
+   "date": "2026-08-11",
+   "retailer": "next",
+   "category": "socks",
+   "count": 14,
+   "avg": 4.27,
+   "median": 2.735
+  },
+  {
+   "date": "2026-08-11",
+   "retailer": "next",
+   "category": "underwear",
+   "count": 8,
+   "avg": 5.32,
+   "median": 5.08
+  },
+  {
+   "date": "2026-08-11",
+   "retailer": "mands",
+   "category": "t-shirts",
+   "count": 16,
+   "avg": 14.06,
+   "median": 13.995000000000001
+  },
+  {
+   "date": "2026-08-11",
+   "retailer": "mands",
+   "category": "shirts",
+   "count": 13,
+   "avg": 26.5,
+   "median": 25
+  },
+  {
+   "date": "2026-08-11",
+   "retailer": "mands",
+   "category": "hoodies",
+   "count": 15,
+   "avg": 31.91,
+   "median": 34.49
+  },
+  {
+   "date": "2026-08-11",
+   "retailer": "mands",
+   "category": "jumpers",
+   "count": 14,
+   "avg": 41.06,
+   "median": 40.745000000000005
+  },
+  {
+   "date": "2026-08-11",
+   "retailer": "mands",
+   "category": "sweatshirts",
+   "count": 11,
+   "avg": 29.63,
+   "median": 31.99
+  },
+  {
+   "date": "2026-08-11",
+   "retailer": "mands",
+   "category": "coats",
+   "count": 15,
+   "avg": 91.54,
+   "median": 97
+  },
+  {
+   "date": "2026-08-11",
+   "retailer": "mands",
+   "category": "jeans",
+   "count": 12,
+   "avg": 30.89,
+   "median": 26.99
+  },
+  {
+   "date": "2026-08-11",
+   "retailer": "mands",
+   "category": "joggers",
+   "count": 16,
+   "avg": 23.1,
+   "median": 23.494999999999997
+  },
+  {
+   "date": "2026-08-11",
+   "retailer": "mands",
+   "category": "socks",
+   "count": 12,
+   "avg": 2.84,
+   "median": 3.035
+  },
+  {
+   "date": "2026-08-11",
+   "retailer": "mands",
+   "category": "underwear",
+   "count": 10,
+   "avg": 4.82,
+   "median": 4.79
+  },
+  {
+   "date": "2026-08-11",
+   "retailer": "hm",
+   "category": "t-shirts",
+   "count": 11,
+   "avg": 10.13,
+   "median": 10.49
+  },
+  {
+   "date": "2026-08-11",
+   "retailer": "hm",
+   "category": "shirts",
+   "count": 14,
+   "avg": 21.2,
+   "median": 20.25
+  },
+  {
+   "date": "2026-08-11",
+   "retailer": "hm",
+   "category": "hoodies",
+   "count": 13,
+   "avg": 20.63,
+   "median": 20.99
+  },
+  {
+   "date": "2026-08-11",
+   "retailer": "hm",
+   "category": "jumpers",
+   "count": 18,
+   "avg": 28.69,
+   "median": 30.5
+  },
+  {
+   "date": "2026-08-11",
+   "retailer": "hm",
+   "category": "sweatshirts",
+   "count": 18,
+   "avg": 18.53,
+   "median": 18.25
+  },
+  {
+   "date": "2026-08-11",
+   "retailer": "hm",
+   "category": "coats",
+   "count": 16,
+   "avg": 63.97,
+   "median": 53
+  },
+  {
+   "date": "2026-08-11",
+   "retailer": "hm",
+   "category": "jeans",
+   "count": 13,
+   "avg": 23.63,
+   "median": 24.49
+  },
+  {
+   "date": "2026-08-11",
+   "retailer": "hm",
+   "category": "joggers",
+   "count": 14,
+   "avg": 20.57,
+   "median": 20.25
+  },
+  {
+   "date": "2026-08-11",
+   "retailer": "hm",
+   "category": "socks",
+   "count": 15,
+   "avg": 2.96,
+   "median": 1.8
+  },
+  {
+   "date": "2026-08-11",
+   "retailer": "hm",
+   "category": "underwear",
+   "count": 17,
+   "avg": 3.35,
+   "median": 3.5
+  },
+  {
+   "date": "2026-08-11",
+   "retailer": "primark",
+   "category": "t-shirts",
+   "count": 10,
+   "avg": 3.79,
+   "median": 3.495
+  },
+  {
+   "date": "2026-08-11",
+   "retailer": "primark",
+   "category": "shirts",
+   "count": 12,
+   "avg": 12.52,
+   "median": 11.995000000000001
+  },
+  {
+   "date": "2026-08-11",
+   "retailer": "primark",
+   "category": "hoodies",
+   "count": 13,
+   "avg": 12.83,
+   "median": 12.99
+  },
+  {
+   "date": "2026-08-11",
+   "retailer": "primark",
+   "category": "jumpers",
+   "count": 10,
+   "avg": 14.14,
+   "median": 13.995000000000001
+  },
+  {
+   "date": "2026-08-11",
+   "retailer": "primark",
+   "category": "sweatshirts",
+   "count": 14,
+   "avg": 10.63,
+   "median": 10.245000000000001
+  },
+  {
+   "date": "2026-08-11",
+   "retailer": "primark",
+   "category": "coats",
+   "count": 14,
+   "avg": 36.51,
+   "median": 38.25
+  },
+  {
+   "date": "2026-08-11",
+   "retailer": "primark",
+   "category": "jeans",
+   "count": 14,
+   "avg": 12.64,
+   "median": 12.25
+  },
+  {
+   "date": "2026-08-11",
+   "retailer": "primark",
+   "category": "joggers",
+   "count": 12,
+   "avg": 10.09,
+   "median": 9.995000000000001
+  },
+  {
+   "date": "2026-08-11",
+   "retailer": "primark",
+   "category": "socks",
+   "count": 13,
+   "avg": 1.63,
+   "median": 1.17
+  },
+  {
+   "date": "2026-08-11",
+   "retailer": "primark",
+   "category": "underwear",
+   "count": 14,
+   "avg": 1.95,
+   "median": 1.89
+  },
+  {
+   "date": "2026-08-18",
+   "retailer": "next",
+   "category": "t-shirts",
+   "count": 13,
+   "avg": 13.13,
+   "median": 12.49
+  },
+  {
+   "date": "2026-08-18",
+   "retailer": "next",
+   "category": "shirts",
+   "count": 13,
+   "avg": 24.61,
+   "median": 24.99
+  },
+  {
+   "date": "2026-08-18",
+   "retailer": "next",
+   "category": "hoodies",
+   "count": 13,
+   "avg": 30.98,
+   "median": 31
+  },
+  {
+   "date": "2026-08-18",
+   "retailer": "next",
+   "category": "jumpers",
+   "count": 11,
+   "avg": 38.13,
+   "median": 37.5
+  },
+  {
+   "date": "2026-08-18",
+   "retailer": "next",
+   "category": "sweatshirts",
+   "count": 15,
+   "avg": 29.31,
+   "median": 28
+  },
+  {
+   "date": "2026-08-18",
+   "retailer": "next",
+   "category": "coats",
+   "count": 12,
+   "avg": 71.73,
+   "median": 70.745
+  },
+  {
+   "date": "2026-08-18",
+   "retailer": "next",
+   "category": "jeans",
+   "count": 7,
+   "avg": 32.72,
+   "median": 28.99
+  },
+  {
+   "date": "2026-08-18",
+   "retailer": "next",
+   "category": "joggers",
+   "count": 14,
+   "avg": 24.55,
+   "median": 23.994999999999997
+  },
+  {
+   "date": "2026-08-18",
+   "retailer": "next",
+   "category": "socks",
+   "count": 14,
+   "avg": 4.11,
+   "median": 2.735
+  },
+  {
+   "date": "2026-08-18",
+   "retailer": "next",
+   "category": "underwear",
+   "count": 8,
+   "avg": 5.11,
+   "median": 5.08
+  },
+  {
+   "date": "2026-08-18",
+   "retailer": "mands",
+   "category": "t-shirts",
+   "count": 16,
+   "avg": 14.14,
+   "median": 13.995000000000001
+  },
+  {
+   "date": "2026-08-18",
+   "retailer": "mands",
+   "category": "shirts",
+   "count": 13,
+   "avg": 26.54,
+   "median": 25
+  },
+  {
+   "date": "2026-08-18",
+   "retailer": "mands",
+   "category": "hoodies",
+   "count": 15,
+   "avg": 32.61,
+   "median": 34.49
+  },
+  {
+   "date": "2026-08-18",
+   "retailer": "mands",
+   "category": "jumpers",
+   "count": 14,
+   "avg": 40.29,
+   "median": 40.745000000000005
+  },
+  {
+   "date": "2026-08-18",
+   "retailer": "mands",
+   "category": "sweatshirts",
+   "count": 11,
+   "avg": 31.25,
+   "median": 31.99
+  },
+  {
+   "date": "2026-08-18",
+   "retailer": "mands",
+   "category": "coats",
+   "count": 15,
+   "avg": 94.65,
+   "median": 97
+  },
+  {
+   "date": "2026-08-18",
+   "retailer": "mands",
+   "category": "jeans",
+   "count": 12,
+   "avg": 30.63,
+   "median": 26.99
+  },
+  {
+   "date": "2026-08-18",
+   "retailer": "mands",
+   "category": "joggers",
    "count": 16,
    "avg": 24.05,
-   "median": 25.994999999999997
+   "median": 23.494999999999997
   },
   {
-   "date": "2026-07-21",
-   "retailer": "hm",
-   "category": "joggers",
-   "count": 16,
-   "avg": 20.07,
-   "median": 21.994999999999997
-  },
-  {
-   "date": "2026-07-21",
-   "retailer": "hm",
+   "date": "2026-08-18",
+   "retailer": "mands",
    "category": "socks",
-   "count": 17,
-   "avg": 3.9,
-   "median": 2.33
-  },
-  {
-   "date": "2026-07-21",
-   "retailer": "hm",
-   "category": "underwear",
-   "count": 16,
-   "avg": 3.54,
-   "median": 3.5
-  },
-  {
-   "date": "2026-07-21",
-   "retailer": "primark",
-   "category": "t-shirts",
-   "count": 13,
-   "avg": 3.65,
-   "median": 3.49
-  },
-  {
-   "date": "2026-07-21",
-   "retailer": "primark",
-   "category": "shirts",
-   "count": 13,
-   "avg": 10.92,
-   "median": 10.99
-  },
-  {
-   "date": "2026-07-21",
-   "retailer": "primark",
-   "category": "hoodies",
-   "count": 17,
-   "avg": 13.2,
-   "median": 12.5
-  },
-  {
-   "date": "2026-07-21",
-   "retailer": "primark",
-   "category": "jumpers",
-   "count": 14,
-   "avg": 13.11,
-   "median": 12.5
-  },
-  {
-   "date": "2026-07-21",
-   "retailer": "primark",
-   "category": "sweatshirts",
-   "count": 13,
-   "avg": 10.94,
-   "median": 11.49
-  },
-  {
-   "date": "2026-07-21",
-   "retailer": "primark",
-   "category": "coats",
-   "count": 14,
-   "avg": 35.71,
-   "median": 35.495000000000005
-  },
-  {
-   "date": "2026-07-21",
-   "retailer": "primark",
-   "category": "jeans",
-   "count": 13,
-   "avg": 13,
-   "median": 14.49
-  },
-  {
-   "date": "2026-07-21",
-   "retailer": "primark",
-   "category": "joggers",
-   "count": 15,
-   "avg": 9.56,
-   "median": 9.99
-  },
-  {
-   "date": "2026-07-21",
-   "retailer": "primark",
-   "category": "socks",
-   "count": 16,
-   "avg": 1.53,
-   "median": 1.135
-  },
-  {
-   "date": "2026-07-21",
-   "retailer": "primark",
-   "category": "underwear",
-   "count": 13,
-   "avg": 2.31,
-   "median": 2.13
-  },
-  {
-   "date": "2026-07-28",
-   "retailer": "next",
-   "category": "t-shirts",
-   "count": 19,
-   "avg": 11.36,
-   "median": 10.5
-  },
-  {
-   "date": "2026-07-28",
-   "retailer": "next",
-   "category": "shirts",
    "count": 12,
-   "avg": 26.04,
-   "median": 26
+   "avg": 2.77,
+   "median": 3.035
   },
   {
-   "date": "2026-07-28",
-   "retailer": "next",
+   "date": "2026-08-18",
+   "retailer": "mands",
+   "category": "underwear",
+   "count": 10,
+   "avg": 4.8,
+   "median": 4.79
+  },
+  {
+   "date": "2026-08-18",
+   "retailer": "hm",
+   "category": "t-shirts",
+   "count": 11,
+   "avg": 10.25,
+   "median": 10.49
+  },
+  {
+   "date": "2026-08-18",
+   "retailer": "hm",
+   "category": "shirts",
+   "count": 14,
+   "avg": 21.46,
+   "median": 20.25
+  },
+  {
+   "date": "2026-08-18",
+   "retailer": "hm",
    "category": "hoodies",
-   "count": 15,
-   "avg": 28.75,
-   "median": 28
+   "count": 13,
+   "avg": 21.28,
+   "median": 20.99
   },
   {
-   "date": "2026-07-28",
-   "retailer": "next",
+   "date": "2026-08-18",
+   "retailer": "hm",
    "category": "jumpers",
    "count": 18,
-   "avg": 34.19,
-   "median": 35.495000000000005
+   "avg": 28.66,
+   "median": 30.5
   },
   {
-   "date": "2026-07-28",
-   "retailer": "next",
+   "date": "2026-08-18",
+   "retailer": "hm",
    "category": "sweatshirts",
    "count": 18,
-   "avg": 30.82,
-   "median": 30.99
+   "avg": 18.38,
+   "median": 18.25
   },
   {
-   "date": "2026-07-28",
-   "retailer": "next",
-   "category": "coats",
-   "count": 17,
-   "avg": 80.75,
-   "median": 87.99
-  },
-  {
-   "date": "2026-07-28",
-   "retailer": "next",
-   "category": "jeans",
-   "count": 15,
-   "avg": 30.49,
-   "median": 30.49
-  },
-  {
-   "date": "2026-07-28",
-   "retailer": "next",
-   "category": "joggers",
-   "count": 16,
-   "avg": 24.35,
-   "median": 24.74
-  },
-  {
-   "date": "2026-07-28",
-   "retailer": "next",
-   "category": "socks",
-   "count": 17,
-   "avg": 4.12,
-   "median": 2.9
-  },
-  {
-   "date": "2026-07-28",
-   "retailer": "next",
-   "category": "underwear",
-   "count": 13,
-   "avg": 5.73,
-   "median": 5.75
-  },
-  {
-   "date": "2026-07-28",
-   "retailer": "mands",
-   "category": "t-shirts",
-   "count": 15,
-   "avg": 15.74,
-   "median": 17
-  },
-  {
-   "date": "2026-07-28",
-   "retailer": "mands",
-   "category": "shirts",
-   "count": 16,
-   "avg": 27.22,
-   "median": 29.994999999999997
-  },
-  {
-   "date": "2026-07-28",
-   "retailer": "mands",
-   "category": "hoodies",
-   "count": 14,
-   "avg": 32.99,
-   "median": 35
-  },
-  {
-   "date": "2026-07-28",
-   "retailer": "mands",
-   "category": "jumpers",
-   "count": 14,
-   "avg": 36.46,
-   "median": 35.745000000000005
-  },
-  {
-   "date": "2026-07-28",
-   "retailer": "mands",
-   "category": "sweatshirts",
-   "count": 12,
-   "avg": 26.59,
-   "median": 25.244999999999997
-  },
-  {
-   "date": "2026-07-28",
-   "retailer": "mands",
-   "category": "coats",
-   "count": 16,
-   "avg": 105.72,
-   "median": 106.75
-  },
-  {
-   "date": "2026-07-28",
-   "retailer": "mands",
-   "category": "jeans",
-   "count": 15,
-   "avg": 31.38,
-   "median": 31.49
-  },
-  {
-   "date": "2026-07-28",
-   "retailer": "mands",
-   "category": "joggers",
-   "count": 12,
-   "avg": 25.35,
-   "median": 25.494999999999997
-  },
-  {
-   "date": "2026-07-28",
-   "retailer": "mands",
-   "category": "socks",
-   "count": 17,
-   "avg": 6.41,
-   "median": 2.83
-  },
-  {
-   "date": "2026-07-28",
-   "retailer": "mands",
-   "category": "underwear",
-   "count": 15,
-   "avg": 4.79,
-   "median": 4.4
-  },
-  {
-   "date": "2026-07-28",
-   "retailer": "hm",
-   "category": "t-shirts",
-   "count": 17,
-   "avg": 10.74,
-   "median": 10.5
-  },
-  {
-   "date": "2026-07-28",
-   "retailer": "hm",
-   "category": "shirts",
-   "count": 18,
-   "avg": 23.84,
-   "median": 24.74
-  },
-  {
-   "date": "2026-07-28",
-   "retailer": "hm",
-   "category": "hoodies",
-   "count": 17,
-   "avg": 20.95,
-   "median": 20.5
-  },
-  {
-   "date": "2026-07-28",
-   "retailer": "hm",
-   "category": "jumpers",
-   "count": 15,
-   "avg": 26.83,
-   "median": 28.99
-  },
-  {
-   "date": "2026-07-28",
-   "retailer": "hm",
-   "category": "sweatshirts",
-   "count": 15,
-   "avg": 18.47,
-   "median": 19.49
-  },
-  {
-   "date": "2026-07-28",
+   "date": "2026-08-18",
    "retailer": "hm",
    "category": "coats",
-   "count": 13,
-   "avg": 59.43,
+   "count": 16,
+   "avg": 66.72,
    "median": 53
   },
   {
-   "date": "2026-07-28",
+   "date": "2026-08-18",
    "retailer": "hm",
    "category": "jeans",
-   "count": 16,
-   "avg": 24.64,
-   "median": 25.994999999999997
+   "count": 13,
+   "avg": 23.65,
+   "median": 24.49
   },
   {
-   "date": "2026-07-28",
+   "date": "2026-08-18",
    "retailer": "hm",
    "category": "joggers",
-   "count": 16,
-   "avg": 20.1,
-   "median": 21.994999999999997
+   "count": 14,
+   "avg": 20.89,
+   "median": 20.25
   },
   {
-   "date": "2026-07-28",
+   "date": "2026-08-18",
    "retailer": "hm",
    "category": "socks",
-   "count": 17,
-   "avg": 3.88,
-   "median": 2.33
+   "count": 15,
+   "avg": 3,
+   "median": 1.8
   },
   {
-   "date": "2026-07-28",
+   "date": "2026-08-18",
    "retailer": "hm",
    "category": "underwear",
-   "count": 16,
+   "count": 17,
    "avg": 3.56,
    "median": 3.5
   },
   {
-   "date": "2026-07-28",
+   "date": "2026-08-18",
    "retailer": "primark",
    "category": "t-shirts",
-   "count": 13,
-   "avg": 3.8,
-   "median": 3.49
+   "count": 10,
+   "avg": 3.67,
+   "median": 3.495
   },
   {
-   "date": "2026-07-28",
+   "date": "2026-08-18",
    "retailer": "primark",
    "category": "shirts",
-   "count": 13,
-   "avg": 10.53,
-   "median": 10.99
+   "count": 12,
+   "avg": 12.25,
+   "median": 11.995000000000001
   },
   {
-   "date": "2026-07-28",
+   "date": "2026-08-18",
    "retailer": "primark",
    "category": "hoodies",
-   "count": 17,
-   "avg": 13.55,
-   "median": 12.5
+   "count": 13,
+   "avg": 12.8,
+   "median": 12.99
   },
   {
-   "date": "2026-07-28",
+   "date": "2026-08-18",
    "retailer": "primark",
    "category": "jumpers",
-   "count": 14,
-   "avg": 13.3,
-   "median": 12.5
+   "count": 10,
+   "avg": 14.16,
+   "median": 13.995000000000001
   },
   {
-   "date": "2026-07-28",
+   "date": "2026-08-18",
    "retailer": "primark",
    "category": "sweatshirts",
-   "count": 13,
-   "avg": 11.17,
-   "median": 11.49
+   "count": 14,
+   "avg": 10.4,
+   "median": 10.245000000000001
   },
   {
-   "date": "2026-07-28",
+   "date": "2026-08-18",
    "retailer": "primark",
    "category": "coats",
    "count": 14,
-   "avg": 36.61,
-   "median": 35.495000000000005
+   "avg": 35.78,
+   "median": 38.25
   },
   {
-   "date": "2026-07-28",
+   "date": "2026-08-18",
    "retailer": "primark",
    "category": "jeans",
-   "count": 13,
-   "avg": 13.76,
-   "median": 14.49
+   "count": 14,
+   "avg": 13.45,
+   "median": 12.25
   },
   {
-   "date": "2026-07-28",
+   "date": "2026-08-18",
    "retailer": "primark",
    "category": "joggers",
-   "count": 15,
-   "avg": 9.83,
-   "median": 9.99
+   "count": 12,
+   "avg": 10.03,
+   "median": 9.995000000000001
   },
   {
-   "date": "2026-07-28",
+   "date": "2026-08-18",
    "retailer": "primark",
    "category": "socks",
-   "count": 16,
-   "avg": 1.51,
-   "median": 1.135
+   "count": 13,
+   "avg": 1.64,
+   "median": 1.17
   },
   {
-   "date": "2026-07-28",
+   "date": "2026-08-18",
    "retailer": "primark",
    "category": "underwear",
-   "count": 13,
-   "avg": 2.3,
-   "median": 2.13
+   "count": 14,
+   "avg": 1.9,
+   "median": 1.89
   },
   {
-   "date": "2026-08-04",
+   "date": "2026-08-25",
    "retailer": "next",
    "category": "t-shirts",
-   "count": 19,
-   "avg": 11.7,
-   "median": 10.5
+   "count": 13,
+   "avg": 13.39,
+   "median": 12.49
   },
   {
-   "date": "2026-08-04",
+   "date": "2026-08-25",
    "retailer": "next",
    "category": "shirts",
-   "count": 12,
-   "avg": 26.42,
-   "median": 26
+   "count": 13,
+   "avg": 23.99,
+   "median": 24.99
   },
   {
-   "date": "2026-08-04",
+   "date": "2026-08-25",
    "retailer": "next",
    "category": "hoodies",
+   "count": 13,
+   "avg": 29.84,
+   "median": 31
+  },
+  {
+   "date": "2026-08-25",
+   "retailer": "next",
+   "category": "jumpers",
+   "count": 11,
+   "avg": 38.09,
+   "median": 37.5
+  },
+  {
+   "date": "2026-08-25",
+   "retailer": "next",
+   "category": "sweatshirts",
    "count": 15,
-   "avg": 30.14,
+   "avg": 28.56,
    "median": 28
   },
   {
-   "date": "2026-08-04",
-   "retailer": "next",
-   "category": "jumpers",
-   "count": 18,
-   "avg": 35.24,
-   "median": 35.495000000000005
-  },
-  {
-   "date": "2026-08-04",
-   "retailer": "next",
-   "category": "sweatshirts",
-   "count": 18,
-   "avg": 30.64,
-   "median": 30.99
-  },
-  {
-   "date": "2026-08-04",
+   "date": "2026-08-25",
    "retailer": "next",
    "category": "coats",
-   "count": 17,
-   "avg": 83.73,
-   "median": 87.99
+   "count": 12,
+   "avg": 72.76,
+   "median": 70.745
   },
   {
-   "date": "2026-08-04",
+   "date": "2026-08-25",
    "retailer": "next",
    "category": "jeans",
-   "count": 15,
-   "avg": 29.78,
-   "median": 30.49
-  },
-  {
-   "date": "2026-08-04",
-   "retailer": "next",
-   "category": "joggers",
-   "count": 16,
-   "avg": 25.25,
-   "median": 24.74
-  },
-  {
-   "date": "2026-08-04",
-   "retailer": "next",
-   "category": "socks",
-   "count": 17,
-   "avg": 4.07,
-   "median": 2.9
-  },
-  {
-   "date": "2026-08-04",
-   "retailer": "next",
-   "category": "underwear",
-   "count": 13,
-   "avg": 5.7,
-   "median": 5.75
-  },
-  {
-   "date": "2026-08-04",
-   "retailer": "mands",
-   "category": "t-shirts",
-   "count": 15,
-   "avg": 15.55,
-   "median": 17
-  },
-  {
-   "date": "2026-08-04",
-   "retailer": "mands",
-   "category": "shirts",
-   "count": 16,
-   "avg": 28.07,
-   "median": 29.994999999999997
-  },
-  {
-   "date": "2026-08-04",
-   "retailer": "mands",
-   "category": "hoodies",
-   "count": 14,
-   "avg": 34.69,
-   "median": 35
-  },
-  {
-   "date": "2026-08-04",
-   "retailer": "mands",
-   "category": "jumpers",
-   "count": 14,
-   "avg": 36.9,
-   "median": 35.745000000000005
-  },
-  {
-   "date": "2026-08-04",
-   "retailer": "mands",
-   "category": "sweatshirts",
-   "count": 12,
-   "avg": 27.1,
-   "median": 25.244999999999997
-  },
-  {
-   "date": "2026-08-04",
-   "retailer": "mands",
-   "category": "coats",
-   "count": 16,
-   "avg": 103.78,
-   "median": 106.75
-  },
-  {
-   "date": "2026-08-04",
-   "retailer": "mands",
-   "category": "jeans",
-   "count": 15,
-   "avg": 31.81,
-   "median": 31.49
-  },
-  {
-   "date": "2026-08-04",
-   "retailer": "mands",
-   "category": "joggers",
-   "count": 12,
-   "avg": 24.12,
-   "median": 25.494999999999997
-  },
-  {
-   "date": "2026-08-04",
-   "retailer": "mands",
-   "category": "socks",
-   "count": 17,
-   "avg": 6.24,
-   "median": 2.83
-  },
-  {
-   "date": "2026-08-04",
-   "retailer": "mands",
-   "category": "underwear",
-   "count": 15,
-   "avg": 4.67,
-   "median": 4.4
-  },
-  {
-   "date": "2026-08-04",
-   "retailer": "hm",
-   "category": "t-shirts",
-   "count": 17,
-   "avg": 10.96,
-   "median": 10.5
-  },
-  {
-   "date": "2026-08-04",
-   "retailer": "hm",
-   "category": "shirts",
-   "count": 18,
-   "avg": 23.19,
-   "median": 24.74
-  },
-  {
-   "date": "2026-08-04",
-   "retailer": "hm",
-   "category": "hoodies",
-   "count": 17,
-   "avg": 20.52,
-   "median": 20.5
-  },
-  {
-   "date": "2026-08-04",
-   "retailer": "hm",
-   "category": "jumpers",
-   "count": 15,
-   "avg": 27.7,
+   "count": 7,
+   "avg": 32,
    "median": 28.99
   },
   {
-   "date": "2026-08-04",
-   "retailer": "hm",
-   "category": "sweatshirts",
-   "count": 15,
-   "avg": 18.36,
-   "median": 19.49
+   "date": "2026-08-25",
+   "retailer": "next",
+   "category": "joggers",
+   "count": 14,
+   "avg": 24.7,
+   "median": 23.994999999999997
   },
   {
-   "date": "2026-08-04",
+   "date": "2026-08-25",
+   "retailer": "next",
+   "category": "socks",
+   "count": 14,
+   "avg": 4.21,
+   "median": 2.735
+  },
+  {
+   "date": "2026-08-25",
+   "retailer": "next",
+   "category": "underwear",
+   "count": 8,
+   "avg": 5.32,
+   "median": 5.08
+  },
+  {
+   "date": "2026-08-25",
+   "retailer": "mands",
+   "category": "t-shirts",
+   "count": 16,
+   "avg": 14.16,
+   "median": 13.995000000000001
+  },
+  {
+   "date": "2026-08-25",
+   "retailer": "mands",
+   "category": "shirts",
+   "count": 13,
+   "avg": 27,
+   "median": 25
+  },
+  {
+   "date": "2026-08-25",
+   "retailer": "mands",
+   "category": "hoodies",
+   "count": 15,
+   "avg": 33.15,
+   "median": 34.49
+  },
+  {
+   "date": "2026-08-25",
+   "retailer": "mands",
+   "category": "jumpers",
+   "count": 14,
+   "avg": 42.17,
+   "median": 40.745000000000005
+  },
+  {
+   "date": "2026-08-25",
+   "retailer": "mands",
+   "category": "sweatshirts",
+   "count": 11,
+   "avg": 31.11,
+   "median": 31.99
+  },
+  {
+   "date": "2026-08-25",
+   "retailer": "mands",
+   "category": "coats",
+   "count": 15,
+   "avg": 95.81,
+   "median": 97
+  },
+  {
+   "date": "2026-08-25",
+   "retailer": "mands",
+   "category": "jeans",
+   "count": 12,
+   "avg": 29.52,
+   "median": 26.99
+  },
+  {
+   "date": "2026-08-25",
+   "retailer": "mands",
+   "category": "joggers",
+   "count": 16,
+   "avg": 23.18,
+   "median": 23.494999999999997
+  },
+  {
+   "date": "2026-08-25",
+   "retailer": "mands",
+   "category": "socks",
+   "count": 12,
+   "avg": 2.89,
+   "median": 3.035
+  },
+  {
+   "date": "2026-08-25",
+   "retailer": "mands",
+   "category": "underwear",
+   "count": 10,
+   "avg": 4.7,
+   "median": 4.79
+  },
+  {
+   "date": "2026-08-25",
+   "retailer": "hm",
+   "category": "t-shirts",
+   "count": 11,
+   "avg": 10.68,
+   "median": 10.49
+  },
+  {
+   "date": "2026-08-25",
+   "retailer": "hm",
+   "category": "shirts",
+   "count": 14,
+   "avg": 21.62,
+   "median": 20.25
+  },
+  {
+   "date": "2026-08-25",
+   "retailer": "hm",
+   "category": "hoodies",
+   "count": 13,
+   "avg": 20.99,
+   "median": 20.99
+  },
+  {
+   "date": "2026-08-25",
+   "retailer": "hm",
+   "category": "jumpers",
+   "count": 18,
+   "avg": 29.26,
+   "median": 30.5
+  },
+  {
+   "date": "2026-08-25",
+   "retailer": "hm",
+   "category": "sweatshirts",
+   "count": 18,
+   "avg": 17.88,
+   "median": 18.25
+  },
+  {
+   "date": "2026-08-25",
    "retailer": "hm",
    "category": "coats",
-   "count": 13,
-   "avg": 58.15,
+   "count": 16,
+   "avg": 67.46,
    "median": 53
   },
   {
-   "date": "2026-08-04",
+   "date": "2026-08-25",
    "retailer": "hm",
    "category": "jeans",
-   "count": 16,
-   "avg": 24.12,
-   "median": 25.994999999999997
+   "count": 13,
+   "avg": 24.38,
+   "median": 24.49
   },
   {
-   "date": "2026-08-04",
+   "date": "2026-08-25",
    "retailer": "hm",
    "category": "joggers",
-   "count": 16,
-   "avg": 21.15,
-   "median": 21.994999999999997
+   "count": 14,
+   "avg": 20.41,
+   "median": 20.25
   },
   {
-   "date": "2026-08-04",
+   "date": "2026-08-25",
    "retailer": "hm",
    "category": "socks",
-   "count": 17,
-   "avg": 3.89,
-   "median": 2.33
+   "count": 15,
+   "avg": 3.06,
+   "median": 1.8
   },
   {
-   "date": "2026-08-04",
+   "date": "2026-08-25",
    "retailer": "hm",
    "category": "underwear",
-   "count": 16,
-   "avg": 3.64,
+   "count": 17,
+   "avg": 3.46,
    "median": 3.5
   },
   {
-   "date": "2026-08-04",
+   "date": "2026-08-25",
    "retailer": "primark",
    "category": "t-shirts",
-   "count": 13,
-   "avg": 3.77,
-   "median": 3.49
+   "count": 10,
+   "avg": 3.69,
+   "median": 3.495
   },
   {
-   "date": "2026-08-04",
+   "date": "2026-08-25",
    "retailer": "primark",
-   "category": "shirts",
-   "count": 13,
-   "avg": 10.61,
-   "median": 10.99
-  },
-  {
-   "date": "2026-08-04",
-   "retailer": "primark",
-   "category": "hoodies",
-   "count": 17,
-   "avg": 12.99,
-   "median": 12.5
-  },
-  {
-   "date": "2026-08-04",
-   "retailer": "primark",
-   "category": "jumpers",
-   "count": 14,
-   "avg": 13.14,
-   "median": 12.5
-  },
-  {
-   "date": "2026-08-04",
-   "retailer": "primark",
-   "category": "sweatshirts",
-   "count": 13,
-   "avg": 10.84,
-   "median": 11.49
-  },
-  {
-   "date": "2026-08-04",
-   "retailer": "primark",
-   "category": "coats",
-   "count": 14,
-   "avg": 37.83,
-   "median": 35.495000000000005
-  },
-  {
-   "date": "2026-08-04",
-   "retailer": "primark",
-   "category": "jeans",
-   "count": 13,
-   "avg": 13.28,
-   "median": 14.49
-  },
-  {
-   "date": "2026-08-04",
-   "retailer": "primark",
-   "category": "joggers",
-   "count": 15,
-   "avg": 9.84,
-   "median": 9.99
-  },
-  {
-   "date": "2026-08-04",
-   "retailer": "primark",
-   "category": "socks",
-   "count": 16,
-   "avg": 1.5,
-   "median": 1.135
-  },
-  {
-   "date": "2026-08-04",
-   "retailer": "primark",
-   "category": "underwear",
-   "count": 13,
-   "avg": 2.2,
-   "median": 2.13
-  },
-  {
-   "date": "2026-08-11",
-   "retailer": "next",
-   "category": "t-shirts",
-   "count": 19,
-   "avg": 12.02,
-   "median": 10.5
-  },
-  {
-   "date": "2026-08-11",
-   "retailer": "next",
    "category": "shirts",
    "count": 12,
-   "avg": 26.4,
-   "median": 26
+   "avg": 12.36,
+   "median": 11.995000000000001
   },
   {
-   "date": "2026-08-11",
-   "retailer": "next",
-   "category": "hoodies",
-   "count": 15,
-   "avg": 30.08,
-   "median": 28
-  },
-  {
-   "date": "2026-08-11",
-   "retailer": "next",
-   "category": "jumpers",
-   "count": 18,
-   "avg": 34.94,
-   "median": 35.495000000000005
-  },
-  {
-   "date": "2026-08-11",
-   "retailer": "next",
-   "category": "sweatshirts",
-   "count": 18,
-   "avg": 30.84,
-   "median": 30.99
-  },
-  {
-   "date": "2026-08-11",
-   "retailer": "next",
-   "category": "coats",
-   "count": 17,
-   "avg": 85.41,
-   "median": 87.99
-  },
-  {
-   "date": "2026-08-11",
-   "retailer": "next",
-   "category": "jeans",
-   "count": 15,
-   "avg": 30.91,
-   "median": 30.49
-  },
-  {
-   "date": "2026-08-11",
-   "retailer": "next",
-   "category": "joggers",
-   "count": 16,
-   "avg": 24.81,
-   "median": 24.74
-  },
-  {
-   "date": "2026-08-11",
-   "retailer": "next",
-   "category": "socks",
-   "count": 17,
-   "avg": 4.01,
-   "median": 2.9
-  },
-  {
-   "date": "2026-08-11",
-   "retailer": "next",
-   "category": "underwear",
-   "count": 13,
-   "avg": 5.46,
-   "median": 5.75
-  },
-  {
-   "date": "2026-08-11",
-   "retailer": "mands",
-   "category": "t-shirts",
-   "count": 15,
-   "avg": 15.76,
-   "median": 17
-  },
-  {
-   "date": "2026-08-11",
-   "retailer": "mands",
-   "category": "shirts",
-   "count": 16,
-   "avg": 27.03,
-   "median": 29.994999999999997
-  },
-  {
-   "date": "2026-08-11",
-   "retailer": "mands",
-   "category": "hoodies",
-   "count": 14,
-   "avg": 33.46,
-   "median": 35
-  },
-  {
-   "date": "2026-08-11",
-   "retailer": "mands",
-   "category": "jumpers",
-   "count": 14,
-   "avg": 38,
-   "median": 35.745000000000005
-  },
-  {
-   "date": "2026-08-11",
-   "retailer": "mands",
-   "category": "sweatshirts",
-   "count": 12,
-   "avg": 26.22,
-   "median": 25.244999999999997
-  },
-  {
-   "date": "2026-08-11",
-   "retailer": "mands",
-   "category": "coats",
-   "count": 16,
-   "avg": 106.58,
-   "median": 106.75
-  },
-  {
-   "date": "2026-08-11",
-   "retailer": "mands",
-   "category": "jeans",
-   "count": 15,
-   "avg": 32.4,
-   "median": 31.49
-  },
-  {
-   "date": "2026-08-11",
-   "retailer": "mands",
-   "category": "joggers",
-   "count": 12,
-   "avg": 25.16,
-   "median": 25.494999999999997
-  },
-  {
-   "date": "2026-08-11",
-   "retailer": "mands",
-   "category": "socks",
-   "count": 17,
-   "avg": 6.33,
-   "median": 2.83
-  },
-  {
-   "date": "2026-08-11",
-   "retailer": "mands",
-   "category": "underwear",
-   "count": 15,
-   "avg": 4.87,
-   "median": 4.4
-  },
-  {
-   "date": "2026-08-11",
-   "retailer": "hm",
-   "category": "t-shirts",
-   "count": 17,
-   "avg": 11.16,
-   "median": 10.5
-  },
-  {
-   "date": "2026-08-11",
-   "retailer": "hm",
-   "category": "shirts",
-   "count": 18,
-   "avg": 23.44,
-   "median": 24.74
-  },
-  {
-   "date": "2026-08-11",
-   "retailer": "hm",
-   "category": "hoodies",
-   "count": 17,
-   "avg": 21.03,
-   "median": 20.5
-  },
-  {
-   "date": "2026-08-11",
-   "retailer": "hm",
-   "category": "jumpers",
-   "count": 15,
-   "avg": 27.87,
-   "median": 28.99
-  },
-  {
-   "date": "2026-08-11",
-   "retailer": "hm",
-   "category": "sweatshirts",
-   "count": 15,
-   "avg": 18.38,
-   "median": 19.49
-  },
-  {
-   "date": "2026-08-11",
-   "retailer": "hm",
-   "category": "coats",
-   "count": 13,
-   "avg": 60.33,
-   "median": 53
-  },
-  {
-   "date": "2026-08-11",
-   "retailer": "hm",
-   "category": "jeans",
-   "count": 16,
-   "avg": 24.99,
-   "median": 25.994999999999997
-  },
-  {
-   "date": "2026-08-11",
-   "retailer": "hm",
-   "category": "joggers",
-   "count": 16,
-   "avg": 20.29,
-   "median": 21.994999999999997
-  },
-  {
-   "date": "2026-08-11",
-   "retailer": "hm",
-   "category": "socks",
-   "count": 17,
-   "avg": 3.97,
-   "median": 2.33
-  },
-  {
-   "date": "2026-08-11",
-   "retailer": "hm",
-   "category": "underwear",
-   "count": 16,
-   "avg": 3.68,
-   "median": 3.5
-  },
-  {
-   "date": "2026-08-11",
-   "retailer": "primark",
-   "category": "t-shirts",
-   "count": 13,
-   "avg": 3.78,
-   "median": 3.49
-  },
-  {
-   "date": "2026-08-11",
-   "retailer": "primark",
-   "category": "shirts",
-   "count": 13,
-   "avg": 10.73,
-   "median": 10.99
-  },
-  {
-   "date": "2026-08-11",
+   "date": "2026-08-25",
    "retailer": "primark",
    "category": "hoodies",
-   "count": 17,
-   "avg": 13.18,
-   "median": 12.5
+   "count": 13,
+   "avg": 12.88,
+   "median": 12.99
   },
   {
-   "date": "2026-08-11",
+   "date": "2026-08-25",
    "retailer": "primark",
    "category": "jumpers",
-   "count": 14,
-   "avg": 13.65,
-   "median": 12.5
+   "count": 10,
+   "avg": 14.19,
+   "median": 13.995000000000001
   },
   {
-   "date": "2026-08-11",
+   "date": "2026-08-25",
    "retailer": "primark",
    "category": "sweatshirts",
-   "count": 13,
-   "avg": 11.11,
-   "median": 11.49
+   "count": 14,
+   "avg": 10.59,
+   "median": 10.245000000000001
   },
   {
-   "date": "2026-08-11",
+   "date": "2026-08-25",
    "retailer": "primark",
    "category": "coats",
-   "count": 14,
-   "avg": 36.12,
-   "median": 35.495000000000005
-  },
-  {
-   "date": "2026-08-11",
-   "retailer": "primark",
-   "category": "jeans",
-   "count": 13,
-   "avg": 13.65,
-   "median": 14.49
-  },
-  {
-   "date": "2026-08-11",
-   "retailer": "primark",
-   "category": "joggers",
-   "count": 15,
-   "avg": 9.77,
-   "median": 9.99
-  },
-  {
-   "date": "2026-08-11",
-   "retailer": "primark",
-   "category": "socks",
-   "count": 16,
-   "avg": 1.56,
-   "median": 1.135
-  },
-  {
-   "date": "2026-08-11",
-   "retailer": "primark",
-   "category": "underwear",
-   "count": 13,
-   "avg": 2.24,
-   "median": 2.13
-  },
-  {
-   "date": "2026-08-18",
-   "retailer": "next",
-   "category": "t-shirts",
-   "count": 19,
-   "avg": 11.82,
-   "median": 10.5
-  },
-  {
-   "date": "2026-08-18",
-   "retailer": "next",
-   "category": "shirts",
-   "count": 12,
-   "avg": 26.27,
-   "median": 26
-  },
-  {
-   "date": "2026-08-18",
-   "retailer": "next",
-   "category": "hoodies",
-   "count": 15,
-   "avg": 29.73,
-   "median": 28
-  },
-  {
-   "date": "2026-08-18",
-   "retailer": "next",
-   "category": "jumpers",
-   "count": 18,
-   "avg": 35.32,
-   "median": 35.495000000000005
-  },
-  {
-   "date": "2026-08-18",
-   "retailer": "next",
-   "category": "sweatshirts",
-   "count": 18,
-   "avg": 31.4,
-   "median": 30.99
-  },
-  {
-   "date": "2026-08-18",
-   "retailer": "next",
-   "category": "coats",
-   "count": 17,
-   "avg": 82.67,
-   "median": 87.99
-  },
-  {
-   "date": "2026-08-18",
-   "retailer": "next",
-   "category": "jeans",
-   "count": 15,
-   "avg": 30.67,
-   "median": 30.49
-  },
-  {
-   "date": "2026-08-18",
-   "retailer": "next",
-   "category": "joggers",
-   "count": 16,
-   "avg": 24.12,
-   "median": 24.74
-  },
-  {
-   "date": "2026-08-18",
-   "retailer": "next",
-   "category": "socks",
-   "count": 17,
-   "avg": 4.14,
-   "median": 2.9
-  },
-  {
-   "date": "2026-08-18",
-   "retailer": "next",
-   "category": "underwear",
-   "count": 13,
-   "avg": 5.46,
-   "median": 5.75
-  },
-  {
-   "date": "2026-08-18",
-   "retailer": "mands",
-   "category": "t-shirts",
-   "count": 15,
-   "avg": 15.83,
-   "median": 17
-  },
-  {
-   "date": "2026-08-18",
-   "retailer": "mands",
-   "category": "shirts",
-   "count": 16,
-   "avg": 27.41,
-   "median": 29.994999999999997
-  },
-  {
-   "date": "2026-08-18",
-   "retailer": "mands",
-   "category": "hoodies",
-   "count": 14,
-   "avg": 33.61,
-   "median": 35
-  },
-  {
-   "date": "2026-08-18",
-   "retailer": "mands",
-   "category": "jumpers",
-   "count": 14,
-   "avg": 38.04,
-   "median": 35.745000000000005
-  },
-  {
-   "date": "2026-08-18",
-   "retailer": "mands",
-   "category": "sweatshirts",
-   "count": 12,
-   "avg": 26.94,
-   "median": 25.244999999999997
-  },
-  {
-   "date": "2026-08-18",
-   "retailer": "mands",
-   "category": "coats",
-   "count": 16,
-   "avg": 105.64,
-   "median": 106.75
-  },
-  {
-   "date": "2026-08-18",
-   "retailer": "mands",
-   "category": "jeans",
-   "count": 15,
-   "avg": 32.87,
-   "median": 31.49
-  },
-  {
-   "date": "2026-08-18",
-   "retailer": "mands",
-   "category": "joggers",
-   "count": 12,
-   "avg": 24.26,
-   "median": 25.494999999999997
-  },
-  {
-   "date": "2026-08-18",
-   "retailer": "mands",
-   "category": "socks",
-   "count": 17,
-   "avg": 6.38,
-   "median": 2.83
-  },
-  {
-   "date": "2026-08-18",
-   "retailer": "mands",
-   "category": "underwear",
-   "count": 15,
-   "avg": 4.87,
-   "median": 4.4
-  },
-  {
-   "date": "2026-08-18",
-   "retailer": "hm",
-   "category": "t-shirts",
-   "count": 17,
-   "avg": 11.19,
-   "median": 10.5
-  },
-  {
-   "date": "2026-08-18",
-   "retailer": "hm",
-   "category": "shirts",
-   "count": 18,
-   "avg": 23.27,
-   "median": 24.74
-  },
-  {
-   "date": "2026-08-18",
-   "retailer": "hm",
-   "category": "hoodies",
-   "count": 17,
-   "avg": 21.07,
-   "median": 20.5
-  },
-  {
-   "date": "2026-08-18",
-   "retailer": "hm",
-   "category": "jumpers",
-   "count": 15,
-   "avg": 28.42,
-   "median": 28.99
-  },
-  {
-   "date": "2026-08-18",
-   "retailer": "hm",
-   "category": "sweatshirts",
-   "count": 15,
-   "avg": 19.5,
-   "median": 19.49
-  },
-  {
-   "date": "2026-08-18",
-   "retailer": "hm",
-   "category": "coats",
-   "count": 13,
-   "avg": 57.74,
-   "median": 53
-  },
-  {
-   "date": "2026-08-18",
-   "retailer": "hm",
-   "category": "jeans",
-   "count": 16,
-   "avg": 25.15,
-   "median": 25.994999999999997
-  },
-  {
-   "date": "2026-08-18",
-   "retailer": "hm",
-   "category": "joggers",
-   "count": 16,
-   "avg": 20.52,
-   "median": 21.994999999999997
-  },
-  {
-   "date": "2026-08-18",
-   "retailer": "hm",
-   "category": "socks",
-   "count": 17,
-   "avg": 3.91,
-   "median": 2.33
-  },
-  {
-   "date": "2026-08-18",
-   "retailer": "hm",
-   "category": "underwear",
-   "count": 16,
-   "avg": 3.64,
-   "median": 3.5
-  },
-  {
-   "date": "2026-08-18",
-   "retailer": "primark",
-   "category": "t-shirts",
-   "count": 13,
-   "avg": 3.8,
-   "median": 3.49
-  },
-  {
-   "date": "2026-08-18",
-   "retailer": "primark",
-   "category": "shirts",
-   "count": 13,
-   "avg": 10.61,
-   "median": 10.99
-  },
-  {
-   "date": "2026-08-18",
-   "retailer": "primark",
-   "category": "hoodies",
-   "count": 17,
-   "avg": 13.18,
-   "median": 12.5
-  },
-  {
-   "date": "2026-08-18",
-   "retailer": "primark",
-   "category": "jumpers",
-   "count": 14,
-   "avg": 13.25,
-   "median": 12.5
-  },
-  {
-   "date": "2026-08-18",
-   "retailer": "primark",
-   "category": "sweatshirts",
-   "count": 13,
-   "avg": 11.29,
-   "median": 11.49
-  },
-  {
-   "date": "2026-08-18",
-   "retailer": "primark",
-   "category": "coats",
-   "count": 14,
-   "avg": 36.52,
-   "median": 35.495000000000005
-  },
-  {
-   "date": "2026-08-18",
-   "retailer": "primark",
-   "category": "jeans",
-   "count": 13,
-   "avg": 13.25,
-   "median": 14.49
-  },
-  {
-   "date": "2026-08-18",
-   "retailer": "primark",
-   "category": "joggers",
-   "count": 15,
-   "avg": 9.72,
-   "median": 9.99
-  },
-  {
-   "date": "2026-08-18",
-   "retailer": "primark",
-   "category": "socks",
-   "count": 16,
-   "avg": 1.54,
-   "median": 1.135
-  },
-  {
-   "date": "2026-08-18",
-   "retailer": "primark",
-   "category": "underwear",
-   "count": 13,
-   "avg": 2.28,
-   "median": 2.13
-  },
-  {
-   "date": "2026-08-25",
-   "retailer": "next",
-   "category": "t-shirts",
-   "count": 19,
-   "avg": 11.92,
-   "median": 10.5
-  },
-  {
-   "date": "2026-08-25",
-   "retailer": "next",
-   "category": "shirts",
-   "count": 12,
-   "avg": 25.65,
-   "median": 26
-  },
-  {
-   "date": "2026-08-25",
-   "retailer": "next",
-   "category": "hoodies",
-   "count": 15,
-   "avg": 30.51,
-   "median": 28
-  },
-  {
-   "date": "2026-08-25",
-   "retailer": "next",
-   "category": "jumpers",
-   "count": 18,
-   "avg": 35.14,
-   "median": 35.495000000000005
-  },
-  {
-   "date": "2026-08-25",
-   "retailer": "next",
-   "category": "sweatshirts",
-   "count": 18,
-   "avg": 30.54,
-   "median": 30.99
-  },
-  {
-   "date": "2026-08-25",
-   "retailer": "next",
-   "category": "coats",
-   "count": 17,
-   "avg": 84.68,
-   "median": 87.99
-  },
-  {
-   "date": "2026-08-25",
-   "retailer": "next",
-   "category": "jeans",
-   "count": 15,
-   "avg": 29.99,
-   "median": 30.49
-  },
-  {
-   "date": "2026-08-25",
-   "retailer": "next",
-   "category": "joggers",
-   "count": 16,
-   "avg": 24.19,
-   "median": 24.74
-  },
-  {
-   "date": "2026-08-25",
-   "retailer": "next",
-   "category": "socks",
-   "count": 17,
-   "avg": 4,
-   "median": 2.9
-  },
-  {
-   "date": "2026-08-25",
-   "retailer": "next",
-   "category": "underwear",
-   "count": 13,
-   "avg": 5.69,
-   "median": 5.75
-  },
-  {
-   "date": "2026-08-25",
-   "retailer": "mands",
-   "category": "t-shirts",
-   "count": 15,
-   "avg": 15.47,
-   "median": 17
-  },
-  {
-   "date": "2026-08-25",
-   "retailer": "mands",
-   "category": "shirts",
-   "count": 16,
-   "avg": 28.07,
-   "median": 29.994999999999997
-  },
-  {
-   "date": "2026-08-25",
-   "retailer": "mands",
-   "category": "hoodies",
-   "count": 14,
-   "avg": 35.33,
-   "median": 35
-  },
-  {
-   "date": "2026-08-25",
-   "retailer": "mands",
-   "category": "jumpers",
    "count": 14,
    "avg": 36.58,
-   "median": 35.745000000000005
+   "median": 38.25
   },
   {
    "date": "2026-08-25",
-   "retailer": "mands",
-   "category": "sweatshirts",
-   "count": 12,
-   "avg": 27.71,
-   "median": 25.244999999999997
-  },
-  {
-   "date": "2026-08-25",
-   "retailer": "mands",
-   "category": "coats",
-   "count": 16,
-   "avg": 107.75,
-   "median": 106.75
-  },
-  {
-   "date": "2026-08-25",
-   "retailer": "mands",
+   "retailer": "primark",
    "category": "jeans",
-   "count": 15,
-   "avg": 33.23,
-   "median": 31.49
-  },
-  {
-   "date": "2026-08-25",
-   "retailer": "mands",
-   "category": "joggers",
-   "count": 12,
-   "avg": 25.07,
-   "median": 25.494999999999997
-  },
-  {
-   "date": "2026-08-25",
-   "retailer": "mands",
-   "category": "socks",
-   "count": 17,
-   "avg": 6.43,
-   "median": 2.83
-  },
-  {
-   "date": "2026-08-25",
-   "retailer": "mands",
-   "category": "underwear",
-   "count": 15,
-   "avg": 4.84,
-   "median": 4.4
-  },
-  {
-   "date": "2026-08-25",
-   "retailer": "hm",
-   "category": "t-shirts",
-   "count": 17,
-   "avg": 10.99,
-   "median": 10.5
-  },
-  {
-   "date": "2026-08-25",
-   "retailer": "hm",
-   "category": "shirts",
-   "count": 18,
-   "avg": 23.27,
-   "median": 24.74
-  },
-  {
-   "date": "2026-08-25",
-   "retailer": "hm",
-   "category": "hoodies",
-   "count": 17,
-   "avg": 21.29,
-   "median": 20.5
-  },
-  {
-   "date": "2026-08-25",
-   "retailer": "hm",
-   "category": "jumpers",
-   "count": 15,
-   "avg": 28.11,
-   "median": 28.99
-  },
-  {
-   "date": "2026-08-25",
-   "retailer": "hm",
-   "category": "sweatshirts",
-   "count": 15,
-   "avg": 19.55,
-   "median": 19.49
-  },
-  {
-   "date": "2026-08-25",
-   "retailer": "hm",
-   "category": "coats",
-   "count": 13,
-   "avg": 58.65,
-   "median": 53
-  },
-  {
-   "date": "2026-08-25",
-   "retailer": "hm",
-   "category": "jeans",
-   "count": 16,
-   "avg": 24.32,
-   "median": 25.994999999999997
-  },
-  {
-   "date": "2026-08-25",
-   "retailer": "hm",
-   "category": "joggers",
-   "count": 16,
-   "avg": 20.6,
-   "median": 21.994999999999997
-  },
-  {
-   "date": "2026-08-25",
-   "retailer": "hm",
-   "category": "socks",
-   "count": 17,
-   "avg": 4.02,
-   "median": 2.33
-  },
-  {
-   "date": "2026-08-25",
-   "retailer": "hm",
-   "category": "underwear",
-   "count": 16,
-   "avg": 3.6,
-   "median": 3.5
-  },
-  {
-   "date": "2026-08-25",
-   "retailer": "primark",
-   "category": "t-shirts",
-   "count": 13,
-   "avg": 3.88,
-   "median": 3.49
-  },
-  {
-   "date": "2026-08-25",
-   "retailer": "primark",
-   "category": "shirts",
-   "count": 13,
-   "avg": 10.69,
-   "median": 10.99
-  },
-  {
-   "date": "2026-08-25",
-   "retailer": "primark",
-   "category": "hoodies",
-   "count": 17,
-   "avg": 13.64,
-   "median": 12.5
-  },
-  {
-   "date": "2026-08-25",
-   "retailer": "primark",
-   "category": "jumpers",
    "count": 14,
-   "avg": 13.62,
-   "median": 12.5
-  },
-  {
-   "date": "2026-08-25",
-   "retailer": "primark",
-   "category": "sweatshirts",
-   "count": 13,
-   "avg": 11.2,
-   "median": 11.49
-  },
-  {
-   "date": "2026-08-25",
-   "retailer": "primark",
-   "category": "coats",
-   "count": 14,
-   "avg": 36.78,
-   "median": 35.495000000000005
-  },
-  {
-   "date": "2026-08-25",
-   "retailer": "primark",
-   "category": "jeans",
-   "count": 13,
-   "avg": 13.46,
-   "median": 14.49
+   "avg": 13.28,
+   "median": 12.25
   },
   {
    "date": "2026-08-25",
    "retailer": "primark",
    "category": "joggers",
-   "count": 15,
-   "avg": 9.52,
-   "median": 9.99
+   "count": 12,
+   "avg": 10.19,
+   "median": 9.995000000000001
   },
   {
    "date": "2026-08-25",
    "retailer": "primark",
    "category": "socks",
-   "count": 16,
-   "avg": 1.55,
-   "median": 1.135
+   "count": 13,
+   "avg": 1.63,
+   "median": 1.17
   },
   {
    "date": "2026-08-25",
    "retailer": "primark",
    "category": "underwear",
-   "count": 13,
-   "avg": 2.23,
-   "median": 2.13
+   "count": 14,
+   "avg": 1.92,
+   "median": 1.89
   },
   {
    "date": "2026-09-01",
    "retailer": "next",
    "category": "t-shirts",
-   "count": 19,
-   "avg": 12.14,
-   "median": 10.5
+   "count": 13,
+   "avg": 13.86,
+   "median": 12.49
   },
   {
    "date": "2026-09-01",
    "retailer": "next",
    "category": "shirts",
-   "count": 12,
-   "avg": 26.73,
-   "median": 26
+   "count": 13,
+   "avg": 23.65,
+   "median": 24.99
   },
   {
    "date": "2026-09-01",
    "retailer": "next",
    "category": "hoodies",
+   "count": 13,
+   "avg": 29.69,
+   "median": 31
+  },
+  {
+   "date": "2026-09-01",
+   "retailer": "next",
+   "category": "jumpers",
+   "count": 11,
+   "avg": 39.43,
+   "median": 37.5
+  },
+  {
+   "date": "2026-09-01",
+   "retailer": "next",
+   "category": "sweatshirts",
    "count": 15,
-   "avg": 29.92,
+   "avg": 29.38,
    "median": 28
   },
   {
    "date": "2026-09-01",
    "retailer": "next",
-   "category": "jumpers",
-   "count": 18,
-   "avg": 35.95,
-   "median": 35.495000000000005
-  },
-  {
-   "date": "2026-09-01",
-   "retailer": "next",
-   "category": "sweatshirts",
-   "count": 18,
-   "avg": 30.66,
-   "median": 30.99
-  },
-  {
-   "date": "2026-09-01",
-   "retailer": "next",
    "category": "coats",
-   "count": 17,
-   "avg": 87.01,
-   "median": 87.99
+   "count": 12,
+   "avg": 72.22,
+   "median": 70.745
   },
   {
    "date": "2026-09-01",
    "retailer": "next",
    "category": "jeans",
-   "count": 15,
-   "avg": 31.29,
-   "median": 30.49
-  },
-  {
-   "date": "2026-09-01",
-   "retailer": "next",
-   "category": "joggers",
-   "count": 16,
-   "avg": 24.35,
-   "median": 24.74
-  },
-  {
-   "date": "2026-09-01",
-   "retailer": "next",
-   "category": "socks",
-   "count": 17,
-   "avg": 4.2,
-   "median": 2.9
-  },
-  {
-   "date": "2026-09-01",
-   "retailer": "next",
-   "category": "underwear",
-   "count": 13,
-   "avg": 5.75,
-   "median": 5.75
-  },
-  {
-   "date": "2026-09-01",
-   "retailer": "mands",
-   "category": "t-shirts",
-   "count": 15,
-   "avg": 15.52,
-   "median": 17
-  },
-  {
-   "date": "2026-09-01",
-   "retailer": "mands",
-   "category": "shirts",
-   "count": 16,
-   "avg": 27.52,
-   "median": 29.994999999999997
-  },
-  {
-   "date": "2026-09-01",
-   "retailer": "mands",
-   "category": "hoodies",
-   "count": 14,
-   "avg": 35.04,
-   "median": 35
-  },
-  {
-   "date": "2026-09-01",
-   "retailer": "mands",
-   "category": "jumpers",
-   "count": 14,
-   "avg": 37.08,
-   "median": 35.745000000000005
-  },
-  {
-   "date": "2026-09-01",
-   "retailer": "mands",
-   "category": "sweatshirts",
-   "count": 12,
-   "avg": 26.82,
-   "median": 25.244999999999997
-  },
-  {
-   "date": "2026-09-01",
-   "retailer": "mands",
-   "category": "coats",
-   "count": 16,
-   "avg": 102.92,
-   "median": 106.75
-  },
-  {
-   "date": "2026-09-01",
-   "retailer": "mands",
-   "category": "jeans",
-   "count": 15,
-   "avg": 32.49,
-   "median": 31.49
-  },
-  {
-   "date": "2026-09-01",
-   "retailer": "mands",
-   "category": "joggers",
-   "count": 12,
-   "avg": 24.61,
-   "median": 25.494999999999997
-  },
-  {
-   "date": "2026-09-01",
-   "retailer": "mands",
-   "category": "socks",
-   "count": 17,
-   "avg": 6.44,
-   "median": 2.83
-  },
-  {
-   "date": "2026-09-01",
-   "retailer": "mands",
-   "category": "underwear",
-   "count": 15,
-   "avg": 4.95,
-   "median": 4.4
-  },
-  {
-   "date": "2026-09-01",
-   "retailer": "hm",
-   "category": "t-shirts",
-   "count": 17,
-   "avg": 11.1,
-   "median": 10.5
-  },
-  {
-   "date": "2026-09-01",
-   "retailer": "hm",
-   "category": "shirts",
-   "count": 18,
-   "avg": 23.29,
-   "median": 24.74
-  },
-  {
-   "date": "2026-09-01",
-   "retailer": "hm",
-   "category": "hoodies",
-   "count": 17,
-   "avg": 20.88,
-   "median": 20.5
-  },
-  {
-   "date": "2026-09-01",
-   "retailer": "hm",
-   "category": "jumpers",
-   "count": 15,
-   "avg": 27.71,
+   "count": 7,
+   "avg": 31.24,
    "median": 28.99
   },
   {
    "date": "2026-09-01",
+   "retailer": "next",
+   "category": "joggers",
+   "count": 14,
+   "avg": 25.15,
+   "median": 23.994999999999997
+  },
+  {
+   "date": "2026-09-01",
+   "retailer": "next",
+   "category": "socks",
+   "count": 14,
+   "avg": 4.24,
+   "median": 2.735
+  },
+  {
+   "date": "2026-09-01",
+   "retailer": "next",
+   "category": "underwear",
+   "count": 8,
+   "avg": 5.15,
+   "median": 5.08
+  },
+  {
+   "date": "2026-09-01",
+   "retailer": "mands",
+   "category": "t-shirts",
+   "count": 16,
+   "avg": 14.51,
+   "median": 13.995000000000001
+  },
+  {
+   "date": "2026-09-01",
+   "retailer": "mands",
+   "category": "shirts",
+   "count": 13,
+   "avg": 26.5,
+   "median": 25
+  },
+  {
+   "date": "2026-09-01",
+   "retailer": "mands",
+   "category": "hoodies",
+   "count": 15,
+   "avg": 33.04,
+   "median": 34.49
+  },
+  {
+   "date": "2026-09-01",
+   "retailer": "mands",
+   "category": "jumpers",
+   "count": 14,
+   "avg": 41.19,
+   "median": 40.745000000000005
+  },
+  {
+   "date": "2026-09-01",
+   "retailer": "mands",
+   "category": "sweatshirts",
+   "count": 11,
+   "avg": 30.54,
+   "median": 31.99
+  },
+  {
+   "date": "2026-09-01",
+   "retailer": "mands",
+   "category": "coats",
+   "count": 15,
+   "avg": 95.43,
+   "median": 97
+  },
+  {
+   "date": "2026-09-01",
+   "retailer": "mands",
+   "category": "jeans",
+   "count": 12,
+   "avg": 30.12,
+   "median": 26.99
+  },
+  {
+   "date": "2026-09-01",
+   "retailer": "mands",
+   "category": "joggers",
+   "count": 16,
+   "avg": 24.05,
+   "median": 23.494999999999997
+  },
+  {
+   "date": "2026-09-01",
+   "retailer": "mands",
+   "category": "socks",
+   "count": 12,
+   "avg": 2.86,
+   "median": 3.035
+  },
+  {
+   "date": "2026-09-01",
+   "retailer": "mands",
+   "category": "underwear",
+   "count": 10,
+   "avg": 4.65,
+   "median": 4.79
+  },
+  {
+   "date": "2026-09-01",
+   "retailer": "hm",
+   "category": "t-shirts",
+   "count": 11,
+   "avg": 10.33,
+   "median": 10.49
+  },
+  {
+   "date": "2026-09-01",
+   "retailer": "hm",
+   "category": "shirts",
+   "count": 14,
+   "avg": 21.49,
+   "median": 20.25
+  },
+  {
+   "date": "2026-09-01",
+   "retailer": "hm",
+   "category": "hoodies",
+   "count": 13,
+   "avg": 21.11,
+   "median": 20.99
+  },
+  {
+   "date": "2026-09-01",
+   "retailer": "hm",
+   "category": "jumpers",
+   "count": 18,
+   "avg": 28.59,
+   "median": 30.5
+  },
+  {
+   "date": "2026-09-01",
    "retailer": "hm",
    "category": "sweatshirts",
-   "count": 15,
-   "avg": 19.36,
-   "median": 19.49
+   "count": 18,
+   "avg": 17.9,
+   "median": 18.25
   },
   {
    "date": "2026-09-01",
    "retailer": "hm",
    "category": "coats",
-   "count": 13,
-   "avg": 59.3,
+   "count": 16,
+   "avg": 68.02,
    "median": 53
   },
   {
    "date": "2026-09-01",
    "retailer": "hm",
    "category": "jeans",
-   "count": 16,
-   "avg": 25.01,
-   "median": 25.994999999999997
+   "count": 13,
+   "avg": 24.4,
+   "median": 24.49
   },
   {
    "date": "2026-09-01",
    "retailer": "hm",
    "category": "joggers",
-   "count": 16,
-   "avg": 20.62,
-   "median": 21.994999999999997
+   "count": 14,
+   "avg": 21.02,
+   "median": 20.25
   },
   {
    "date": "2026-09-01",
    "retailer": "hm",
    "category": "socks",
-   "count": 17,
-   "avg": 3.9,
-   "median": 2.33
+   "count": 15,
+   "avg": 3.02,
+   "median": 1.8
   },
   {
    "date": "2026-09-01",
    "retailer": "hm",
    "category": "underwear",
-   "count": 16,
-   "avg": 3.63,
+   "count": 17,
+   "avg": 3.49,
    "median": 3.5
   },
   {
    "date": "2026-09-01",
    "retailer": "primark",
    "category": "t-shirts",
-   "count": 13,
-   "avg": 3.73,
-   "median": 3.49
+   "count": 10,
+   "avg": 3.77,
+   "median": 3.495
   },
   {
    "date": "2026-09-01",
    "retailer": "primark",
    "category": "shirts",
-   "count": 13,
-   "avg": 10.75,
-   "median": 10.99
+   "count": 12,
+   "avg": 12.59,
+   "median": 11.995000000000001
   },
   {
    "date": "2026-09-01",
    "retailer": "primark",
    "category": "hoodies",
-   "count": 17,
+   "count": 13,
    "avg": 13.48,
-   "median": 12.5
+   "median": 12.99
   },
   {
    "date": "2026-09-01",
    "retailer": "primark",
    "category": "jumpers",
-   "count": 14,
-   "avg": 13.68,
-   "median": 12.5
+   "count": 10,
+   "avg": 14.6,
+   "median": 13.995000000000001
   },
   {
    "date": "2026-09-01",
    "retailer": "primark",
    "category": "sweatshirts",
-   "count": 13,
-   "avg": 11.17,
-   "median": 11.49
+   "count": 14,
+   "avg": 10.52,
+   "median": 10.245000000000001
   },
   {
    "date": "2026-09-01",
    "retailer": "primark",
    "category": "coats",
    "count": 14,
-   "avg": 37.26,
-   "median": 35.495000000000005
+   "avg": 36.05,
+   "median": 38.25
   },
   {
    "date": "2026-09-01",
    "retailer": "primark",
    "category": "jeans",
-   "count": 13,
-   "avg": 13.72,
-   "median": 14.49
+   "count": 14,
+   "avg": 13.1,
+   "median": 12.25
   },
   {
    "date": "2026-09-01",
    "retailer": "primark",
    "category": "joggers",
-   "count": 15,
-   "avg": 9.91,
-   "median": 9.99
+   "count": 12,
+   "avg": 9.9,
+   "median": 9.995000000000001
   },
   {
    "date": "2026-09-01",
    "retailer": "primark",
    "category": "socks",
-   "count": 16,
-   "avg": 1.51,
-   "median": 1.135
+   "count": 13,
+   "avg": 1.7,
+   "median": 1.17
   },
   {
    "date": "2026-09-01",
    "retailer": "primark",
    "category": "underwear",
-   "count": 13,
-   "avg": 2.3,
-   "median": 2.13
+   "count": 14,
+   "avg": 2.01,
+   "median": 1.89
   },
   {
    "date": "2026-09-08",
    "retailer": "next",
    "category": "t-shirts",
-   "count": 19,
-   "avg": 12.08,
-   "median": 10.5
+   "count": 13,
+   "avg": 13.36,
+   "median": 12.49
   },
   {
    "date": "2026-09-08",
    "retailer": "next",
    "category": "shirts",
-   "count": 12,
-   "avg": 26.73,
-   "median": 26
+   "count": 13,
+   "avg": 24.14,
+   "median": 24.99
   },
   {
    "date": "2026-09-08",
    "retailer": "next",
    "category": "hoodies",
+   "count": 13,
+   "avg": 30.95,
+   "median": 31
+  },
+  {
+   "date": "2026-09-08",
+   "retailer": "next",
+   "category": "jumpers",
+   "count": 11,
+   "avg": 39.9,
+   "median": 37.5
+  },
+  {
+   "date": "2026-09-08",
+   "retailer": "next",
+   "category": "sweatshirts",
    "count": 15,
-   "avg": 30.08,
+   "avg": 29.72,
    "median": 28
   },
   {
    "date": "2026-09-08",
    "retailer": "next",
-   "category": "jumpers",
-   "count": 18,
-   "avg": 36.6,
-   "median": 35.495000000000005
-  },
-  {
-   "date": "2026-09-08",
-   "retailer": "next",
-   "category": "sweatshirts",
-   "count": 18,
-   "avg": 32,
-   "median": 30.99
-  },
-  {
-   "date": "2026-09-08",
-   "retailer": "next",
    "category": "coats",
-   "count": 17,
-   "avg": 85.47,
-   "median": 87.99
+   "count": 12,
+   "avg": 76.62,
+   "median": 70.745
   },
   {
    "date": "2026-09-08",
    "retailer": "next",
    "category": "jeans",
-   "count": 15,
-   "avg": 30.99,
-   "median": 30.49
+   "count": 7,
+   "avg": 32.19,
+   "median": 28.99
   },
   {
    "date": "2026-09-08",
    "retailer": "next",
    "category": "joggers",
-   "count": 16,
-   "avg": 25.1,
-   "median": 24.74
+   "count": 14,
+   "avg": 25.51,
+   "median": 23.994999999999997
   },
   {
    "date": "2026-09-08",
    "retailer": "next",
    "category": "socks",
-   "count": 17,
-   "avg": 4.18,
-   "median": 2.9
+   "count": 14,
+   "avg": 4.41,
+   "median": 2.735
   },
   {
    "date": "2026-09-08",
    "retailer": "next",
    "category": "underwear",
-   "count": 13,
-   "avg": 5.64,
-   "median": 5.75
+   "count": 8,
+   "avg": 5.15,
+   "median": 5.08
   },
   {
    "date": "2026-09-08",
    "retailer": "mands",
    "category": "t-shirts",
-   "count": 15,
-   "avg": 15.78,
-   "median": 17
+   "count": 16,
+   "avg": 14.76,
+   "median": 13.995000000000001
   },
   {
    "date": "2026-09-08",
    "retailer": "mands",
    "category": "shirts",
-   "count": 16,
-   "avg": 27.42,
-   "median": 29.994999999999997
+   "count": 13,
+   "avg": 26.98,
+   "median": 25
   },
   {
    "date": "2026-09-08",
    "retailer": "mands",
    "category": "hoodies",
-   "count": 14,
-   "avg": 34.09,
-   "median": 35
+   "count": 15,
+   "avg": 32.63,
+   "median": 34.49
   },
   {
    "date": "2026-09-08",
    "retailer": "mands",
    "category": "jumpers",
    "count": 14,
-   "avg": 37.82,
-   "median": 35.745000000000005
+   "avg": 40.74,
+   "median": 40.745000000000005
   },
   {
    "date": "2026-09-08",
    "retailer": "mands",
    "category": "sweatshirts",
-   "count": 12,
-   "avg": 27.07,
-   "median": 25.244999999999997
+   "count": 11,
+   "avg": 30.6,
+   "median": 31.99
   },
   {
    "date": "2026-09-08",
    "retailer": "mands",
    "category": "coats",
-   "count": 16,
-   "avg": 108.63,
-   "median": 106.75
+   "count": 15,
+   "avg": 94.91,
+   "median": 97
   },
   {
    "date": "2026-09-08",
    "retailer": "mands",
    "category": "jeans",
-   "count": 15,
-   "avg": 32.53,
-   "median": 31.49
+   "count": 12,
+   "avg": 31.12,
+   "median": 26.99
   },
   {
    "date": "2026-09-08",
    "retailer": "mands",
    "category": "joggers",
-   "count": 12,
-   "avg": 25.33,
-   "median": 25.494999999999997
+   "count": 16,
+   "avg": 24.71,
+   "median": 23.494999999999997
   },
   {
    "date": "2026-09-08",
    "retailer": "mands",
    "category": "socks",
-   "count": 17,
-   "avg": 6.76,
-   "median": 2.83
+   "count": 12,
+   "avg": 2.87,
+   "median": 3.035
   },
   {
    "date": "2026-09-08",
    "retailer": "mands",
    "category": "underwear",
+   "count": 10,
+   "avg": 4.76,
+   "median": 4.79
+  },
+  {
+   "date": "2026-09-08",
+   "retailer": "hm",
+   "category": "t-shirts",
+   "count": 11,
+   "avg": 10.63,
+   "median": 10.49
+  },
+  {
+   "date": "2026-09-08",
+   "retailer": "hm",
+   "category": "shirts",
+   "count": 14,
+   "avg": 20.93,
+   "median": 20.25
+  },
+  {
+   "date": "2026-09-08",
+   "retailer": "hm",
+   "category": "hoodies",
+   "count": 13,
+   "avg": 22.03,
+   "median": 20.99
+  },
+  {
+   "date": "2026-09-08",
+   "retailer": "hm",
+   "category": "jumpers",
+   "count": 18,
+   "avg": 29.23,
+   "median": 30.5
+  },
+  {
+   "date": "2026-09-08",
+   "retailer": "hm",
+   "category": "sweatshirts",
+   "count": 18,
+   "avg": 18.2,
+   "median": 18.25
+  },
+  {
+   "date": "2026-09-08",
+   "retailer": "hm",
+   "category": "coats",
+   "count": 16,
+   "avg": 66.08,
+   "median": 53
+  },
+  {
+   "date": "2026-09-08",
+   "retailer": "hm",
+   "category": "jeans",
+   "count": 13,
+   "avg": 23.98,
+   "median": 24.49
+  },
+  {
+   "date": "2026-09-08",
+   "retailer": "hm",
+   "category": "joggers",
+   "count": 14,
+   "avg": 21.28,
+   "median": 20.25
+  },
+  {
+   "date": "2026-09-08",
+   "retailer": "hm",
+   "category": "socks",
    "count": 15,
+   "avg": 2.94,
+   "median": 1.8
+  },
+  {
+   "date": "2026-09-08",
+   "retailer": "hm",
+   "category": "underwear",
+   "count": 17,
+   "avg": 3.59,
+   "median": 3.5
+  },
+  {
+   "date": "2026-09-08",
+   "retailer": "primark",
+   "category": "t-shirts",
+   "count": 10,
+   "avg": 3.91,
+   "median": 3.495
+  },
+  {
+   "date": "2026-09-08",
+   "retailer": "primark",
+   "category": "shirts",
+   "count": 12,
+   "avg": 12.69,
+   "median": 11.995000000000001
+  },
+  {
+   "date": "2026-09-08",
+   "retailer": "primark",
+   "category": "hoodies",
+   "count": 13,
+   "avg": 13.36,
+   "median": 12.99
+  },
+  {
+   "date": "2026-09-08",
+   "retailer": "primark",
+   "category": "jumpers",
+   "count": 10,
+   "avg": 13.88,
+   "median": 13.995000000000001
+  },
+  {
+   "date": "2026-09-08",
+   "retailer": "primark",
+   "category": "sweatshirts",
+   "count": 14,
+   "avg": 10.89,
+   "median": 10.245000000000001
+  },
+  {
+   "date": "2026-09-08",
+   "retailer": "primark",
+   "category": "coats",
+   "count": 14,
+   "avg": 36.68,
+   "median": 38.25
+  },
+  {
+   "date": "2026-09-08",
+   "retailer": "primark",
+   "category": "jeans",
+   "count": 14,
+   "avg": 13.02,
+   "median": 12.25
+  },
+  {
+   "date": "2026-09-08",
+   "retailer": "primark",
+   "category": "joggers",
+   "count": 12,
+   "avg": 10.28,
+   "median": 9.995000000000001
+  },
+  {
+   "date": "2026-09-08",
+   "retailer": "primark",
+   "category": "socks",
+   "count": 13,
+   "avg": 1.64,
+   "median": 1.17
+  },
+  {
+   "date": "2026-09-08",
+   "retailer": "primark",
+   "category": "underwear",
+   "count": 14,
+   "avg": 1.98,
+   "median": 1.89
+  },
+  {
+   "date": "2026-09-15",
+   "retailer": "next",
+   "category": "t-shirts",
+   "count": 13,
+   "avg": 13.38,
+   "median": 12.49
+  },
+  {
+   "date": "2026-09-15",
+   "retailer": "next",
+   "category": "shirts",
+   "count": 13,
+   "avg": 24.27,
+   "median": 24.99
+  },
+  {
+   "date": "2026-09-15",
+   "retailer": "next",
+   "category": "hoodies",
+   "count": 13,
+   "avg": 29.78,
+   "median": 31
+  },
+  {
+   "date": "2026-09-15",
+   "retailer": "next",
+   "category": "jumpers",
+   "count": 11,
+   "avg": 38.53,
+   "median": 37.5
+  },
+  {
+   "date": "2026-09-15",
+   "retailer": "next",
+   "category": "sweatshirts",
+   "count": 15,
+   "avg": 29.88,
+   "median": 28
+  },
+  {
+   "date": "2026-09-15",
+   "retailer": "next",
+   "category": "coats",
+   "count": 12,
+   "avg": 74.07,
+   "median": 70.745
+  },
+  {
+   "date": "2026-09-15",
+   "retailer": "next",
+   "category": "jeans",
+   "count": 7,
+   "avg": 32.32,
+   "median": 28.99
+  },
+  {
+   "date": "2026-09-15",
+   "retailer": "next",
+   "category": "joggers",
+   "count": 14,
+   "avg": 25.46,
+   "median": 23.994999999999997
+  },
+  {
+   "date": "2026-09-15",
+   "retailer": "next",
+   "category": "socks",
+   "count": 14,
+   "avg": 4.22,
+   "median": 2.735
+  },
+  {
+   "date": "2026-09-15",
+   "retailer": "next",
+   "category": "underwear",
+   "count": 8,
+   "avg": 5.26,
+   "median": 5.08
+  },
+  {
+   "date": "2026-09-15",
+   "retailer": "mands",
+   "category": "t-shirts",
+   "count": 16,
+   "avg": 14.14,
+   "median": 13.995000000000001
+  },
+  {
+   "date": "2026-09-15",
+   "retailer": "mands",
+   "category": "shirts",
+   "count": 13,
+   "avg": 26.37,
+   "median": 25
+  },
+  {
+   "date": "2026-09-15",
+   "retailer": "mands",
+   "category": "hoodies",
+   "count": 15,
+   "avg": 33.3,
+   "median": 34.49
+  },
+  {
+   "date": "2026-09-15",
+   "retailer": "mands",
+   "category": "jumpers",
+   "count": 14,
+   "avg": 40.72,
+   "median": 40.745000000000005
+  },
+  {
+   "date": "2026-09-15",
+   "retailer": "mands",
+   "category": "sweatshirts",
+   "count": 11,
+   "avg": 30.55,
+   "median": 31.99
+  },
+  {
+   "date": "2026-09-15",
+   "retailer": "mands",
+   "category": "coats",
+   "count": 15,
+   "avg": 97.77,
+   "median": 97
+  },
+  {
+   "date": "2026-09-15",
+   "retailer": "mands",
+   "category": "jeans",
+   "count": 12,
+   "avg": 30.05,
+   "median": 26.99
+  },
+  {
+   "date": "2026-09-15",
+   "retailer": "mands",
+   "category": "joggers",
+   "count": 16,
+   "avg": 23.43,
+   "median": 23.494999999999997
+  },
+  {
+   "date": "2026-09-15",
+   "retailer": "mands",
+   "category": "socks",
+   "count": 12,
+   "avg": 2.98,
+   "median": 3.035
+  },
+  {
+   "date": "2026-09-15",
+   "retailer": "mands",
+   "category": "underwear",
+   "count": 10,
    "avg": 4.74,
-   "median": 4.4
+   "median": 4.79
   },
   {
-   "date": "2026-09-08",
+   "date": "2026-09-15",
    "retailer": "hm",
    "category": "t-shirts",
-   "count": 17,
-   "avg": 11.51,
-   "median": 10.5
+   "count": 11,
+   "avg": 10.51,
+   "median": 10.49
   },
   {
-   "date": "2026-09-08",
+   "date": "2026-09-15",
    "retailer": "hm",
    "category": "shirts",
-   "count": 18,
-   "avg": 24.25,
-   "median": 24.74
-  },
-  {
-   "date": "2026-09-08",
-   "retailer": "hm",
-   "category": "hoodies",
-   "count": 17,
-   "avg": 22.08,
-   "median": 20.5
-  },
-  {
-   "date": "2026-09-08",
-   "retailer": "hm",
-   "category": "jumpers",
-   "count": 15,
-   "avg": 27.96,
-   "median": 28.99
-  },
-  {
-   "date": "2026-09-08",
-   "retailer": "hm",
-   "category": "sweatshirts",
-   "count": 15,
-   "avg": 18.83,
-   "median": 19.49
-  },
-  {
-   "date": "2026-09-08",
-   "retailer": "hm",
-   "category": "coats",
-   "count": 13,
-   "avg": 59.12,
-   "median": 53
-  },
-  {
-   "date": "2026-09-08",
-   "retailer": "hm",
-   "category": "jeans",
-   "count": 16,
-   "avg": 24.53,
-   "median": 25.994999999999997
-  },
-  {
-   "date": "2026-09-08",
-   "retailer": "hm",
-   "category": "joggers",
-   "count": 16,
-   "avg": 21.25,
-   "median": 21.994999999999997
-  },
-  {
-   "date": "2026-09-08",
-   "retailer": "hm",
-   "category": "socks",
-   "count": 17,
-   "avg": 4.04,
-   "median": 2.33
-  },
-  {
-   "date": "2026-09-08",
-   "retailer": "hm",
-   "category": "underwear",
-   "count": 16,
-   "avg": 3.69,
-   "median": 3.5
-  },
-  {
-   "date": "2026-09-08",
-   "retailer": "primark",
-   "category": "t-shirts",
-   "count": 13,
-   "avg": 3.75,
-   "median": 3.49
-  },
-  {
-   "date": "2026-09-08",
-   "retailer": "primark",
-   "category": "shirts",
-   "count": 13,
-   "avg": 11.05,
-   "median": 10.99
-  },
-  {
-   "date": "2026-09-08",
-   "retailer": "primark",
-   "category": "hoodies",
-   "count": 17,
-   "avg": 13.48,
-   "median": 12.5
-  },
-  {
-   "date": "2026-09-08",
-   "retailer": "primark",
-   "category": "jumpers",
    "count": 14,
-   "avg": 14.06,
-   "median": 12.5
-  },
-  {
-   "date": "2026-09-08",
-   "retailer": "primark",
-   "category": "sweatshirts",
-   "count": 13,
-   "avg": 10.88,
-   "median": 11.49
-  },
-  {
-   "date": "2026-09-08",
-   "retailer": "primark",
-   "category": "coats",
-   "count": 14,
-   "avg": 38.21,
-   "median": 35.495000000000005
-  },
-  {
-   "date": "2026-09-08",
-   "retailer": "primark",
-   "category": "jeans",
-   "count": 13,
-   "avg": 14.04,
-   "median": 14.49
-  },
-  {
-   "date": "2026-09-08",
-   "retailer": "primark",
-   "category": "joggers",
-   "count": 15,
-   "avg": 9.79,
-   "median": 9.99
-  },
-  {
-   "date": "2026-09-08",
-   "retailer": "primark",
-   "category": "socks",
-   "count": 16,
-   "avg": 1.51,
-   "median": 1.135
-  },
-  {
-   "date": "2026-09-08",
-   "retailer": "primark",
-   "category": "underwear",
-   "count": 13,
-   "avg": 2.27,
-   "median": 2.13
+   "avg": 21.84,
+   "median": 20.25
   },
   {
    "date": "2026-09-15",
-   "retailer": "next",
-   "category": "t-shirts",
-   "count": 19,
-   "avg": 12.02,
-   "median": 10.5
-  },
-  {
-   "date": "2026-09-15",
-   "retailer": "next",
-   "category": "shirts",
-   "count": 12,
-   "avg": 25.95,
-   "median": 26
-  },
-  {
-   "date": "2026-09-15",
-   "retailer": "next",
+   "retailer": "hm",
    "category": "hoodies",
-   "count": 15,
-   "avg": 30.06,
-   "median": 28
+   "count": 13,
+   "avg": 21.83,
+   "median": 20.99
   },
   {
    "date": "2026-09-15",
-   "retailer": "next",
+   "retailer": "hm",
    "category": "jumpers",
    "count": 18,
-   "avg": 36.39,
-   "median": 35.495000000000005
+   "avg": 28.83,
+   "median": 30.5
   },
   {
    "date": "2026-09-15",
-   "retailer": "next",
+   "retailer": "hm",
    "category": "sweatshirts",
    "count": 18,
-   "avg": 31.31,
-   "median": 30.99
-  },
-  {
-   "date": "2026-09-15",
-   "retailer": "next",
-   "category": "coats",
-   "count": 17,
-   "avg": 86.35,
-   "median": 87.99
-  },
-  {
-   "date": "2026-09-15",
-   "retailer": "next",
-   "category": "jeans",
-   "count": 15,
-   "avg": 30.68,
-   "median": 30.49
-  },
-  {
-   "date": "2026-09-15",
-   "retailer": "next",
-   "category": "joggers",
-   "count": 16,
-   "avg": 25.02,
-   "median": 24.74
-  },
-  {
-   "date": "2026-09-15",
-   "retailer": "next",
-   "category": "socks",
-   "count": 17,
-   "avg": 4.1,
-   "median": 2.9
-  },
-  {
-   "date": "2026-09-15",
-   "retailer": "next",
-   "category": "underwear",
-   "count": 13,
-   "avg": 5.57,
-   "median": 5.75
-  },
-  {
-   "date": "2026-09-15",
-   "retailer": "mands",
-   "category": "t-shirts",
-   "count": 15,
-   "avg": 15.83,
-   "median": 17
-  },
-  {
-   "date": "2026-09-15",
-   "retailer": "mands",
-   "category": "shirts",
-   "count": 16,
-   "avg": 29.02,
-   "median": 29.994999999999997
-  },
-  {
-   "date": "2026-09-15",
-   "retailer": "mands",
-   "category": "hoodies",
-   "count": 14,
-   "avg": 35.45,
-   "median": 35
-  },
-  {
-   "date": "2026-09-15",
-   "retailer": "mands",
-   "category": "jumpers",
-   "count": 14,
-   "avg": 37.59,
-   "median": 35.745000000000005
-  },
-  {
-   "date": "2026-09-15",
-   "retailer": "mands",
-   "category": "sweatshirts",
-   "count": 12,
-   "avg": 27.69,
-   "median": 25.244999999999997
-  },
-  {
-   "date": "2026-09-15",
-   "retailer": "mands",
-   "category": "coats",
-   "count": 16,
-   "avg": 108.16,
-   "median": 106.75
-  },
-  {
-   "date": "2026-09-15",
-   "retailer": "mands",
-   "category": "jeans",
-   "count": 15,
-   "avg": 33.85,
-   "median": 31.49
-  },
-  {
-   "date": "2026-09-15",
-   "retailer": "mands",
-   "category": "joggers",
-   "count": 12,
-   "avg": 24.99,
-   "median": 25.494999999999997
-  },
-  {
-   "date": "2026-09-15",
-   "retailer": "mands",
-   "category": "socks",
-   "count": 17,
-   "avg": 6.6,
-   "median": 2.83
-  },
-  {
-   "date": "2026-09-15",
-   "retailer": "mands",
-   "category": "underwear",
-   "count": 15,
-   "avg": 4.97,
-   "median": 4.4
-  },
-  {
-   "date": "2026-09-15",
-   "retailer": "hm",
-   "category": "t-shirts",
-   "count": 17,
-   "avg": 11.02,
-   "median": 10.5
-  },
-  {
-   "date": "2026-09-15",
-   "retailer": "hm",
-   "category": "shirts",
-   "count": 18,
-   "avg": 23.34,
-   "median": 24.74
-  },
-  {
-   "date": "2026-09-15",
-   "retailer": "hm",
-   "category": "hoodies",
-   "count": 17,
-   "avg": 21.35,
-   "median": 20.5
-  },
-  {
-   "date": "2026-09-15",
-   "retailer": "hm",
-   "category": "jumpers",
-   "count": 15,
-   "avg": 28.65,
-   "median": 28.99
-  },
-  {
-   "date": "2026-09-15",
-   "retailer": "hm",
-   "category": "sweatshirts",
-   "count": 15,
-   "avg": 18.76,
-   "median": 19.49
+   "avg": 18.08,
+   "median": 18.25
   },
   {
    "date": "2026-09-15",
    "retailer": "hm",
    "category": "coats",
-   "count": 13,
-   "avg": 61.23,
+   "count": 16,
+   "avg": 66.66,
    "median": 53
   },
   {
    "date": "2026-09-15",
    "retailer": "hm",
    "category": "jeans",
-   "count": 16,
-   "avg": 24.84,
-   "median": 25.994999999999997
+   "count": 13,
+   "avg": 24.73,
+   "median": 24.49
   },
   {
    "date": "2026-09-15",
    "retailer": "hm",
    "category": "joggers",
-   "count": 16,
-   "avg": 20.48,
-   "median": 21.994999999999997
+   "count": 14,
+   "avg": 20.34,
+   "median": 20.25
   },
   {
    "date": "2026-09-15",
    "retailer": "hm",
    "category": "socks",
-   "count": 17,
-   "avg": 4.08,
-   "median": 2.33
+   "count": 15,
+   "avg": 3.06,
+   "median": 1.8
   },
   {
    "date": "2026-09-15",
    "retailer": "hm",
    "category": "underwear",
-   "count": 16,
-   "avg": 3.7,
+   "count": 17,
+   "avg": 3.56,
    "median": 3.5
   },
   {
    "date": "2026-09-15",
    "retailer": "primark",
    "category": "t-shirts",
-   "count": 13,
-   "avg": 3.86,
-   "median": 3.49
+   "count": 10,
+   "avg": 3.9,
+   "median": 3.495
   },
   {
    "date": "2026-09-15",
    "retailer": "primark",
    "category": "shirts",
-   "count": 13,
-   "avg": 10.71,
-   "median": 10.99
+   "count": 12,
+   "avg": 13.1,
+   "median": 11.995000000000001
   },
   {
    "date": "2026-09-15",
    "retailer": "primark",
    "category": "hoodies",
-   "count": 17,
-   "avg": 13.64,
-   "median": 12.5
+   "count": 13,
+   "avg": 13.37,
+   "median": 12.99
   },
   {
    "date": "2026-09-15",
    "retailer": "primark",
    "category": "jumpers",
-   "count": 14,
-   "avg": 13.42,
-   "median": 12.5
+   "count": 10,
+   "avg": 14.28,
+   "median": 13.995000000000001
   },
   {
    "date": "2026-09-15",
    "retailer": "primark",
    "category": "sweatshirts",
-   "count": 13,
-   "avg": 10.94,
-   "median": 11.49
+   "count": 14,
+   "avg": 10.46,
+   "median": 10.245000000000001
   },
   {
    "date": "2026-09-15",
    "retailer": "primark",
    "category": "coats",
    "count": 14,
-   "avg": 36.73,
-   "median": 35.495000000000005
+   "avg": 38.11,
+   "median": 38.25
   },
   {
    "date": "2026-09-15",
    "retailer": "primark",
    "category": "jeans",
-   "count": 13,
-   "avg": 13.93,
-   "median": 14.49
+   "count": 14,
+   "avg": 13.53,
+   "median": 12.25
   },
   {
    "date": "2026-09-15",
    "retailer": "primark",
    "category": "joggers",
-   "count": 15,
-   "avg": 10.08,
-   "median": 9.99
+   "count": 12,
+   "avg": 10.29,
+   "median": 9.995000000000001
   },
   {
    "date": "2026-09-15",
    "retailer": "primark",
    "category": "socks",
-   "count": 16,
-   "avg": 1.57,
-   "median": 1.135
+   "count": 13,
+   "avg": 1.71,
+   "median": 1.17
   },
   {
    "date": "2026-09-15",
    "retailer": "primark",
    "category": "underwear",
-   "count": 13,
-   "avg": 2.34,
-   "median": 2.13
+   "count": 14,
+   "avg": 1.97,
+   "median": 1.89
   },
   {
    "date": "2026-09-22",
    "retailer": "next",
    "category": "t-shirts",
-   "count": 19,
-   "avg": 12.11,
-   "median": 10.5
+   "count": 13,
+   "avg": 13.79,
+   "median": 12.49
   },
   {
    "date": "2026-09-22",
    "retailer": "next",
    "category": "shirts",
-   "count": 12,
-   "avg": 27.32,
-   "median": 26
+   "count": 13,
+   "avg": 24.65,
+   "median": 24.99
   },
   {
    "date": "2026-09-22",
    "retailer": "next",
    "category": "hoodies",
+   "count": 13,
+   "avg": 31.07,
+   "median": 31
+  },
+  {
+   "date": "2026-09-22",
+   "retailer": "next",
+   "category": "jumpers",
+   "count": 11,
+   "avg": 38.35,
+   "median": 37.5
+  },
+  {
+   "date": "2026-09-22",
+   "retailer": "next",
+   "category": "sweatshirts",
    "count": 15,
-   "avg": 30.82,
+   "avg": 29.13,
    "median": 28
   },
   {
    "date": "2026-09-22",
    "retailer": "next",
-   "category": "jumpers",
-   "count": 18,
-   "avg": 35.45,
-   "median": 35.495000000000005
-  },
-  {
-   "date": "2026-09-22",
-   "retailer": "next",
-   "category": "sweatshirts",
-   "count": 18,
-   "avg": 31.8,
-   "median": 30.99
-  },
-  {
-   "date": "2026-09-22",
-   "retailer": "next",
    "category": "coats",
-   "count": 17,
-   "avg": 85.32,
-   "median": 87.99
+   "count": 12,
+   "avg": 75.24,
+   "median": 70.745
   },
   {
    "date": "2026-09-22",
    "retailer": "next",
    "category": "jeans",
-   "count": 15,
-   "avg": 30.45,
-   "median": 30.49
-  },
-  {
-   "date": "2026-09-22",
-   "retailer": "next",
-   "category": "joggers",
-   "count": 16,
-   "avg": 25.77,
-   "median": 24.74
-  },
-  {
-   "date": "2026-09-22",
-   "retailer": "next",
-   "category": "socks",
-   "count": 17,
-   "avg": 4.09,
-   "median": 2.9
-  },
-  {
-   "date": "2026-09-22",
-   "retailer": "next",
-   "category": "underwear",
-   "count": 13,
-   "avg": 5.66,
-   "median": 5.75
-  },
-  {
-   "date": "2026-09-22",
-   "retailer": "mands",
-   "category": "t-shirts",
-   "count": 15,
-   "avg": 15.81,
-   "median": 17
-  },
-  {
-   "date": "2026-09-22",
-   "retailer": "mands",
-   "category": "shirts",
-   "count": 16,
-   "avg": 27.78,
-   "median": 29.994999999999997
-  },
-  {
-   "date": "2026-09-22",
-   "retailer": "mands",
-   "category": "hoodies",
-   "count": 14,
-   "avg": 34.48,
-   "median": 35
-  },
-  {
-   "date": "2026-09-22",
-   "retailer": "mands",
-   "category": "jumpers",
-   "count": 14,
-   "avg": 37.56,
-   "median": 35.745000000000005
-  },
-  {
-   "date": "2026-09-22",
-   "retailer": "mands",
-   "category": "sweatshirts",
-   "count": 12,
-   "avg": 27.01,
-   "median": 25.244999999999997
-  },
-  {
-   "date": "2026-09-22",
-   "retailer": "mands",
-   "category": "coats",
-   "count": 16,
-   "avg": 107.69,
-   "median": 106.75
-  },
-  {
-   "date": "2026-09-22",
-   "retailer": "mands",
-   "category": "jeans",
-   "count": 15,
-   "avg": 34.06,
-   "median": 31.49
-  },
-  {
-   "date": "2026-09-22",
-   "retailer": "mands",
-   "category": "joggers",
-   "count": 12,
-   "avg": 25.07,
-   "median": 25.494999999999997
-  },
-  {
-   "date": "2026-09-22",
-   "retailer": "mands",
-   "category": "socks",
-   "count": 17,
-   "avg": 6.72,
-   "median": 2.83
-  },
-  {
-   "date": "2026-09-22",
-   "retailer": "mands",
-   "category": "underwear",
-   "count": 15,
-   "avg": 4.87,
-   "median": 4.4
-  },
-  {
-   "date": "2026-09-22",
-   "retailer": "hm",
-   "category": "t-shirts",
-   "count": 17,
-   "avg": 11.04,
-   "median": 10.5
-  },
-  {
-   "date": "2026-09-22",
-   "retailer": "hm",
-   "category": "shirts",
-   "count": 18,
-   "avg": 23.55,
-   "median": 24.74
-  },
-  {
-   "date": "2026-09-22",
-   "retailer": "hm",
-   "category": "hoodies",
-   "count": 17,
-   "avg": 21.79,
-   "median": 20.5
-  },
-  {
-   "date": "2026-09-22",
-   "retailer": "hm",
-   "category": "jumpers",
-   "count": 15,
-   "avg": 28.24,
+   "count": 7,
+   "avg": 32.37,
    "median": 28.99
   },
   {
    "date": "2026-09-22",
+   "retailer": "next",
+   "category": "joggers",
+   "count": 14,
+   "avg": 25.6,
+   "median": 23.994999999999997
+  },
+  {
+   "date": "2026-09-22",
+   "retailer": "next",
+   "category": "socks",
+   "count": 14,
+   "avg": 4.44,
+   "median": 2.735
+  },
+  {
+   "date": "2026-09-22",
+   "retailer": "next",
+   "category": "underwear",
+   "count": 8,
+   "avg": 5.44,
+   "median": 5.08
+  },
+  {
+   "date": "2026-09-22",
+   "retailer": "mands",
+   "category": "t-shirts",
+   "count": 16,
+   "avg": 14.72,
+   "median": 13.995000000000001
+  },
+  {
+   "date": "2026-09-22",
+   "retailer": "mands",
+   "category": "shirts",
+   "count": 13,
+   "avg": 27.59,
+   "median": 25
+  },
+  {
+   "date": "2026-09-22",
+   "retailer": "mands",
+   "category": "hoodies",
+   "count": 15,
+   "avg": 33.21,
+   "median": 34.49
+  },
+  {
+   "date": "2026-09-22",
+   "retailer": "mands",
+   "category": "jumpers",
+   "count": 14,
+   "avg": 42.82,
+   "median": 40.745000000000005
+  },
+  {
+   "date": "2026-09-22",
+   "retailer": "mands",
+   "category": "sweatshirts",
+   "count": 11,
+   "avg": 31.01,
+   "median": 31.99
+  },
+  {
+   "date": "2026-09-22",
+   "retailer": "mands",
+   "category": "coats",
+   "count": 15,
+   "avg": 98.45,
+   "median": 97
+  },
+  {
+   "date": "2026-09-22",
+   "retailer": "mands",
+   "category": "jeans",
+   "count": 12,
+   "avg": 31.58,
+   "median": 26.99
+  },
+  {
+   "date": "2026-09-22",
+   "retailer": "mands",
+   "category": "joggers",
+   "count": 16,
+   "avg": 23.95,
+   "median": 23.494999999999997
+  },
+  {
+   "date": "2026-09-22",
+   "retailer": "mands",
+   "category": "socks",
+   "count": 12,
+   "avg": 2.97,
+   "median": 3.035
+  },
+  {
+   "date": "2026-09-22",
+   "retailer": "mands",
+   "category": "underwear",
+   "count": 10,
+   "avg": 4.85,
+   "median": 4.79
+  },
+  {
+   "date": "2026-09-22",
+   "retailer": "hm",
+   "category": "t-shirts",
+   "count": 11,
+   "avg": 10.57,
+   "median": 10.49
+  },
+  {
+   "date": "2026-09-22",
+   "retailer": "hm",
+   "category": "shirts",
+   "count": 14,
+   "avg": 21.78,
+   "median": 20.25
+  },
+  {
+   "date": "2026-09-22",
+   "retailer": "hm",
+   "category": "hoodies",
+   "count": 13,
+   "avg": 21.17,
+   "median": 20.99
+  },
+  {
+   "date": "2026-09-22",
+   "retailer": "hm",
+   "category": "jumpers",
+   "count": 18,
+   "avg": 29.13,
+   "median": 30.5
+  },
+  {
+   "date": "2026-09-22",
    "retailer": "hm",
    "category": "sweatshirts",
-   "count": 15,
-   "avg": 19.36,
-   "median": 19.49
+   "count": 18,
+   "avg": 18.4,
+   "median": 18.25
   },
   {
    "date": "2026-09-22",
    "retailer": "hm",
    "category": "coats",
-   "count": 13,
-   "avg": 61.82,
+   "count": 16,
+   "avg": 68.18,
    "median": 53
   },
   {
    "date": "2026-09-22",
    "retailer": "hm",
    "category": "jeans",
-   "count": 16,
-   "avg": 25.43,
-   "median": 25.994999999999997
+   "count": 13,
+   "avg": 24.28,
+   "median": 24.49
   },
   {
    "date": "2026-09-22",
    "retailer": "hm",
    "category": "joggers",
-   "count": 16,
-   "avg": 20.62,
-   "median": 21.994999999999997
+   "count": 14,
+   "avg": 21.43,
+   "median": 20.25
   },
   {
    "date": "2026-09-22",
    "retailer": "hm",
    "category": "socks",
-   "count": 17,
-   "avg": 3.97,
-   "median": 2.33
+   "count": 15,
+   "avg": 3.06,
+   "median": 1.8
   },
   {
    "date": "2026-09-22",
    "retailer": "hm",
    "category": "underwear",
-   "count": 16,
-   "avg": 3.72,
+   "count": 17,
+   "avg": 3.49,
    "median": 3.5
   },
   {
    "date": "2026-09-22",
    "retailer": "primark",
    "category": "t-shirts",
-   "count": 13,
-   "avg": 3.94,
-   "median": 3.49
+   "count": 10,
+   "avg": 3.87,
+   "median": 3.495
   },
   {
    "date": "2026-09-22",
    "retailer": "primark",
    "category": "shirts",
-   "count": 13,
-   "avg": 11.09,
-   "median": 10.99
+   "count": 12,
+   "avg": 12.81,
+   "median": 11.995000000000001
   },
   {
    "date": "2026-09-22",
    "retailer": "primark",
    "category": "hoodies",
-   "count": 17,
-   "avg": 13.49,
-   "median": 12.5
+   "count": 13,
+   "avg": 13.66,
+   "median": 12.99
   },
   {
    "date": "2026-09-22",
    "retailer": "primark",
    "category": "jumpers",
-   "count": 14,
-   "avg": 13.77,
-   "median": 12.5
+   "count": 10,
+   "avg": 14.3,
+   "median": 13.995000000000001
   },
   {
    "date": "2026-09-22",
    "retailer": "primark",
    "category": "sweatshirts",
-   "count": 13,
-   "avg": 11.19,
-   "median": 11.49
+   "count": 14,
+   "avg": 10.81,
+   "median": 10.245000000000001
   },
   {
    "date": "2026-09-22",
+   "retailer": "primark",
+   "category": "coats",
+   "count": 14,
+   "avg": 37.41,
+   "median": 38.25
+  },
+  {
+   "date": "2026-09-22",
+   "retailer": "primark",
+   "category": "jeans",
+   "count": 14,
+   "avg": 12.97,
+   "median": 12.25
+  },
+  {
+   "date": "2026-09-22",
+   "retailer": "primark",
+   "category": "joggers",
+   "count": 12,
+   "avg": 10.46,
+   "median": 9.995000000000001
+  },
+  {
+   "date": "2026-09-22",
+   "retailer": "primark",
+   "category": "socks",
+   "count": 13,
+   "avg": 1.73,
+   "median": 1.17
+  },
+  {
+   "date": "2026-09-22",
+   "retailer": "primark",
+   "category": "underwear",
+   "count": 14,
+   "avg": 1.99,
+   "median": 1.89
+  },
+  {
+   "date": "2026-09-29",
+   "retailer": "next",
+   "category": "t-shirts",
+   "count": 13,
+   "avg": 13.66,
+   "median": 12.49
+  },
+  {
+   "date": "2026-09-29",
+   "retailer": "next",
+   "category": "shirts",
+   "count": 13,
+   "avg": 24.67,
+   "median": 24.99
+  },
+  {
+   "date": "2026-09-29",
+   "retailer": "next",
+   "category": "hoodies",
+   "count": 13,
+   "avg": 31.58,
+   "median": 31
+  },
+  {
+   "date": "2026-09-29",
+   "retailer": "next",
+   "category": "jumpers",
+   "count": 11,
+   "avg": 38.8,
+   "median": 37.5
+  },
+  {
+   "date": "2026-09-29",
+   "retailer": "next",
+   "category": "sweatshirts",
+   "count": 15,
+   "avg": 29.54,
+   "median": 28
+  },
+  {
+   "date": "2026-09-29",
+   "retailer": "next",
+   "category": "coats",
+   "count": 12,
+   "avg": 76.18,
+   "median": 70.745
+  },
+  {
+   "date": "2026-09-29",
+   "retailer": "next",
+   "category": "jeans",
+   "count": 7,
+   "avg": 32.82,
+   "median": 28.99
+  },
+  {
+   "date": "2026-09-29",
+   "retailer": "next",
+   "category": "joggers",
+   "count": 14,
+   "avg": 25.23,
+   "median": 23.994999999999997
+  },
+  {
+   "date": "2026-09-29",
+   "retailer": "next",
+   "category": "socks",
+   "count": 14,
+   "avg": 4.35,
+   "median": 2.735
+  },
+  {
+   "date": "2026-09-29",
+   "retailer": "next",
+   "category": "underwear",
+   "count": 8,
+   "avg": 5.22,
+   "median": 5.08
+  },
+  {
+   "date": "2026-09-29",
+   "retailer": "mands",
+   "category": "t-shirts",
+   "count": 16,
+   "avg": 14.55,
+   "median": 13.995000000000001
+  },
+  {
+   "date": "2026-09-29",
+   "retailer": "mands",
+   "category": "shirts",
+   "count": 13,
+   "avg": 27.48,
+   "median": 25
+  },
+  {
+   "date": "2026-09-29",
+   "retailer": "mands",
+   "category": "hoodies",
+   "count": 15,
+   "avg": 33.82,
+   "median": 34.49
+  },
+  {
+   "date": "2026-09-29",
+   "retailer": "mands",
+   "category": "jumpers",
+   "count": 14,
+   "avg": 42.56,
+   "median": 40.745000000000005
+  },
+  {
+   "date": "2026-09-29",
+   "retailer": "mands",
+   "category": "sweatshirts",
+   "count": 11,
+   "avg": 30.77,
+   "median": 31.99
+  },
+  {
+   "date": "2026-09-29",
+   "retailer": "mands",
+   "category": "coats",
+   "count": 15,
+   "avg": 94.11,
+   "median": 97
+  },
+  {
+   "date": "2026-09-29",
+   "retailer": "mands",
+   "category": "jeans",
+   "count": 12,
+   "avg": 30.65,
+   "median": 26.99
+  },
+  {
+   "date": "2026-09-29",
+   "retailer": "mands",
+   "category": "joggers",
+   "count": 16,
+   "avg": 23.78,
+   "median": 23.494999999999997
+  },
+  {
+   "date": "2026-09-29",
+   "retailer": "mands",
+   "category": "socks",
+   "count": 12,
+   "avg": 2.96,
+   "median": 3.035
+  },
+  {
+   "date": "2026-09-29",
+   "retailer": "mands",
+   "category": "underwear",
+   "count": 10,
+   "avg": 4.71,
+   "median": 4.79
+  },
+  {
+   "date": "2026-09-29",
+   "retailer": "hm",
+   "category": "t-shirts",
+   "count": 11,
+   "avg": 10.49,
+   "median": 10.49
+  },
+  {
+   "date": "2026-09-29",
+   "retailer": "hm",
+   "category": "shirts",
+   "count": 14,
+   "avg": 21.5,
+   "median": 20.25
+  },
+  {
+   "date": "2026-09-29",
+   "retailer": "hm",
+   "category": "hoodies",
+   "count": 13,
+   "avg": 21.78,
+   "median": 20.99
+  },
+  {
+   "date": "2026-09-29",
+   "retailer": "hm",
+   "category": "jumpers",
+   "count": 18,
+   "avg": 29.06,
+   "median": 30.5
+  },
+  {
+   "date": "2026-09-29",
+   "retailer": "hm",
+   "category": "sweatshirts",
+   "count": 18,
+   "avg": 18.16,
+   "median": 18.25
+  },
+  {
+   "date": "2026-09-29",
+   "retailer": "hm",
+   "category": "coats",
+   "count": 16,
+   "avg": 66.96,
+   "median": 53
+  },
+  {
+   "date": "2026-09-29",
+   "retailer": "hm",
+   "category": "jeans",
+   "count": 13,
+   "avg": 23.63,
+   "median": 24.49
+  },
+  {
+   "date": "2026-09-29",
+   "retailer": "hm",
+   "category": "joggers",
+   "count": 14,
+   "avg": 20.58,
+   "median": 20.25
+  },
+  {
+   "date": "2026-09-29",
+   "retailer": "hm",
+   "category": "socks",
+   "count": 15,
+   "avg": 3.15,
+   "median": 1.8
+  },
+  {
+   "date": "2026-09-29",
+   "retailer": "hm",
+   "category": "underwear",
+   "count": 17,
+   "avg": 3.55,
+   "median": 3.5
+  },
+  {
+   "date": "2026-09-29",
+   "retailer": "primark",
+   "category": "t-shirts",
+   "count": 10,
+   "avg": 3.93,
+   "median": 3.495
+  },
+  {
+   "date": "2026-09-29",
+   "retailer": "primark",
+   "category": "shirts",
+   "count": 12,
+   "avg": 12.86,
+   "median": 11.995000000000001
+  },
+  {
+   "date": "2026-09-29",
+   "retailer": "primark",
+   "category": "hoodies",
+   "count": 13,
+   "avg": 13.03,
+   "median": 12.99
+  },
+  {
+   "date": "2026-09-29",
+   "retailer": "primark",
+   "category": "jumpers",
+   "count": 10,
+   "avg": 14.61,
+   "median": 13.995000000000001
+  },
+  {
+   "date": "2026-09-29",
+   "retailer": "primark",
+   "category": "sweatshirts",
+   "count": 14,
+   "avg": 10.97,
+   "median": 10.245000000000001
+  },
+  {
+   "date": "2026-09-29",
    "retailer": "primark",
    "category": "coats",
    "count": 14,
    "avg": 37.07,
-   "median": 35.495000000000005
+   "median": 38.25
   },
   {
-   "date": "2026-09-22",
+   "date": "2026-09-29",
    "retailer": "primark",
    "category": "jeans",
-   "count": 13,
-   "avg": 13.98,
-   "median": 14.49
-  },
-  {
-   "date": "2026-09-22",
-   "retailer": "primark",
-   "category": "joggers",
-   "count": 15,
-   "avg": 9.66,
-   "median": 9.99
-  },
-  {
-   "date": "2026-09-22",
-   "retailer": "primark",
-   "category": "socks",
-   "count": 16,
-   "avg": 1.56,
-   "median": 1.135
-  },
-  {
-   "date": "2026-09-22",
-   "retailer": "primark",
-   "category": "underwear",
-   "count": 13,
-   "avg": 2.33,
-   "median": 2.13
-  },
-  {
-   "date": "2026-09-29",
-   "retailer": "next",
-   "category": "t-shirts",
-   "count": 19,
-   "avg": 12.39,
-   "median": 10.5
-  },
-  {
-   "date": "2026-09-29",
-   "retailer": "next",
-   "category": "shirts",
-   "count": 12,
-   "avg": 26.57,
-   "median": 26
-  },
-  {
-   "date": "2026-09-29",
-   "retailer": "next",
-   "category": "hoodies",
-   "count": 15,
-   "avg": 30.27,
-   "median": 28
-  },
-  {
-   "date": "2026-09-29",
-   "retailer": "next",
-   "category": "jumpers",
-   "count": 18,
-   "avg": 37.46,
-   "median": 35.495000000000005
-  },
-  {
-   "date": "2026-09-29",
-   "retailer": "next",
-   "category": "sweatshirts",
-   "count": 18,
-   "avg": 31.05,
-   "median": 30.99
-  },
-  {
-   "date": "2026-09-29",
-   "retailer": "next",
-   "category": "coats",
-   "count": 17,
-   "avg": 85.55,
-   "median": 87.99
-  },
-  {
-   "date": "2026-09-29",
-   "retailer": "next",
-   "category": "jeans",
-   "count": 15,
-   "avg": 30.68,
-   "median": 30.49
-  },
-  {
-   "date": "2026-09-29",
-   "retailer": "next",
-   "category": "joggers",
-   "count": 16,
-   "avg": 25.61,
-   "median": 24.74
-  },
-  {
-   "date": "2026-09-29",
-   "retailer": "next",
-   "category": "socks",
-   "count": 17,
-   "avg": 4.12,
-   "median": 2.9
-  },
-  {
-   "date": "2026-09-29",
-   "retailer": "next",
-   "category": "underwear",
-   "count": 13,
-   "avg": 5.83,
-   "median": 5.75
-  },
-  {
-   "date": "2026-09-29",
-   "retailer": "mands",
-   "category": "t-shirts",
-   "count": 15,
-   "avg": 15.9,
-   "median": 17
-  },
-  {
-   "date": "2026-09-29",
-   "retailer": "mands",
-   "category": "shirts",
-   "count": 16,
-   "avg": 28.8,
-   "median": 29.994999999999997
-  },
-  {
-   "date": "2026-09-29",
-   "retailer": "mands",
-   "category": "hoodies",
    "count": 14,
-   "avg": 34.8,
-   "median": 35
+   "avg": 13.24,
+   "median": 12.25
   },
   {
    "date": "2026-09-29",
-   "retailer": "mands",
-   "category": "jumpers",
-   "count": 14,
-   "avg": 38.26,
-   "median": 35.745000000000005
-  },
-  {
-   "date": "2026-09-29",
-   "retailer": "mands",
-   "category": "sweatshirts",
-   "count": 12,
-   "avg": 27.81,
-   "median": 25.244999999999997
-  },
-  {
-   "date": "2026-09-29",
-   "retailer": "mands",
-   "category": "coats",
-   "count": 16,
-   "avg": 107.91,
-   "median": 106.75
-  },
-  {
-   "date": "2026-09-29",
-   "retailer": "mands",
-   "category": "jeans",
-   "count": 15,
-   "avg": 33.08,
-   "median": 31.49
-  },
-  {
-   "date": "2026-09-29",
-   "retailer": "mands",
+   "retailer": "primark",
    "category": "joggers",
    "count": 12,
-   "avg": 24.92,
-   "median": 25.494999999999997
+   "avg": 10.43,
+   "median": 9.995000000000001
   },
   {
    "date": "2026-09-29",
-   "retailer": "mands",
+   "retailer": "primark",
    "category": "socks",
-   "count": 17,
-   "avg": 6.66,
-   "median": 2.83
+   "count": 13,
+   "avg": 1.73,
+   "median": 1.17
   },
   {
    "date": "2026-09-29",
-   "retailer": "mands",
+   "retailer": "primark",
    "category": "underwear",
-   "count": 15,
-   "avg": 4.87,
-   "median": 4.4
-  },
-  {
-   "date": "2026-09-29",
-   "retailer": "hm",
-   "category": "t-shirts",
-   "count": 17,
-   "avg": 11.55,
-   "median": 10.5
-  },
-  {
-   "date": "2026-09-29",
-   "retailer": "hm",
-   "category": "shirts",
-   "count": 18,
-   "avg": 23.85,
-   "median": 24.74
-  },
-  {
-   "date": "2026-09-29",
-   "retailer": "hm",
-   "category": "hoodies",
-   "count": 17,
-   "avg": 21.57,
-   "median": 20.5
-  },
-  {
-   "date": "2026-09-29",
-   "retailer": "hm",
-   "category": "jumpers",
-   "count": 15,
-   "avg": 28.14,
-   "median": 28.99
-  },
-  {
-   "date": "2026-09-29",
-   "retailer": "hm",
-   "category": "sweatshirts",
-   "count": 15,
-   "avg": 19.59,
-   "median": 19.49
-  },
-  {
-   "date": "2026-09-29",
-   "retailer": "hm",
-   "category": "coats",
-   "count": 13,
-   "avg": 59.35,
-   "median": 53
-  },
-  {
-   "date": "2026-09-29",
-   "retailer": "hm",
-   "category": "jeans",
-   "count": 16,
-   "avg": 25.32,
-   "median": 25.994999999999997
-  },
-  {
-   "date": "2026-09-29",
-   "retailer": "hm",
-   "category": "joggers",
-   "count": 16,
-   "avg": 21.58,
-   "median": 21.994999999999997
-  },
-  {
-   "date": "2026-09-29",
-   "retailer": "hm",
-   "category": "socks",
-   "count": 17,
-   "avg": 4.01,
-   "median": 2.33
-  },
-  {
-   "date": "2026-09-29",
-   "retailer": "hm",
-   "category": "underwear",
-   "count": 16,
-   "avg": 3.68,
-   "median": 3.5
-  },
-  {
-   "date": "2026-09-29",
-   "retailer": "primark",
-   "category": "t-shirts",
-   "count": 13,
-   "avg": 3.88,
-   "median": 3.49
-  },
-  {
-   "date": "2026-09-29",
-   "retailer": "primark",
-   "category": "shirts",
-   "count": 13,
-   "avg": 10.89,
-   "median": 10.99
-  },
-  {
-   "date": "2026-09-29",
-   "retailer": "primark",
-   "category": "hoodies",
-   "count": 17,
-   "avg": 13.33,
-   "median": 12.5
-  },
-  {
-   "date": "2026-09-29",
-   "retailer": "primark",
-   "category": "jumpers",
    "count": 14,
-   "avg": 13.83,
-   "median": 12.5
-  },
-  {
-   "date": "2026-09-29",
-   "retailer": "primark",
-   "category": "sweatshirts",
-   "count": 13,
-   "avg": 11.5,
-   "median": 11.49
-  },
-  {
-   "date": "2026-09-29",
-   "retailer": "primark",
-   "category": "coats",
-   "count": 14,
-   "avg": 38.03,
-   "median": 35.495000000000005
-  },
-  {
-   "date": "2026-09-29",
-   "retailer": "primark",
-   "category": "jeans",
-   "count": 13,
-   "avg": 14.33,
-   "median": 14.49
-  },
-  {
-   "date": "2026-09-29",
-   "retailer": "primark",
-   "category": "joggers",
-   "count": 15,
-   "avg": 9.8,
-   "median": 9.99
-  },
-  {
-   "date": "2026-09-29",
-   "retailer": "primark",
-   "category": "socks",
-   "count": 16,
-   "avg": 1.53,
-   "median": 1.135
-  },
-  {
-   "date": "2026-09-29",
-   "retailer": "primark",
-   "category": "underwear",
-   "count": 13,
-   "avg": 2.3,
-   "median": 2.13
+   "avg": 1.97,
+   "median": 1.89
   }
  ]
 }

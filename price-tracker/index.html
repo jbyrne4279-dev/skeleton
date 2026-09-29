@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>UK Clothing Price Index</title>
-<meta name="description" content="Average UK high-street clothing prices, sizes and colours across Next, M&S, H&M and Primark.">
+<meta name="description" content="Average UK high-street clothing prices, sizes, colours and new releases across Next, M&S, H&M and Primark.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="site/styles.css">
@@ -21,26 +21,48 @@
 </header>
 
 <div class="banner" id="sample-banner" hidden>
-  <div class="wrap"><strong>Sample data.</strong> These prices are made up so you can preview the dashboard. Run <code>npm run scrape</code> to collect real prices.</div>
+  <div class="wrap"><strong>Sample data.</strong> These prices and pictures are made up so you can preview the dashboard. Run <code>npm run scrape</code> to collect real prices and product screenshots.</div>
 </div>
 
 <main class="wrap">
   <section class="filters" aria-label="Filters">
-    <div class="chips" id="category-chips" role="tablist" aria-label="Category"></div>
+    <div class="cat-tiles" id="category-tiles" role="tablist" aria-label="Category"></div>
     <div class="selects">
       <label>Colour <select id="f-colour"></select></label>
       <label>Who for <select id="f-gender">
         <option value="">Everyone</option><option value="men">Men</option><option value="women">Women</option><option value="kids">Kids</option><option value="unisex">Unisex / unlabelled</option>
       </select></label>
       <label>Size <select id="f-size"></select></label>
+      <label>Released <select id="f-period"></select></label>
+      <label>Show <select id="f-status">
+        <option value="active">On sale now</option><option value="all">Everything ever listed</option><option value="gone">No longer listed</option>
+      </select></label>
     </div>
   </section>
 
   <section class="hero card">
-    <p class="eyebrow" id="hero-label"></p>
-    <p class="hero-num" id="hero-num">–</p>
-    <p class="hero-sub" id="hero-sub"></p>
-    <dl class="hero-stats" id="hero-stats"></dl>
+    <div class="hero-main">
+      <p class="eyebrow" id="hero-label"></p>
+      <p class="hero-num" id="hero-num">–</p>
+      <p class="hero-sub" id="hero-sub"></p>
+      <dl class="hero-stats" id="hero-stats"></dl>
+    </div>
+    <div class="hero-picks">
+      <p class="eyebrow">Cheapest at each shop</p>
+      <div class="picks" id="picks"></div>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="card-head">
+      <h2>Released over time</h2>
+      <div class="seg" role="group" aria-label="Group by">
+        <button data-gran="month" aria-pressed="true">Month</button><button data-gran="quarter" aria-pressed="false">Quarter</button><button data-gran="season" aria-pressed="false">Season</button>
+      </div>
+    </div>
+    <p class="hint lead-hint">New products by the date they first appeared, with the average price of each drop. Click a period to filter the whole page to it.</p>
+    <div class="timeline" id="timeline"></div>
+    <button class="more" id="timeline-more" hidden>Show earlier periods</button>
   </section>
 
   <section class="card">
@@ -72,24 +94,38 @@
   <section class="card">
     <div class="card-head">
       <h2>Every category at a glance</h2>
-      <p class="hint">Average price per item. Colour, who-for and size filters apply. Click a row to open it.</p>
+      <p class="hint">Average price per item with the current filters. Click a row to open it.</p>
     </div>
     <div class="scroll"><table class="data matrix" id="matrix"></table></div>
   </section>
 
-  <section class="card">
+  <section class="card" id="gallery-card">
     <div class="card-head">
       <h2>Products <span class="count" id="product-count"></span></h2>
-      <input type="search" id="f-search" placeholder="Search products…" aria-label="Search products">
+      <div class="gallery-tools">
+        <input type="search" id="f-search" placeholder="Search products…" aria-label="Search products">
+        <select id="f-sort" aria-label="Sort by">
+          <option value="unitPrice:1">Price: low to high</option>
+          <option value="unitPrice:-1">Price: high to low</option>
+          <option value="firstSeen:-1">Newest first</option>
+          <option value="firstSeen:1">Oldest first</option>
+          <option value="retailer:1">Retailer</option>
+        </select>
+      </div>
     </div>
-    <div class="scroll"><table class="data products" id="products"></table></div>
+    <div class="gallery" id="gallery"></div>
     <button class="more" id="more" hidden>Show more</button>
   </section>
 </main>
 
 <footer class="wrap foot">
-  Prices are collected automatically from retailers' public product pages and may be out of date. Multipacks are priced per item.
+  Prices and screenshots are collected automatically from retailers' public product pages and may be out of date. Multipacks are priced per item. "Released" is the date a product first appeared on the retailer's site.
 </footer>
+
+<dialog class="lightbox" id="lightbox" aria-label="Product details">
+  <button class="lb-close" id="lb-close" aria-label="Close">×</button>
+  <div class="lb-body" id="lb-body"></div>
+</dialog>
 
 <div class="tip" id="tip" role="tooltip" hidden></div>
 <script type="module" src="site/app.js"></script>

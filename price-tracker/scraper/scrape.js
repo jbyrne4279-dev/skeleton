@@ -6,15 +6,20 @@
 //   npm run scrape -- --retailer hm      # one retailer
 //   npm run scrape -- --category socks   # one category
 //   npm run scrape -- --max 10 --headful --debug
+//   npm run scrape -- --refresh-images     # re-shoot images that already exist
 
 import { chromium } from 'playwright';
-import { readFile, writeFile, mkdir } from 'node:fs/promises';
-import { fileURLToPath } from 'node:url';
+import { readFile, writeFile, mkdir, rm } from 'node:fs/promises';
+import { existsSync } from 'node:fs';
+import { createHash } from 'node:crypto';
+import sharp from 'sharp';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 import path from 'node:path';
 import { RETAILERS } from '../lib/retailers.js';
 import { CATEGORIES } from '../lib/catalog.js';
 import { summarise } from '../lib/stats.js';
 import { extractProduct } from './extract.js';
+import { mergeRun } from './merge.js';
 
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const DATA = path.join(ROOT, 'data');
@@ -26,6 +31,7 @@ const opt = (n, d) => { const i = args.indexOf(`--${n}`); return i >= 0 ? args[i
 const MAX_PER_SEARCH = Number(opt('max', 24));
 const CONCURRENCY = Number(opt('concurrency', 3));
 const DEBUG = flag('debug');
+const REFRESH_IMAGES = flag('refresh-images');
 const retailers = RETAILERS.filter(r => !opt('retailer') || r.id === opt('retailer'));
 const categories = CATEGORIES.filter(c => !opt('category') || c.id === opt('category'));
 
@@ -85,12 +91,52 @@ async function scrapeProduct(context, retailer, url, categoryHint) {
     const [html, dom] = await Promise.all([page.content(), page.evaluate(readDom)]);
     const product = extractProduct(html, { url, retailer: retailer.id, categoryHint, dom });
     if (!product && DEBUG) await dump(page, `${retailer.id}-product-miss`);
+    if (product) product.image = await productImage(page, retailer, product);
     return product;
   } catch (e) {
     log(`  ! ${url}: ${e.message.split('\n')[0]}`);
     return null;
   } finally {
     await page.close();
+  }
+}
+
+// Screenshots the product's main photo as it appears on the retailer's page
+// and saves it as a WebP thumbnail: data/images/<retailer>/<hash>.webp.
+// Existing images are reused unless --refresh-images is passed.
+async function productImage(page, retailer, product) {
+  const rel = `data/images/${retailer.id}/${createHash('sha1').update(product.url).digest('hex').slice(0, 16)}.webp`;
+  const file = path.join(ROOT, rel);
+  if (existsSync(file) && !REFRESH_IMAGES) return rel;
+  try {
+    await acceptCookies(page);
+    // The main photo is the largest image near the top of the page.
+    const handle = await page.evaluateHandle(() => {
+      const area = el => { const r = el.getBoundingClientRect(); return r.width * r.height; };
+      const imgs = [...document.querySelectorAll('img, picture')].filter(el => {
+        const r = el.getBoundingClientRect();
+        return r.width >= 150 && r.height >= 150 && r.top + scrollY < innerHeight * 1.5 && getComputedStyle(el).visibility !== 'hidden';
+      });
+      return imgs.sort((a, b) => area(b) - area(a))[0] || null;
+    });
+    let png;
+    const el = handle.asElement();
+    if (el) {
+      await el.scrollIntoViewIfNeeded({ timeout: 3000 }).catch(() => {});
+      await el.evaluate(img => img.tagName !== 'IMG' || img.complete || new Promise(r => { img.onload = img.onerror = r; setTimeout(r, 4000); }));
+      png = await el.screenshot({ type: 'png', timeout: 10000 });
+    } else if (product.imageUrl) {
+      // No usable <img> on screen (e.g. canvas gallery) - fall back to the published photo.
+      const res = await page.request.get(product.imageUrl, { timeout: 15000 });
+      if (res.ok()) png = await res.body();
+    }
+    if (!png) return null;
+    await mkdir(path.dirname(file), { recursive: true });
+    await sharp(png).resize({ width: 480, withoutEnlargement: true }).webp({ quality: 72 }).toFile(file);
+    return rel;
+  } catch (e) {
+    log(`  ! image for ${product.url}: ${e.message.split('\n')[0]}`);
+    return existsSync(file) ? rel : null;
   }
 }
 
@@ -155,13 +201,13 @@ async function main() {
     return;
   }
 
-  // Keep last run's data for any retailer/category that came back empty this
-  // time (blocked, site change) so one bad run doesn't blank the dashboard.
+  // Every product ever seen is kept (see merge.js) so the dashboard can show
+  // releases over time; categories that failed this run keep their old data.
   const prev = await readJson(path.join(DATA, 'products.json'), { products: [] });
-  const kept = prev.sample ? [] : prev.products.filter(p => !done.has(`${p.retailer}|${p.category}`));
-  const byUrl = new Map();
-  for (const p of [...kept, ...fresh]) byUrl.set(`${p.url}|${p.category}`, p);
-  const products = [...byUrl.values()];
+  const today = new Date().toISOString().slice(0, 10);
+  const products = mergeRun(prev.sample ? [] : prev.products, fresh, done, today);
+  const active = products.filter(p => p.active);
+  if (prev.sample) await rm(path.join(DATA, 'images', 'sample'), { recursive: true, force: true });
 
   await mkdir(DATA, { recursive: true });
   const generatedAt = new Date().toISOString();
@@ -174,12 +220,16 @@ async function main() {
   history.sample = false;
   history.rows = history.rows.filter(r => r.date !== day);
   for (const r of RETAILERS) for (const c of CATEGORIES) {
-    const s = summarise(products.filter(p => p.retailer === r.id && p.category === c.id).map(p => p.unitPrice));
+    const s = summarise(active.filter(p => p.retailer === r.id && p.category === c.id).map(p => p.unitPrice));
     if (s.count) history.rows.push({ date: day, retailer: r.id, category: c.id, count: s.count, avg: +s.avg.toFixed(2), median: s.median });
   }
   await writeFile(path.join(DATA, 'history.json'), JSON.stringify(history, null, 1));
 
-  log(`Saved ${products.length} products (${fresh.length} fresh, ${kept.length} carried over).`);
+  const known = new Set(prev.sample ? [] : prev.products.map(p => p.url));
+  const isNew = fresh.filter(p => !known.has(p.url)).length;
+  log(`Saved ${products.length} products: ${fresh.length} scraped (${isNew} new), ${active.length} currently listed, ${fresh.filter(p => p.image).length} with images.`);
 }
 
-main().catch(e => { console.error(e); process.exit(1); });
+export { productImage, readDom };
+
+if (import.meta.url === pathToFileURL(process.argv[1]).href) main().catch(e => { console.error(e); process.exit(1); });

@@ -120,6 +120,10 @@ export function extractProduct(html, { url, retailer, categoryHint, dom = {} }) 
   const category = categorise(name, categoryHint);
   if (!category) return null;
 
+  const imageUrl = [product?.image].flat().map(i => (typeof i === 'string' ? i : i?.url || i?.contentUrl)).find(Boolean)
+    || decode(metaContent(html, 'og:image')) || null;
+  const releaseDate = [product?.releaseDate, product?.datePublished].find(d => d && !Number.isNaN(Date.parse(d))) || null;
+
   const price = Math.min(...prices);
   const pack = packSize(name);
   return {
@@ -138,6 +142,8 @@ export function extractProduct(html, { url, retailer, categoryHint, dom = {} }) 
       ? [...new Set(colourList.map(baseColour).filter(Boolean))]
       : [baseColour(name)].filter(c => c && c !== 'other'),
     sizes: sizeList,
+    imageUrl,
+    releaseDate: releaseDate && new Date(releaseDate).toISOString().slice(0, 10),
     scrapedAt: new Date().toISOString(),
   };
 }

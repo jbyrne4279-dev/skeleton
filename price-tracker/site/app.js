@@ -9,27 +9,61 @@ const seriesVar = r => `var(--s${r.colour})`;
 const retailerById = Object.fromEntries(RETAILERS.map(r => [r.id, r]));
 const SWATCH = { white: '#ffffff', cream: '#efe6d2', black: '#111', navy: '#1c2b4a', grey: '#8a8a8a', blue: '#3f7fd0', green: '#4f7a3a', red: '#b8322f', pink: '#e79ab5', purple: '#7d5ba6', yellow: '#e8c33a', orange: '#e0813a', brown: '#8a5a3b', multi: 'conic-gradient(#e0813a,#3f7fd0,#4f7a3a,#e79ab5,#e0813a)', other: 'transparent' };
 
-const state = { category: 't-shirts', colour: '', gender: '', size: '', search: '', sort: 'unitPrice', dir: 1, limit: 50 };
+const state = { category: 't-shirts', colour: '', gender: '', size: '', period: '', status: 'active', gran: 'month', search: '', sort: 'unitPrice:1', limit: 48, periods: 6 };
+const HASH_KEYS = ['category', 'colour', 'gender', 'size', 'period', 'status', 'gran'];
 let DATA = { products: [] };
 let HISTORY = { rows: [] };
+let NOW = Date.now();
+
+// Older data files (before release tracking) have no firstSeen/active fields.
+const normalise = p => ({ active: true, firstSeen: (p.scrapedAt || '').slice(0, 10), priceLog: [], image: null, ...p });
+
+// ---------------------------------------------------------------- release periods
+const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+const SEASONS = ['Spring', 'Summer', 'Autumn', 'Winter'];
+// Returns a sortable key like "month:2026-09", "quarter:2026-3" or "season:2025-4".
+function periodOf(date, gran = state.gran) {
+  const [y, m] = date.split('-').map(Number);
+  if (gran === 'quarter') return `quarter:${y}-${Math.ceil(m / 3)}`;
+  if (gran === 'season') {
+    // UK retail seasons: Spring Mar-May, Summer Jun-Aug, Autumn Sep-Nov, Winter Dec-Feb.
+    const s = m >= 3 && m <= 5 ? 1 : m >= 6 && m <= 8 ? 2 : m >= 9 && m <= 11 ? 3 : 4;
+    return `season:${m <= 2 ? y - 1 : y}-${s}`;
+  }
+  return `month:${y}-${String(m).padStart(2, '0')}`;
+}
+function periodLabel(key) {
+  const [gran, rest] = key.split(':');
+  const [y, n] = rest.split('-').map(Number);
+  if (gran === 'quarter') return `${MONTHS[(n - 1) * 3].slice(0, 3)}–${MONTHS[n * 3 - 1].slice(0, 3)} ${y}`;
+  if (gran === 'season') return n === 4 ? `Winter ${y}/${String(y + 1).slice(2)}` : `${SEASONS[n - 1]} ${y}`;
+  return `${MONTHS[n - 1]} ${y}`;
+}
+const fmtDay = d => new Date(`${d}T00:00`).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+const isNew = p => NOW - Date.parse(p.firstSeen) < 30 * 864e5;
 
 // --- state <-> URL hash, so a view like "white t-shirts, men" can be shared ---
 function readHash() {
   const h = new URLSearchParams(location.hash.slice(1));
-  for (const k of ['category', 'colour', 'gender', 'size']) if (h.has(k)) state[k] = h.get(k);
+  for (const k of HASH_KEYS) if (h.has(k)) state[k] = h.get(k);
   if (!CATEGORY_BY_ID[state.category]) state.category = 't-shirts';
+  if (!['month', 'quarter', 'season'].includes(state.gran)) state.gran = 'month';
+  if (state.period && !state.period.startsWith(`${state.gran}:`)) state.period = '';
 }
 function writeHash() {
   const h = new URLSearchParams();
-  for (const k of ['category', 'colour', 'gender', 'size']) if (state[k]) h.set(k, state[k]);
+  for (const k of HASH_KEYS) if (state[k] && !(k === 'status' && state[k] === 'active') && !(k === 'gran' && state[k] === 'month')) h.set(k, state[k]);
   history.replaceState(null, '', `#${h}`);
 }
 
-// Filters other than category - used by both the main view and the matrix.
-function passesFilters(p) {
+// Filters other than category - used by the main view, the tiles and the matrix.
+// `ignore` skips some, e.g. the timeline shows every period and status.
+function passesFilters(p, ignore = []) {
   return (!state.colour || p.baseColours.includes(state.colour))
     && (!state.gender || p.gender === state.gender)
-    && (!state.size || p.sizes.includes(state.size));
+    && (!state.size || p.sizes.includes(state.size))
+    && (ignore.includes('period') || !state.period || periodOf(p.firstSeen) === state.period)
+    && (ignore.includes('status') || state.status === 'all' || (state.status === 'gone' ? !p.active : p.active));
 }
 const current = () => DATA.products.filter(p => p.category === state.category && passesFilters(p));
 
@@ -37,13 +71,43 @@ function describe() {
   const cat = CATEGORY_BY_ID[state.category].label.toLowerCase();
   const who = { men: "men's ", women: "women's ", kids: "kids' ", unisex: 'unlabelled ' }[state.gender] || '';
   const size = state.size ? ` in size ${state.size}` : '';
-  return `${who}${state.colour ? `${state.colour} ` : ''}${cat}${size}`;
+  const when = state.period ? ` released ${state.gran === 'month' ? 'in ' : ''}${periodLabel(state.period)}` : '';
+  return `${who}${state.colour ? `${state.colour} ` : ''}${cat}${size}${when}`;
+}
+
+// ---------------------------------------------------------------- shared product card
+function photo(p, { tags = true } = {}) {
+  const r = retailerById[p.retailer];
+  const img = p.image
+    ? `<img src="${esc(p.image)}" alt="${esc(p.name)}" loading="lazy" decoding="async">`
+    : `<span class="noimg">No picture yet</span>`;
+  const badge = !p.active ? `<span class="badge gone">No longer listed</span>` : isNew(p) ? `<span class="badge">New</span>` : '';
+  return `<div class="img">${img}${tags ? `<span class="shop-tag"><span class="dot" style="background:${seriesVar(r)}"></span>${esc(r.name)}</span>${badge}` : ''}</div>`;
+}
+function card(p, { meta = true } = {}) {
+  const i = DATA.products.indexOf(p);
+  return `<button class="pcard" data-product="${i}">
+    ${photo(p)}
+    <span class="price">${gbp(p.unitPrice)}${p.packSize > 1 ? ` <small>each · ${gbp(p.price)} for ${p.packSize}</small>` : ''}</span>
+    <span class="pname">${esc(p.name)}</span>
+    ${meta ? `<span class="swatches">${p.baseColours.slice(0, 8).map(c => `<span class="swatch" title="${esc(c)}" style="background:${SWATCH[c] || 'transparent'}"></span>`).join('')}</span>
+    <span class="meta">${p.sizes.length ? esc(sortSizes(p.sizes).join(' · ')) : 'Sizes not listed'}</span>
+    <span class="meta">Released ${fmtDay(p.firstSeen)}</span>` : ''}
+  </button>`;
 }
 
 // ---------------------------------------------------------------- controls
 function renderControls() {
-  $('category-chips').innerHTML = CATEGORIES.map(c =>
-    `<button class="chip" role="tab" data-cat="${c.id}" aria-selected="${c.id === state.category}">${esc(c.label)}</button>`).join('');
+  // Category tiles: picture of the newest matching product + its average price.
+  $('category-tiles').innerHTML = CATEGORIES.map(c => {
+    const ps = DATA.products.filter(p => p.category === c.id && passesFilters(p));
+    const pic = [...ps].filter(p => p.image).sort((a, b) => b.firstSeen.localeCompare(a.firstSeen))[0]
+      || DATA.products.find(p => p.category === c.id && p.image);
+    const avg = marketStats(ps, RETAILERS).market.avg;
+    return `<button class="cat-tile" role="tab" data-cat="${c.id}" aria-selected="${c.id === state.category}">
+      ${pic ? `<img src="${esc(pic.image)}" alt="" loading="lazy">` : '<span class="ph"></span>'}
+      <b>${esc(c.label)}</b><span>${avg == null ? 'No matches' : `avg ${gbp(avg)}`}</span></button>`;
+  }).join('');
 
   const inCat = DATA.products.filter(p => p.category === state.category);
   const colours = COLOURS.map(([c]) => c).filter(c => inCat.some(p => p.baseColours.includes(c)));
@@ -55,13 +119,20 @@ function renderControls() {
   $('f-size').innerHTML = `<option value="">Any size</option>` + sizes.map(s => `<option>${esc(s)}</option>`).join('');
   if (state.size && !sizes.includes(state.size)) $('f-size').insertAdjacentHTML('beforeend', `<option>${esc(state.size)}</option>`);
   $('f-size').value = state.size;
+
+  const periods = [...new Set(inCat.map(p => periodOf(p.firstSeen)))].sort().reverse();
+  if (state.period && !periods.includes(state.period)) periods.unshift(state.period);
+  $('f-period').innerHTML = `<option value="">Any time</option>` + periods.map(k => `<option value="${k}">${periodLabel(k)}</option>`).join('');
+  $('f-period').value = state.period;
   $('f-gender').value = state.gender;
+  $('f-status').value = state.status;
+  for (const b of document.querySelectorAll('[data-gran]')) b.setAttribute('aria-pressed', b.dataset.gran === state.gran);
 }
 
 // ---------------------------------------------------------------- hero
 function renderHero(stats) {
   const m = stats.market;
-  $('hero-label').textContent = `Average price of ${describe()} in the UK`;
+  $('hero-label').textContent = `Average UK price of ${describe()}`;
   $('hero-num').textContent = gbp(m.avg);
   const cheapest = stats.byRetailer.filter(r => r.count).sort((a, b) => a.avg - b.avg)[0];
   const dearest = stats.byRetailer.filter(r => r.count).sort((a, b) => b.avg - a.avg)[0];
@@ -71,6 +142,11 @@ function renderHero(stats) {
     : 'No products match these filters yet.';
   const items = [['Median', gbp(m.median)], ['Lowest', gbp(m.min)], ['Highest', gbp(m.max)], ['All products pooled', gbp(m.pooledAvg)]];
   $('hero-stats').innerHTML = m.count ? items.map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join('') : '';
+
+  $('picks').innerHTML = RETAILERS.map(r => {
+    const p = current().filter(x => x.retailer === r.id).sort((a, b) => a.unitPrice - b.unitPrice)[0];
+    return p ? card(p, { meta: false }) : `<div class="pick-empty">No matching products at ${esc(r.name)}</div>`;
+  }).join('');
 }
 
 // ---------------------------------------------------------------- retailer bars + table
@@ -192,28 +268,72 @@ function renderMatrix() {
   $('matrix').innerHTML = head + `<tbody>${body}</tbody>`;
 }
 
-// ---------------------------------------------------------------- products table
+// ---------------------------------------------------------------- released over time
+function renderTimeline() {
+  // Every release in this category with the colour / who-for / size filters,
+  // regardless of the period and on-sale filters, so all periods stay visible.
+  const ps = DATA.products.filter(p => p.category === state.category && passesFilters(p, ['period', 'status']));
+  const groups = new Map();
+  for (const p of ps) {
+    const k = periodOf(p.firstSeen);
+    if (!groups.has(k)) groups.set(k, []);
+    groups.get(k).push(p);
+  }
+  const keys = [...groups.keys()].sort().reverse();
+  if (!keys.length) { $('timeline').innerHTML = '<p class="gallery-empty">No releases match these filters.</p>'; $('timeline-more').hidden = true; return; }
+  $('timeline').innerHTML = keys.slice(0, state.periods).map(k => {
+    const list = groups.get(k).sort((a, b) => b.firstSeen.localeCompare(a.firstSeen));
+    const s = marketStats(list, RETAILERS);
+    const live = list.filter(p => p.active).length;
+    const shown = list.slice(0, 11);
+    return `<div class="period">
+      <div class="period-head">
+        <button data-period="${k}" aria-pressed="${state.period === k}" title="Filter the page to this period">${periodLabel(k)}</button>
+        <span class="stat">${list.length} new · average ${gbp(s.market.avg)} · ${live} still on sale</span>
+      </div>
+      <div class="period-mix">${s.byRetailer.filter(r => r.count).map(r => `<span><span class="dot" style="background:${seriesVar(r.retailer)}"></span>${esc(r.retailer.name)} ${r.count} · ${gbp(r.avg)}</span>`).join('')}</div>
+      <div class="strip">${shown.map(p => card(p, { meta: false })).join('')}
+        ${list.length > shown.length ? `<button class="more-tile" data-period="${k}" data-jump="1">See all ${list.length}</button>` : ''}</div>
+    </div>`;
+  }).join('');
+  $('timeline-more').hidden = keys.length <= state.periods;
+}
+
+// ---------------------------------------------------------------- product gallery
 function renderProducts(products) {
   const q = state.search.toLowerCase();
   let list = q ? products.filter(p => `${p.name} ${retailerById[p.retailer]?.name} ${p.colours.join(' ')}`.toLowerCase().includes(q)) : products;
-  const key = state.sort;
+  const [key, dir] = state.sort.split(':');
   list = [...list].sort((a, b) => {
     const va = key === 'retailer' ? retailerById[a.retailer].name : a[key], vb = key === 'retailer' ? retailerById[b.retailer].name : b[key];
-    return (typeof va === 'string' ? va.localeCompare(vb) : va - vb) * state.dir;
+    return (typeof va === 'string' ? va.localeCompare(vb) : va - vb) * Number(dir) || a.unitPrice - b.unitPrice;
   });
   $('product-count').textContent = `· ${list.length}`;
-  const th = (k, label, cls = '') => `<th class="${cls}"><button class="th-sort" data-sort="${k}">${label}${state.sort === k ? (state.dir > 0 ? ' ↑' : ' ↓') : ''}</button></th>`;
-  $('products').innerHTML = `<thead><tr>${th('retailer', 'Retailer')}${th('name', 'Product')}${th('unitPrice', 'Price per item', 'n')}<th>Colours</th><th>Sizes</th></tr></thead><tbody>` +
-    list.slice(0, state.limit).map(p => {
-      const r = retailerById[p.retailer];
-      return `<tr>
-        <td><span class="bar-name"><span class="dot" style="background:${seriesVar(r)}"></span>${esc(r.name)}</span></td>
-        <td class="name">${p.url ? `<a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.name)}</a>` : esc(p.name)}</td>
-        <td class="n">${gbp(p.unitPrice)}${p.packSize > 1 ? `<div class="muted">${gbp(p.price)} for ${p.packSize}</div>` : ''}</td>
-        <td class="opts">${esc(p.colours.join(', ')) || '<span class="muted">–</span>'}</td>
-        <td class="opts">${esc(sortSizes(p.sizes).join(', ')) || '<span class="muted">–</span>'}</td></tr>`;
-    }).join('') + '</tbody>';
+  $('gallery').innerHTML = list.length ? list.slice(0, state.limit).map(p => card(p)).join('') : '<p class="gallery-empty">No products match these filters.</p>';
   $('more').hidden = list.length <= state.limit;
+}
+
+// ---------------------------------------------------------------- lightbox
+function openProduct(p) {
+  const r = retailerById[p.retailer];
+  const log = p.priceLog?.length > 1 ? `<div class="plog">${p.priceLog.map(l => `<span>${fmtDay(l.date)}: ${gbp(l.price)}</span>`).join('')}</div>` : null;
+  const rows = [
+    ['Shop', `<span class="bar-name"><span class="dot" style="background:${seriesVar(r)}"></span>${esc(r.name)}</span>`],
+    ['Category', esc(CATEGORY_BY_ID[p.category]?.label)],
+    ['Colours', esc(p.colours.join(', ')) || '–'],
+    ['Sizes', esc(sortSizes(p.sizes).join(', ')) || '–'],
+    ['Released', `${fmtDay(p.firstSeen)} <span class="muted">(${periodLabel(periodOf(p.firstSeen, 'season'))})</span>`],
+    ['Status', p.active ? 'On sale now' : `No longer listed (last seen ${fmtDay(p.lastSeen)})`],
+    log && ['Price history', log],
+  ].filter(Boolean);
+  $('lb-body').innerHTML = `${photo(p, { tags: false })}
+    <div class="lb-info">
+      <h3>${esc(p.name)}</h3>
+      <div class="lb-price">${gbp(p.unitPrice)}${p.packSize > 1 ? ` <span class="muted" style="font-size:15px;font-weight:400">each · ${gbp(p.price)} for ${p.packSize}</span>` : ''}</div>
+      <dl>${rows.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join('')}</dl>
+      ${p.url ? `<a class="btn" href="${esc(p.url)}" target="_blank" rel="noopener">View at ${esc(r.name)} ↗</a>` : ''}
+    </div>`;
+  $('lightbox').showModal();
 }
 
 // ---------------------------------------------------------------- tooltip
@@ -235,23 +355,38 @@ function render() {
   const products = current();
   const stats = marketStats(products, RETAILERS);
   renderHero(stats);
+  renderTimeline();
   renderRetailers(stats);
   renderTrend();
   renderAvailability(products);
   renderMatrix();
   renderProducts(products);
 }
+const set = changes => { Object.assign(state, changes, { limit: 48 }); render(); };
 
 document.addEventListener('click', e => {
+  const prod = e.target.closest('[data-product]');
+  if (prod) return openProduct(DATA.products[prod.dataset.product]);
   const cat = e.target.closest('[data-cat]');
-  if (cat) { state.category = cat.dataset.cat; state.limit = 50; render(); if (cat.tagName === 'TR') scrollTo({ top: 0, behavior: 'smooth' }); return; }
-  const sort = e.target.closest('[data-sort]');
-  if (sort) { const k = sort.dataset.sort; state.dir = state.sort === k ? -state.dir : 1; state.sort = k; renderProducts(current()); }
+  if (cat) { set({ category: cat.dataset.cat, period: '', periods: 6 }); if (cat.tagName === 'TR') scrollTo({ top: 0, behavior: 'smooth' }); return; }
+  const period = e.target.closest('[data-period]');
+  if (period) {
+    const k = period.dataset.period;
+    set({ period: state.period === k && !period.dataset.jump ? '' : k });
+    if (period.dataset.jump) $('gallery-card').scrollIntoView({ behavior: 'smooth' });
+    return;
+  }
+  const gran = e.target.closest('[data-gran]');
+  if (gran) set({ gran: gran.dataset.gran, period: '', periods: 6 });
 });
-for (const [id, k] of [['f-colour', 'colour'], ['f-gender', 'gender'], ['f-size', 'size']])
-  $(id).addEventListener('change', e => { state[k] = e.target.value; state.limit = 50; render(); });
+for (const [id, k] of [['f-colour', 'colour'], ['f-gender', 'gender'], ['f-size', 'size'], ['f-period', 'period'], ['f-status', 'status']])
+  $(id).addEventListener('change', e => set({ [k]: e.target.value }));
 $('f-search').addEventListener('input', e => { state.search = e.target.value; renderProducts(current()); });
-$('more').addEventListener('click', () => { state.limit += 100; renderProducts(current()); });
+$('f-sort').addEventListener('change', e => { state.sort = e.target.value; renderProducts(current()); });
+$('more').addEventListener('click', () => { state.limit += 96; renderProducts(current()); });
+$('timeline-more').addEventListener('click', () => { state.periods += 12; renderTimeline(); });
+$('lb-close').addEventListener('click', () => $('lightbox').close());
+$('lightbox').addEventListener('click', e => { if (e.target === $('lightbox')) $('lightbox').close(); });
 $('retailer-chart').addEventListener('pointermove', e => {
   const row = e.target.closest('[data-tip-retailer]');
   if (!row) return hideTip();
@@ -274,6 +409,8 @@ async function load() {
     console.error(err);
     return;
   }
+  DATA.products = DATA.products.map(normalise);
+  NOW = Date.parse(DATA.generatedAt) || Date.now();
   $('sample-banner').hidden = !DATA.sample;
   $('retailer-names').textContent = RETAILERS.map(r => r.name).join(', ').replace(/, ([^,]*)$/, ' and $1');
   $('updated').textContent = `Updated ${new Date(DATA.generatedAt).toLocaleString('en-GB', { dateStyle: 'medium', timeStyle: 'short' })}`;

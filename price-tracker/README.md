@@ -3,9 +3,17 @@
 Tracks what everyday clothes cost on the UK high street. A scraper visits
 **Next, M&S, H&M and Primark**, searches each one for every category
 (T-shirts, shirts, hoodies, jumpers, sweatshirts, coats, jeans, joggers, socks,
-underwear) and records each product's **price, colours and sizes**. The
-dashboard turns that into:
+underwear) and records each product's **price, colours and sizes**. It also
+**screenshots each product's photo** on the retailer's site (saved as a small
+WebP) and remembers **when each product first appeared**, so you can see what
+was released when. The dashboard turns that into:
 
+- **picture tiles** for every category, and a **photo gallery** of every product
+  (click one for a larger view, colours, sizes, release date and price history)
+- **Released over time**: new products grouped by month, quarter or season
+  (Spring/Summer/Autumn/Winter), with each drop's average price per shop.
+  Click a period to filter the whole page to it
+- **cheapest product at each shop**, with pictures
 - **UK average price** for any category, narrowed by colour, men/women/kids and
   size — e.g. "average price of a white T-shirt in the UK"
 - average / median / cheapest / dearest **per retailer**
@@ -14,7 +22,7 @@ dashboard turns that into:
 - an **every-category matrix** and a searchable, sortable **product list**
 
 Views are shareable: the filters live in the URL, e.g.
-`index.html#category=t-shirts&colour=white&gender=men`.
+`index.html#category=t-shirts&colour=white&gender=men&period=month:2026-09`.
 
 ## Quick start
 
@@ -36,6 +44,7 @@ npm run scrape -- --retailer hm            # one retailer (next | mands | hm | p
 npm run scrape -- --category socks         # one category
 npm run scrape -- --max 10                 # products per search term (default 24)
 npm run scrape -- --headful --debug        # watch the browser; save pages to data/debug/
+npm run scrape -- --refresh-images         # re-take screenshots that already exist
 ```
 
 ## How prices are worked out
@@ -48,6 +57,20 @@ npm run scrape -- --headful --debug        # watch the browser; save pages to da
   shown next to it.
 - **Colours** are normalised to base colours ("Optic White" → white,
   "Ecru" → cream) so you can filter across retailers.
+
+## Pictures and release dates
+
+- **Pictures**: on each product page the scraper finds the main product photo
+  (the largest image near the top), screenshots it, and saves it as a 480px
+  WebP in `data/images/<retailer>/`. If there's no usable image on screen it
+  downloads the photo the retailer publishes instead. Each product is shot once;
+  later runs reuse the file.
+- **Released** is the date the product first appeared on the retailer's site.
+  If the retailer publishes its own release date, that's used; otherwise it's
+  the first day the scraper saw it. So release dates build up from your first
+  scrape onwards. Products that are dropped stay in the data as "No longer
+  listed", so older releases remain visible.
+- Price changes are logged per product and shown in its detail view.
 
 Product data comes from the schema.org JSON-LD retailers publish for Google
 Shopping, with Open Graph price tags and the visible size/colour pickers as
@@ -91,7 +114,9 @@ Add retailers in `lib/retailers.js`, categories and colour names in
 | `scraper/scrape.js` | Playwright scraper |
 | `scraper/extract.js` | Turns a product page into a price/colour/size record |
 | `scraper/make-sample.js` | Generates sample data for previewing |
-| `data/products.json` | Latest snapshot of every product |
+| `scraper/merge.js` | Tracks release dates, dropped products and price changes between runs |
+| `data/products.json` | Every product ever seen, with its latest details |
+| `data/images/` | Product screenshots (WebP) |
 | `data/history.json` | Daily average per retailer and category |
 | `test/` | `npm test` |
 
