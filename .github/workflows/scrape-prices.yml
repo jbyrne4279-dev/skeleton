@@ -49,6 +49,6 @@ jobs:
         run: |
           git config user.name "price-bot"
           git config user.email "price-bot@users.noreply.github.com"
-          git add data/products.json data/history.json data/images
+          git add data/products.json data/history.json data/images/
           git diff --cached --quiet || git commit -m "Update clothing prices $(date -u +%F)"
           git push

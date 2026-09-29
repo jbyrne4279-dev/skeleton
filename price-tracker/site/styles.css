@@ -30,6 +30,7 @@
 }
 
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
 body { margin: 0; background: var(--page); color: var(--ink); font: 15px/1.5 "Inter Tight", system-ui, sans-serif; }
 .wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
 h1, h2 { margin: 0; letter-spacing: -0.01em; }
@@ -204,3 +205,7 @@ main > *, .timeline > * { min-width: 0; }
   .lb-body .img { border-radius: 14px 14px 0 0; max-height: 55vh; }
   .gallery-tools, .gallery-tools input { width: 100%; }
 }
+.lb-colours { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 4px; }
+.lb-colours button { display: grid; gap: 2px; width: 56px; padding: 0; border: 0; background: none; color: var(--ink-2); font: inherit; font-size: 11px; cursor: pointer; text-align: center; }
+.lb-colours img { width: 56px; aspect-ratio: 4/5; object-fit: cover; border-radius: 6px; background: var(--photo); border: 1px solid var(--grid); }
+.lb-colours span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }

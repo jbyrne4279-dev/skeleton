@@ -18,7 +18,7 @@ import path from 'node:path';
 import { RETAILERS } from '../lib/retailers.js';
 import { CATEGORIES } from '../lib/catalog.js';
 import { summarise } from '../lib/stats.js';
-import { extractProduct } from './extract.js';
+import { extractProduct, imageKey } from './extract.js';
 import { mergeRun } from './merge.js';
 
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
@@ -91,7 +91,7 @@ async function scrapeProduct(context, retailer, url, categoryHint) {
     const [html, dom] = await Promise.all([page.content(), page.evaluate(readDom)]);
     const product = extractProduct(html, { url, retailer: retailer.id, categoryHint, dom });
     if (!product && DEBUG) await dump(page, `${retailer.id}-product-miss`);
-    if (product) product.image = await productImage(page, retailer, product);
+    if (product) Object.assign(product, await productImages(page, retailer, product));
     return product;
   } catch (e) {
     log(`  ! ${url}: ${e.message.split('\n')[0]}`);
@@ -101,43 +101,86 @@ async function scrapeProduct(context, retailer, url, categoryHint) {
   }
 }
 
-// Screenshots the product's main photo as it appears on the retailer's page
-// and saves it as a WebP thumbnail: data/images/<retailer>/<hash>.webp.
-// Existing images are reused unless --refresh-images is passed.
-async function productImage(page, retailer, product) {
-  const rel = `data/images/${retailer.id}/${createHash('sha1').update(product.url).digest('hex').slice(0, 16)}.webp`;
-  const file = path.join(ROOT, rel);
-  if (existsSync(file) && !REFRESH_IMAGES) return rel;
-  try {
-    await acceptCookies(page);
-    // The main photo is the largest image near the top of the page.
-    const handle = await page.evaluateHandle(() => {
-      const area = el => { const r = el.getBoundingClientRect(); return r.width * r.height; };
-      const imgs = [...document.querySelectorAll('img, picture')].filter(el => {
-        const r = el.getBoundingClientRect();
-        return r.width >= 150 && r.height >= 150 && r.top + scrollY < innerHeight * 1.5 && getComputedStyle(el).visibility !== 'hidden';
-      });
-      return imgs.sort((a, b) => area(b) - area(a))[0] || null;
-    });
-    let png;
-    const el = handle.asElement();
-    if (el) {
-      await el.scrollIntoViewIfNeeded({ timeout: 3000 }).catch(() => {});
-      await el.evaluate(img => img.tagName !== 'IMG' || img.complete || new Promise(r => { img.onload = img.onerror = r; setTimeout(r, 4000); }));
-      png = await el.screenshot({ type: 'png', timeout: 10000 });
-    } else if (product.imageUrl) {
-      // No usable <img> on screen (e.g. canvas gallery) - fall back to the published photo.
-      const res = await page.request.get(product.imageUrl, { timeout: 15000 });
-      if (res.ok()) png = await res.body();
-    }
-    if (!png) return null;
-    await mkdir(path.dirname(file), { recursive: true });
-    await sharp(png).resize({ width: 480, withoutEnlargement: true }).webp({ quality: 72 }).toFile(file);
+// Saves pictures of the exact product, as WebP files in data/images/<retailer>/.
+//
+// Main picture, in order of preference:
+//   1. 'on-page'  - screenshot of the <img> on the product page that shows the
+//                   retailer's own product photo (the one named in its
+//                   schema.org data), so the picture is 1:1 with the product
+//   2. 'official' - that same photo downloaded directly, if it isn't on screen
+//   3. 'guess'    - largest image near the top of the page (last resort)
+// Plus one picture per colour when the retailer publishes per-colour photos,
+// so filtering by "white" shows the white version of the product.
+// Existing files are reused unless --refresh-images is passed.
+async function productImages(page, retailer, product) {
+  const base = `data/images/${retailer.id}/${createHash('sha1').update(product.url).digest('hex').slice(0, 16)}`;
+  const out = { image: null, imageMatch: null, colourImages: {} };
+  const save = async (buf, rel) => {
+    await mkdir(path.dirname(path.join(ROOT, rel)), { recursive: true });
+    await sharp(buf).resize({ width: 480, withoutEnlargement: true }).webp({ quality: 72 }).toFile(path.join(ROOT, rel));
     return rel;
-  } catch (e) {
-    log(`  ! image for ${product.url}: ${e.message.split('\n')[0]}`);
-    return existsSync(file) ? rel : null;
+  };
+  const download = async url => {
+    const res = await page.request.get(url, { timeout: 15000, headers: { referer: product.url } });
+    return res.ok() ? res.body() : null;
+  };
+
+  const main = `${base}.webp`;
+  if (existsSync(path.join(ROOT, main)) && !REFRESH_IMAGES) {
+    Object.assign(out, { image: main, imageMatch: product.imageMatch || null });
+  } else {
+    try {
+      await acceptCookies(page);
+      const key = imageKey(product.imageUrl);
+      const find = exact => page.evaluateHandle(([k, exact]) => {
+        const visible = el => { const r = el.getBoundingClientRect(); return r.width >= 150 && r.height >= 150 && getComputedStyle(el).visibility !== 'hidden'; };
+        const imgs = [...document.querySelectorAll('img')].filter(visible);
+        if (exact) {
+          const srcs = img => [img.currentSrc, img.src, img.srcset, img.dataset.src, img.closest('picture')?.innerHTML].join(' ').toLowerCase();
+          return (k && imgs.find(img => srcs(img).includes(k))) || null;
+        }
+        const area = el => { const r = el.getBoundingClientRect(); return r.width * r.height; };
+        return imgs.filter(el => el.getBoundingClientRect().top + scrollY < innerHeight * 1.5).sort((a, b) => area(b) - area(a))[0] || null;
+      }, [key, exact]).then(h => h.asElement());
+
+      let buf = null;
+      const exact = key && await find(true);
+      if (exact) {
+        buf = await shoot(exact);
+        out.imageMatch = 'on-page';
+      }
+      if (!buf && product.imageUrl) {
+        buf = await download(product.imageUrl);
+        if (buf) out.imageMatch = 'official';
+      }
+      const guess = !buf && await find(false);
+      if (guess) {
+        buf = await shoot(guess);
+        out.imageMatch = 'guess';
+      }
+      if (buf) out.image = await save(buf, main);
+    } catch (e) {
+      log(`  ! image for ${product.url}: ${e.message.split('\n')[0]}`);
+    }
   }
+
+  for (const [colour, url] of Object.entries(product.colourImages || {}).slice(0, 12)) {
+    const rel = `${base}-${colour.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}.webp`;
+    try {
+      if (existsSync(path.join(ROOT, rel)) && !REFRESH_IMAGES) { out.colourImages[colour] = rel; continue; }
+      const buf = await download(url);
+      if (buf) out.colourImages[colour] = await save(buf, rel);
+    } catch (e) {
+      log(`  ! ${colour} image for ${product.url}: ${e.message.split('\n')[0]}`);
+    }
+  }
+  return out;
+}
+
+async function shoot(el) {
+  await el.scrollIntoViewIfNeeded({ timeout: 3000 }).catch(() => {});
+  await el.evaluate(img => img.complete || new Promise(r => { img.onload = img.onerror = r; setTimeout(r, 4000); }));
+  return el.screenshot({ type: 'png', timeout: 10000 });
 }
 
 async function dump(page, label) {
@@ -230,6 +273,6 @@ async function main() {
   log(`Saved ${products.length} products: ${fresh.length} scraped (${isNew} new), ${active.length} currently listed, ${fresh.filter(p => p.image).length} with images.`);
 }
 
-export { productImage, readDom };
+export { productImages, readDom };
 
 if (import.meta.url === pathToFileURL(process.argv[1]).href) main().catch(e => { console.error(e); process.exit(1); });

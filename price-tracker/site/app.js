@@ -1,4 +1,4 @@
-import { CATEGORIES, CATEGORY_BY_ID, COLOURS } from '../lib/catalog.js';
+import { CATEGORIES, CATEGORY_BY_ID, COLOURS, baseColour } from '../lib/catalog.js';
 import { RETAILER_INFO as RETAILERS } from '../lib/retailers.js';
 import { marketStats, summarise, tally, sortSizes } from '../lib/stats.js';
 
@@ -16,7 +16,7 @@ let HISTORY = { rows: [] };
 let NOW = Date.now();
 
 // Older data files (before release tracking) have no firstSeen/active fields.
-const normalise = p => ({ active: true, firstSeen: (p.scrapedAt || '').slice(0, 10), priceLog: [], image: null, ...p });
+const normalise = p => ({ active: true, firstSeen: (p.scrapedAt || '').slice(0, 10), priceLog: [], image: null, colourImages: {}, ...p });
 
 // ---------------------------------------------------------------- release periods
 const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -76,10 +76,20 @@ function describe() {
 }
 
 // ---------------------------------------------------------------- shared product card
+// The retailer's photo of this exact product - in the filtered colour when the
+// retailer publishes a photo per colour.
+function pictureFor(p) {
+  if (state.colour) {
+    const hit = Object.entries(p.colourImages).find(([c]) => baseColour(c) === state.colour);
+    if (hit) return hit[1];
+  }
+  return p.image || Object.values(p.colourImages)[0] || null;
+}
 function photo(p, { tags = true } = {}) {
   const r = retailerById[p.retailer];
-  const img = p.image
-    ? `<img src="${esc(p.image)}" alt="${esc(p.name)}" loading="lazy" decoding="async">`
+  const src = pictureFor(p);
+  const img = src
+    ? `<img src="${esc(src)}" alt="${esc(p.name)}" loading="lazy" decoding="async">`
     : `<span class="noimg">No picture yet</span>`;
   const badge = !p.active ? `<span class="badge gone">No longer listed</span>` : isNew(p) ? `<span class="badge">New</span>` : '';
   return `<div class="img">${img}${tags ? `<span class="shop-tag"><span class="dot" style="background:${seriesVar(r)}"></span>${esc(r.name)}</span>${badge}` : ''}</div>`;
@@ -101,11 +111,11 @@ function renderControls() {
   // Category tiles: picture of the newest matching product + its average price.
   $('category-tiles').innerHTML = CATEGORIES.map(c => {
     const ps = DATA.products.filter(p => p.category === c.id && passesFilters(p));
-    const pic = [...ps].filter(p => p.image).sort((a, b) => b.firstSeen.localeCompare(a.firstSeen))[0]
-      || DATA.products.find(p => p.category === c.id && p.image);
+    const pic = [...ps].filter(pictureFor).sort((a, b) => b.firstSeen.localeCompare(a.firstSeen))[0]
+      || DATA.products.find(p => p.category === c.id && pictureFor(p));
     const avg = marketStats(ps, RETAILERS).market.avg;
     return `<button class="cat-tile" role="tab" data-cat="${c.id}" aria-selected="${c.id === state.category}">
-      ${pic ? `<img src="${esc(pic.image)}" alt="" loading="lazy">` : '<span class="ph"></span>'}
+      ${pic ? `<img src="${esc(pictureFor(pic))}" alt="" loading="lazy">` : '<span class="ph"></span>'}
       <b>${esc(c.label)}</b><span>${avg == null ? 'No matches' : `avg ${gbp(avg)}`}</span></button>`;
   }).join('');
 
@@ -320,17 +330,22 @@ function openProduct(p) {
   const rows = [
     ['Shop', `<span class="bar-name"><span class="dot" style="background:${seriesVar(r)}"></span>${esc(r.name)}</span>`],
     ['Category', esc(CATEGORY_BY_ID[p.category]?.label)],
-    ['Colours', esc(p.colours.join(', ')) || '–'],
+    ['Colours', Object.keys(p.colourImages).length
+      ? `<div class="lb-colours">${Object.entries(p.colourImages).map(([c, src]) => `<button data-swap="${esc(src)}" title="${esc(c)}"><img src="${esc(src)}" alt="${esc(c)}"><span>${esc(c)}</span></button>`).join('')}</div>`
+        + (p.colours.length > Object.keys(p.colourImages).length ? `<div class="muted">All colours: ${esc(p.colours.join(', '))}</div>` : '')
+      : esc(p.colours.join(', ')) || '–'],
     ['Sizes', esc(sortSizes(p.sizes).join(', ')) || '–'],
     ['Released', `${fmtDay(p.firstSeen)} <span class="muted">(${periodLabel(periodOf(p.firstSeen, 'season'))})</span>`],
     ['Status', p.active ? 'On sale now' : `No longer listed (last seen ${fmtDay(p.lastSeen)})`],
     log && ['Price history', log],
   ].filter(Boolean);
+  const note = p.imageMatch === 'guess' ? `<p class="muted">Picture picked automatically from the product page and may not show this exact item.</p>` : '';
   $('lb-body').innerHTML = `${photo(p, { tags: false })}
     <div class="lb-info">
       <h3>${esc(p.name)}</h3>
       <div class="lb-price">${gbp(p.unitPrice)}${p.packSize > 1 ? ` <span class="muted" style="font-size:15px;font-weight:400">each · ${gbp(p.price)} for ${p.packSize}</span>` : ''}</div>
       <dl>${rows.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join('')}</dl>
+      ${note}
       ${p.url ? `<a class="btn" href="${esc(p.url)}" target="_blank" rel="noopener">View at ${esc(r.name)} ↗</a>` : ''}
     </div>`;
   $('lightbox').showModal();
@@ -386,6 +401,10 @@ $('f-sort').addEventListener('change', e => { state.sort = e.target.value; rende
 $('more').addEventListener('click', () => { state.limit += 96; renderProducts(current()); });
 $('timeline-more').addEventListener('click', () => { state.periods += 12; renderTimeline(); });
 $('lb-close').addEventListener('click', () => $('lightbox').close());
+$('lb-body').addEventListener('click', e => {
+  const b = e.target.closest('[data-swap]');
+  if (b) $('lb-body').querySelector('.img img').src = b.dataset.swap;
+});
 $('lightbox').addEventListener('click', e => { if (e.target === $('lightbox')) $('lightbox').close(); });
 $('retailer-chart').addEventListener('pointermove', e => {
   const row = e.target.closest('[data-tip-retailer]');
@@ -404,8 +423,10 @@ async function load() {
   try {
     [DATA, HISTORY] = await Promise.all([get('data/products.json'), get('data/history.json').catch(() => ({ rows: [] }))]);
   } catch (err) {
-    $('hero-label').textContent = 'No data yet';
-    $('hero-sub').textContent = 'Run "npm run scrape" (or "npm run sample" for demo data), then serve this folder with "npm run serve".';
+    $('hero-label').textContent = 'No products collected yet';
+    $('hero-num').textContent = '';
+    $('hero-sub').textContent = 'Run "npm run scrape" to collect real products, prices and photos from each retailer, then reload this page.';
+    for (const el of document.querySelectorAll('main > section:not(.hero), .hero-picks')) el.hidden = true;
     console.error(err);
     return;
   }

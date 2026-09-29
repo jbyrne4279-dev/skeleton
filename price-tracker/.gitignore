@@ -1,2 +1,4 @@
 node_modules/
 data/debug/
+# Sample data from `npm run sample` - never commit it
+data/images/sample/

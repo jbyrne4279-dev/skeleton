@@ -27,6 +27,8 @@ export function mergeRun(prev, fresh, done, today) {
     out.set(keyOf(p), {
       ...p,
       image: p.image || was?.image || null,
+      imageMatch: p.imageMatch || was?.imageMatch || null,
+      colourImages: { ...was?.colourImages, ...p.colourImages },
       firstSeen,
       lastSeen: today,
       active: true,

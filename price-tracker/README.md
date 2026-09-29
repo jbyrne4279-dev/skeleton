@@ -31,11 +31,14 @@ cd price-tracker
 npm install
 npx playwright install chromium   # one-off browser download
 
-npm run sample    # optional: fake data to preview the dashboard
+npm run scrape    # collect real products, prices and photos (takes a while)
 npm run serve     # open http://localhost:8080
-
-npm run scrape    # collect real prices (takes a while)
 ```
+
+The repo ships with no product data: everything on the dashboard comes from
+the retailers' own sites. (`npm run sample` makes clearly-marked fake data if
+you just want to try the layout; it is ignored by git and replaced by the
+first real scrape.)
 
 Scraper options:
 
@@ -60,11 +63,18 @@ npm run scrape -- --refresh-images         # re-take screenshots that already ex
 
 ## Pictures and release dates
 
-- **Pictures**: on each product page the scraper finds the main product photo
-  (the largest image near the top), screenshots it, and saves it as a 480px
-  WebP in `data/images/<retailer>/`. If there's no usable image on screen it
-  downloads the photo the retailer publishes instead. Each product is shot once;
-  later runs reuse the file.
+- **Pictures are the exact product.** Each retailer's product page names its
+  own product photo in its schema.org data. The scraper finds that photo on the
+  page and screenshots it (`on-page`); if it isn't on screen, it downloads that
+  same photo (`official`). Only if the retailer names no photo at all does it
+  fall back to the largest image near the top of the page (`guess`), and the
+  product's detail view then says the picture may not match. The method used
+  is saved per product as `imageMatch`.
+- **One picture per colour.** When the retailer publishes a photo for each
+  colour, each is saved too. Filtering by a colour shows that colour's photo,
+  and the detail view shows every colour as a thumbnail.
+- Pictures are saved as 480px WebP files in `data/images/<retailer>/`. Each is
+  taken once; later runs reuse the file (`--refresh-images` re-takes them).
 - **Released** is the date the product first appeared on the retailer's site.
   If the retailer publishes its own release date, that's used; otherwise it's
   the first day the scraper saw it. So release dates build up from your first
@@ -113,7 +123,7 @@ Add retailers in `lib/retailers.js`, categories and colour names in
 | `lib/` | Categories, colours, retailers and statistics shared by scraper and dashboard |
 | `scraper/scrape.js` | Playwright scraper |
 | `scraper/extract.js` | Turns a product page into a price/colour/size record |
-| `scraper/make-sample.js` | Generates sample data for previewing |
+| `scraper/make-sample.js` | Generates fake data for trying the layout (not committed) |
 | `scraper/merge.js` | Tracks release dates, dropped products and price changes between runs |
 | `data/products.json` | Every product ever seen, with its latest details |
 | `data/images/` | Product screenshots (WebP) |

@@ -89,6 +89,7 @@ export function extractProduct(html, { url, retailer, categoryHint, dom = {} }) 
   let currency = null;
   const colours = [];
   const sizes = [];
+  const colourImages = {}; // colour name -> the retailer's own photo of that colour
   if (product) {
     const main = offerPrice(product.offers);
     prices.push(...main.prices);
@@ -101,6 +102,9 @@ export function extractProduct(html, { url, retailer, categoryHint, dom = {} }) 
       currency ||= vp.currency;
       colours.push(...asArray(v.color).map(text));
       sizes.push(...asArray(v.size).map(text));
+      const vc = text(asArray(v.color)[0]);
+      const vi = imageSrc(v.image);
+      if (vc && vi && !colourImages[vc]) colourImages[vc] = absolute(vi, url);
     }
   }
   if (!prices.length) {
@@ -120,8 +124,8 @@ export function extractProduct(html, { url, retailer, categoryHint, dom = {} }) 
   const category = categorise(name, categoryHint);
   if (!category) return null;
 
-  const imageUrl = [product?.image].flat().map(i => (typeof i === 'string' ? i : i?.url || i?.contentUrl)).find(Boolean)
-    || decode(metaContent(html, 'og:image')) || null;
+  const img = imageSrc(product?.image) || decode(metaContent(html, 'og:image'));
+  const imageUrl = img ? absolute(img, url) : null;
   const releaseDate = [product?.releaseDate, product?.datePublished].find(d => d && !Number.isNaN(Date.parse(d))) || null;
 
   const price = Math.min(...prices);
@@ -143,9 +147,24 @@ export function extractProduct(html, { url, retailer, categoryHint, dom = {} }) 
       : [baseColour(name)].filter(c => c && c !== 'other'),
     sizes: sizeList,
     imageUrl,
+    colourImages,
     releaseDate: releaseDate && new Date(releaseDate).toISOString().slice(0, 10),
     scrapedAt: new Date().toISOString(),
   };
 }
 
 const round2 = n => Math.round(n * 100) / 100;
+
+// The part of an image URL that identifies the photo itself, ignoring CDN size
+// and format parameters: ".../mands/white_T28?w=600&fmt=webp" -> "white_t28".
+// Used to find the retailer's own product photo among the <img>s on the page.
+export function imageKey(url) {
+  if (!url) return null;
+  try {
+    const seg = new URL(url, 'https://x').pathname.split('/').filter(Boolean).pop() || '';
+    const key = decodeURIComponent(seg).replace(/\.(jpe?g|png|webp|avif|gif)$/i, '').toLowerCase();
+    return key.length >= 5 ? key : null;
+  } catch { return null; }
+}
+const imageSrc = img => [img].flat().map(i => (typeof i === 'string' ? i : i?.url || i?.contentUrl)).find(Boolean) || null;
+const absolute = (src, base) => { try { return new URL(src, base).href; } catch { return src; } };

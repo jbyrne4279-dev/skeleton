@@ -15,6 +15,11 @@ test('reads price, colours and sizes from JSON-LD ProductGroup', () => {
   assert.deepEqual(p.colours, ['White', 'Navy']);
   assert.deepEqual(p.baseColours, ['white', 'navy']);
   assert.deepEqual(p.sizes, ['S', 'M', 'XL']);
+  assert.equal(p.imageUrl, 'https://asset1.cxnmarksandspencer.com/is/image/mands/white_T28');
+  assert.deepEqual(p.colourImages, {
+    White: 'https://asset1.cxnmarksandspencer.com/is/image/mands/white_T28?w=600',
+    Navy: 'https://asset1.cxnmarksandspencer.com/is/image/mands/navy_T28',
+  });
 });
 
 test('falls back to meta tags + DOM, and prices multipacks per item', () => {
