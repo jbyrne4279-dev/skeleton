@@ -1,0 +1,99 @@
+# UK Clothing Price Index
+
+Tracks what everyday clothes cost on the UK high street. A scraper visits
+**Next, M&S, H&M and Primark**, searches each one for every category
+(T-shirts, shirts, hoodies, jumpers, sweatshirts, coats, jeans, joggers, socks,
+underwear) and records each product's **price, colours and sizes**. The
+dashboard turns that into:
+
+- **UK average price** for any category, narrowed by colour, men/women/kids and
+  size — e.g. "average price of a white T-shirt in the UK"
+- average / median / cheapest / dearest **per retailer**
+- a **price trend** over time (one data point per scrape day)
+- which **sizes and colours** each retailer stocks
+- an **every-category matrix** and a searchable, sortable **product list**
+
+Views are shareable: the filters live in the URL, e.g.
+`index.html#category=t-shirts&colour=white&gender=men`.
+
+## Quick start
+
+```bash
+cd price-tracker
+npm install
+npx playwright install chromium   # one-off browser download
+
+npm run sample    # optional: fake data to preview the dashboard
+npm run serve     # open http://localhost:8080
+
+npm run scrape    # collect real prices (takes a while)
+```
+
+Scraper options:
+
+```bash
+npm run scrape -- --retailer hm            # one retailer (next | mands | hm | primark)
+npm run scrape -- --category socks         # one category
+npm run scrape -- --max 10                 # products per search term (default 24)
+npm run scrape -- --headful --debug        # watch the browser; save pages to data/debug/
+```
+
+## How prices are worked out
+
+- **Price** is the lowest current price on the product page (sale prices count).
+- **Multipacks** ("5 Pack Socks", "Pack of 3 Boxers") are divided by pack size,
+  so socks and underwear compare per item.
+- **UK average** = the mean of each retailer's average, so a retailer with 200
+  T-shirts doesn't outweigh one with 20. The pooled average of every product is
+  shown next to it.
+- **Colours** are normalised to base colours ("Optic White" → white,
+  "Ecru" → cream) so you can filter across retailers.
+
+Product data comes from the schema.org JSON-LD retailers publish for Google
+Shopping, with Open Graph price tags and the visible size/colour pickers as
+fallbacks. See `scraper/extract.js`.
+
+## Keeping it up to date automatically
+
+`.github/workflows/scrape-prices.yml` runs the scraper every day on GitHub
+Actions and commits the new `data/*.json`, which builds up the price history.
+You can also start it by hand from the repo's **Actions** tab. To publish the
+dashboard, turn on GitHub Pages for the repo; it will be at
+`/price-tracker/`.
+
+## When a retailer stops working
+
+Retailers redesign their sites and use bot protection, so expect to adjust
+things now and then:
+
+1. Run `npm run scrape -- --retailer <id> --max 3 --headful --debug`.
+2. If it finds **0 product links**, the search URL or product link pattern in
+   `lib/retailers.js` needs updating — look at the saved page in `data/debug/`.
+3. If it finds links but **0 products with a price**, the product page layout
+   changed; check the saved product page and adjust `scraper/extract.js` or
+   the selectors in `readDom()` in `scraper/scrape.js`.
+4. If pages are blocked (captcha / "access denied"), run from your own machine
+   with `--headful`, lower `--concurrency`, or scrape less often. GitHub's
+   data-centre IPs are more likely to be blocked than a home connection.
+
+A failed run never wipes existing data: categories that return nothing keep
+their previous products.
+
+Add retailers in `lib/retailers.js`, categories and colour names in
+`lib/catalog.js`.
+
+## Files
+
+| Path | What it is |
+|---|---|
+| `index.html`, `site/` | The dashboard (plain HTML/CSS/JS, no build step) |
+| `lib/` | Categories, colours, retailers and statistics shared by scraper and dashboard |
+| `scraper/scrape.js` | Playwright scraper |
+| `scraper/extract.js` | Turns a product page into a price/colour/size record |
+| `scraper/make-sample.js` | Generates sample data for previewing |
+| `data/products.json` | Latest snapshot of every product |
+| `data/history.json` | Daily average per retailer and category |
+| `test/` | `npm test` |
+
+Please scrape politely: the defaults visit a few pages at a time, once a day.
+Check each retailer's terms before using the data commercially.

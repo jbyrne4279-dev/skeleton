@@ -1,0 +1,54 @@
+name: Scrape clothing prices
+
+on:
+  schedule:
+    - cron: '17 5 * * *'   # daily, 05:17 UTC
+  workflow_dispatch:
+    inputs:
+      retailer:
+        description: 'Only this retailer (next, mands, hm, primark) - blank for all'
+        required: false
+      max:
+        description: 'Max products per search term'
+        required: false
+        default: '24'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scrape-prices
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    defaults:
+      run:
+        working-directory: price-tracker
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: price-tracker/package-lock.json
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm test
+      - name: Scrape
+        env:
+          RETAILER: ${{ github.event.inputs.retailer }}
+          MAX: ${{ github.event.inputs.max || '24' }}
+        run: |
+          ARGS="--max $MAX"
+          if [ -n "$RETAILER" ]; then ARGS="$ARGS --retailer $RETAILER"; fi
+          npm run scrape -- $ARGS
+      - name: Commit updated prices
+        run: |
+          git config user.name "price-bot"
+          git config user.email "price-bot@users.noreply.github.com"
+          git add data/products.json data/history.json
+          git diff --cached --quiet || git commit -m "Update clothing prices $(date -u +%F)"
+          git push

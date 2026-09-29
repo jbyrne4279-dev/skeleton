@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UK Clothing Price Index</title>
+<meta name="description" content="Average UK high-street clothing prices, sizes and colours across Next, M&S, H&M and Primark.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site/styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-inner">
+    <div>
+      <h1>UK Clothing Price Index</h1>
+      <p class="sub">What everyday clothes cost across <span id="retailer-names">UK high-street retailers</span>.</p>
+    </div>
+    <p class="updated" id="updated"></p>
+  </div>
+</header>
+
+<div class="banner" id="sample-banner" hidden>
+  <div class="wrap"><strong>Sample data.</strong> These prices are made up so you can preview the dashboard. Run <code>npm run scrape</code> to collect real prices.</div>
+</div>
+
+<main class="wrap">
+  <section class="filters" aria-label="Filters">
+    <div class="chips" id="category-chips" role="tablist" aria-label="Category"></div>
+    <div class="selects">
+      <label>Colour <select id="f-colour"></select></label>
+      <label>Who for <select id="f-gender">
+        <option value="">Everyone</option><option value="men">Men</option><option value="women">Women</option><option value="kids">Kids</option><option value="unisex">Unisex / unlabelled</option>
+      </select></label>
+      <label>Size <select id="f-size"></select></label>
+    </div>
+  </section>
+
+  <section class="hero card">
+    <p class="eyebrow" id="hero-label"></p>
+    <p class="hero-num" id="hero-num">–</p>
+    <p class="hero-sub" id="hero-sub"></p>
+    <dl class="hero-stats" id="hero-stats"></dl>
+  </section>
+
+  <section class="card">
+    <div class="card-head">
+      <h2>Average price by retailer</h2>
+      <p class="hint">Bar = average. Line = cheapest to dearest.</p>
+    </div>
+    <div id="retailer-chart" class="bars"></div>
+    <div class="scroll"><table class="data" id="retailer-table"></table></div>
+  </section>
+
+  <section class="card">
+    <div class="card-head">
+      <h2>Price trend</h2>
+      <p class="hint" id="trend-hint"></p>
+    </div>
+    <div class="legend" id="trend-legend"></div>
+    <div class="trend" id="trend"></div>
+  </section>
+
+  <section class="card">
+    <div class="card-head">
+      <h2>Sizes &amp; colours on offer</h2>
+      <p class="hint">Share of matching products that list each option.</p>
+    </div>
+    <div class="avail" id="availability"></div>
+  </section>
+
+  <section class="card">
+    <div class="card-head">
+      <h2>Every category at a glance</h2>
+      <p class="hint">Average price per item. Colour, who-for and size filters apply. Click a row to open it.</p>
+    </div>
+    <div class="scroll"><table class="data matrix" id="matrix"></table></div>
+  </section>
+
+  <section class="card">
+    <div class="card-head">
+      <h2>Products <span class="count" id="product-count"></span></h2>
+      <input type="search" id="f-search" placeholder="Search products…" aria-label="Search products">
+    </div>
+    <div class="scroll"><table class="data products" id="products"></table></div>
+    <button class="more" id="more" hidden>Show more</button>
+  </section>
+</main>
+
+<footer class="wrap foot">
+  Prices are collected automatically from retailers' public product pages and may be out of date. Multipacks are priced per item.
+</footer>
+
+<div class="tip" id="tip" role="tooltip" hidden></div>
+<script type="module" src="site/app.js"></script>
+</body>
+</html>

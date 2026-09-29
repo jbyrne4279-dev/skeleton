@@ -1,0 +1,16 @@
+{
+  "name": "uk-clothing-price-tracker",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Collects clothing prices, sizes and colours from UK retailers and shows UK market averages.",
+  "type": "module",
+  "scripts": {
+    "scrape": "node scraper/scrape.js",
+    "sample": "node scraper/make-sample.js",
+    "serve": "node serve.js",
+    "test": "node --test test/*.test.js"
+  },
+  "dependencies": {
+    "playwright": "^1.55.0"
+  }
+}
