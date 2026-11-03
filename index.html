@@ -1,9 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Lume — AI that gets results</title>
+<title>Reinstatement Cost Assessment — RICS Rebuild Cost Valuations UK</title>
+<meta name="description" content="RICS-certified reinstatement cost assessments (rebuild cost valuations) for UK homeowners, landlords, freeholders, managing agents and commercial property owners. Insure for the right amount.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
@@ -11,23 +12,20 @@
 <body>
 <header class="nav" id="nav">
   <div class="container nav-inner">
-    <a href="#" class="logo"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 2v20M2 12h20M4.9 4.9l14.2 14.2M19.1 4.9 4.9 19.1"/></g></svg>Lume</a>
+    <a href="#" class="logo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><path d="M3 11 12 3l9 8"/><path d="M5 10v10h14V10"/><path d="m9 15 2 2 4-4"/></g></svg>Reinstatement<span class="logo-thin">Cost Assessment</span></a>
     <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
     <nav class="menu" id="menu">
-      <div class="dd"><button class="dd-btn">Products <i class="chev"></i></button>
-        <div class="dd-panel"><p class="dd-h">Platform</p><a href="#features">AI Agents</a><a href="#features">Analytics</a><a href="#features">Automation</a><p class="dd-h">Developers</p><a href="#">API</a><a href="#">Integrations</a></div></div>
-      <div class="dd"><button class="dd-btn">Solutions <i class="chev"></i></button>
-        <div class="dd-panel"><p class="dd-h">By team</p><a href="#">Marketing</a><a href="#">Engineering</a><a href="#">Sales</a><p class="dd-h">By size</p><a href="#">Startups</a><a href="#">Enterprise</a></div></div>
+      <div class="dd"><button class="dd-btn">Services <i class="chev"></i></button>
+        <div class="dd-panel"><p class="dd-h">Assessments</p><a href="#services">Residential homes</a><a href="#services">Blocks of flats</a><a href="#services">Commercial property</a><a href="#services">Listed &amp; heritage</a><p class="dd-h">Delivery</p><a href="#services">Desktop assessment</a><a href="#services">Site inspection</a></div></div>
+      <div class="dd"><button class="dd-btn">Who we help <i class="chev"></i></button>
+        <div class="dd-panel"><p class="dd-h">Owners</p><a href="#who">Homeowners</a><a href="#who">Landlords</a><a href="#who">Freeholders</a><p class="dd-h">Professionals</p><a href="#who">Managing agents</a><a href="#who">RMCs &amp; RTMs</a><a href="#who">Insurance brokers</a></div></div>
       <div class="dd"><button class="dd-btn">Resources <i class="chev"></i></button>
-        <div class="dd-panel"><p class="dd-h">Learn</p><a href="#">Documentation</a><a href="#">Guides</a><a href="#faq">FAQ</a><p class="dd-h">Community</p><a href="#">Changelog</a></div></div>
-      <div class="dd"><button class="dd-btn">Company <i class="chev"></i></button>
-        <div class="dd-panel"><p class="dd-h">About</p><a href="#">About Us</a><a href="#">Careers</a><p class="dd-h">Content</p><a href="#">Blog</a><a href="#" data-contact>Contact</a></div></div>
+        <div class="dd-panel"><p class="dd-h">Learn</p><a href="#process">How it works</a><a href="#faq">FAQ</a><a href="#faq">Under-insurance explained</a></div></div>
       <div class="dd"><button class="dd-btn">Pricing <i class="chev"></i></button>
-        <div class="dd-panel"><p class="dd-h">Plans</p><a href="#pricing">Free</a><a href="#pricing">Pro</a><a href="#pricing">Sales</a></div></div>
+        <div class="dd-panel"><p class="dd-h">Fixed fees</p><a href="#pricing">Desktop</a><a href="#pricing">Inspection</a><a href="#pricing">Blocks &amp; commercial</a></div></div>
       <span class="sep"></span>
-      <button class="icon-btn" id="theme" aria-label="Toggle theme"><svg viewBox="0 0 24 24" width="16" height="16"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg></button>
-      <button class="btn btn-ghost sm" data-contact>Contact Sales</button>
-      <a class="btn btn-dark sm" href="#hero-email">Try Lume</a>
+      <button class="btn btn-ghost sm" data-contact>Speak to a surveyor</button>
+      <a class="btn btn-dark sm" href="#quote">Get a quote</a>
     </nav>
   </div>
 </header>
@@ -35,89 +33,150 @@
 <main>
 <section class="hero container">
   <div class="hero-copy reveal">
-    <h1>AI that thinks, does, and gets results for you.</h1>
-    <p class="lead">Accelerate your productivity with AI that understands context, generates insights, and helps you accomplish more—safely and securely.</p>
-    <button class="btn btn-ghost google" id="google"><svg width="14" height="14" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9 3.5l6.7-6.7C35.6 2.4 30.2 0 24 0 14.6 0 6.6 5.4 2.7 13.2l7.8 6C12.4 13.7 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 3-2.3 5.5-4.8 7.2l7.5 5.8c4.4-4 7.1-10 7.1-17.5z"/><path fill="#FBBC05" d="M10.5 28.8A14.5 14.5 0 0 1 9.5 24c0-1.7.3-3.3.8-4.8l-7.8-6A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.8l7.9-6z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.5-5.8c-2.1 1.4-4.9 2.3-8.4 2.3-6.3 0-11.6-4.2-13.5-10l-7.9 6C6.6 42.6 14.6 48 24 48z"/></svg>Sign in with Google</button>
-    <div class="or"><span>or</span></div>
-    <form class="email-row" id="hero-form" novalidate>
-      <input type="email" id="hero-email" placeholder="Enter your email" required>
-      <button class="btn btn-dark">Continue with email</button>
+    <span class="badge"><i></i>RICS Regulated · UK-wide</span>
+    <h1>Insure your property for what it really costs to rebuild.</h1>
+    <p class="lead">RICS-certified reinstatement cost assessments for UK property owners. Know your true rebuild figure, avoid under-insurance and stop overpaying on premiums — with a clear report your insurer will accept.</p>
+    <form class="quote-row" id="quote" novalidate>
+      <input id="q-postcode" placeholder="Property postcode" autocomplete="postal-code" required>
+      <select id="q-type" aria-label="Property type">
+        <option value="">Property type</option>
+        <option>House</option>
+        <option>Flat / apartment</option>
+        <option>Block of flats</option>
+        <option>Commercial</option>
+        <option>Listed / heritage</option>
+      </select>
+      <button class="btn btn-dark">Get my quote</button>
     </form>
     <p class="form-msg" id="hero-msg"></p>
     <div class="proof">
-      <div class="avatars"><span>JD</span><span>SA</span><span>MK</span></div>
-      <span><b>5,000+</b> <em>users</em></span>
-      <span class="stars">★★★★★ <em>5.0</em></span>
-      <span class="powered"><i style="background:#e8805d"></i><i style="background:#555"></i><i style="background:#6b8cff"></i><i style="background:#333"></i><em>Powered by AI</em></span>
+      <span class="tick">✓ <em>Fixed fees</em></span>
+      <span class="tick">✓ <em>BCIS-based costings</em></span>
+      <span class="tick">✓ <em>Reports in days, not weeks</em></span>
     </div>
   </div>
   <div class="hero-art reveal">
     <svg viewBox="0 0 400 410" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
       <defs>
         <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d9693c"/><stop offset="1" stop-color="#c2552b"/></linearGradient>
-        <linearGradient id="wood" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#9c4d22"/><stop offset=".5" stop-color="#c67a43"/><stop offset="1" stop-color="#8e421b"/></linearGradient>
+        <linearGradient id="brick" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#9c4d22"/><stop offset=".5" stop-color="#c67a43"/><stop offset="1" stop-color="#8e421b"/></linearGradient>
+        <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#fff" stroke-opacity=".12"/></pattern>
       </defs>
       <rect width="400" height="410" fill="url(#bg)"/>
-      <g fill="url(#wood)" stroke="#7a3714" stroke-opacity=".35">
-        <path d="M30 330 L230 300 L400 330 L400 410 L30 410Z"/>
-        <path d="M60 260 L240 235 L390 260 L390 330 L60 330Z"/>
-        <path d="M110 200 L260 180 L380 200 L380 262 L110 262Z"/>
+      <rect width="400" height="410" fill="url(#grid)"/>
+      <g class="orb"><circle cx="315" cy="95" r="52" fill="#ffd9bf" opacity=".25"/><circle cx="315" cy="95" r="34" fill="#ffe8d6" opacity=".55"/><circle cx="315" cy="95" r="18" fill="#fff"/></g>
+      <g stroke="#7a3714" stroke-opacity=".4">
+        <path d="M70 215 L190 120 L310 215Z" fill="#8e421b"/>
+        <rect x="90" y="212" width="200" height="150" fill="url(#brick)"/>
+        <rect x="235" y="140" width="22" height="45" fill="#8e421b"/>
       </g>
-      <g class="orb"><circle cx="300" cy="130" r="58" fill="#ffd9bf" opacity=".25"/><circle cx="300" cy="130" r="38" fill="#ffe8d6" opacity=".55"/><circle cx="300" cy="130" r="20" fill="#fff"/></g>
-      <path id="trail" class="trail" d="M10 20 C 120 10, 200 60, 170 140 S 60 260, 90 330 S 300 360, 395 300" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="3 9" stroke-linecap="round"/>
+      <g fill="#ffe8d6" opacity=".9">
+        <rect x="115" y="240" width="40" height="34" rx="2"/><rect x="225" y="240" width="40" height="34" rx="2"/>
+        <rect x="170" y="300" width="40" height="62" rx="2" fill="#5e2a0f" opacity=".7"/>
+      </g>
+      <path d="M40 362H360" stroke="#fff" stroke-opacity=".5" stroke-width="2"/>
+      <g class="dim" stroke="#fff" stroke-width="1.5" fill="none" stroke-dasharray="3 6" stroke-linecap="round">
+        <path class="trail" d="M90 385H290"/><path class="trail" d="M330 212V362"/><path class="trail" d="M60 205L190 102L320 205"/>
+      </g>
+      <g font-family="JetBrains Mono,monospace" font-size="11" fill="#fff">
+        <text x="160" y="402">GIA 142 m²</text>
+        <text x="338" y="292" transform="rotate(90 338 292)">7.4 m</text>
+      </g>
+      <g transform="translate(28 30)">
+        <rect width="150" height="58" rx="10" fill="#fff" opacity=".95"/>
+        <text x="14" y="22" font-family="Inter Tight,sans-serif" font-size="10" fill="#6b6b72">Reinstatement cost</text>
+        <text x="14" y="44" font-family="Inter Tight,sans-serif" font-size="20" font-weight="600" fill="#0b0b0c">£412,000</text>
+      </g>
     </svg>
   </div>
 </section>
 
-<section class="section container" id="features">
-  <div class="head reveal"><h2>Everything you need to succeed</h2><p>Powerful features designed to help you work smarter, not harder. Everything you need in one place.</p></div>
+<section class="strip container reveal" aria-label="Key facts">
+  <div><b>80%+</b><span>of UK properties are thought to be under-insured</span></div>
+  <div><b>RICS</b><span>Regulated surveyors and RICS-compliant methodology</span></div>
+  <div><b>BCIS</b><span>Up-to-date regional rebuild cost data</span></div>
+  <div><b>3 years</b><span>Recommended reassessment cycle, with annual index-linking</span></div>
+</section>
+
+<section class="section container" id="services">
+  <div class="head reveal"><h2>Rebuild cost assessments for every property</h2><p>Whether it's your family home or a 200-unit residential block, we calculate the full cost to demolish, clear and rebuild — so your buildings insurance sum insured is right.</p></div>
   <div class="feat">
     <div class="feat-screen reveal">
       <div class="screen" id="screen"></div>
     </div>
     <div class="acc reveal" id="feat-acc">
-      <div class="acc-item open" data-i="0"><button><span class="fi">◎</span>Advanced Analytics<i class="chev"></i></button><div class="acc-body"><div><p>Get deep insights into your data with powerful analytics tools. Track metrics, visualize trends, and make data-driven decisions with ease.</p></div></div></div>
-      <div class="acc-item" data-i="1"><button><span class="fi">◉</span>Smart Automation<i class="chev"></i></button><div class="acc-body"><div><p>Automate repetitive tasks and workflows. Set up triggers, conditions, and actions to streamline your processes and save time.</p></div></div></div>
-      <div class="acc-item" data-i="2"><button><span class="fi">↘</span>Team Collaboration<i class="chev"></i></button><div class="acc-body"><div><p>Share agents, prompts and results with your team. Comment, assign and work together in real time across every project.</p></div></div></div>
+      <div class="acc-item open" data-i="0"><button><span class="fi">⌂</span>Residential homes<i class="chev"></i></button><div class="acc-body"><div><p>Houses, bungalows, flats and HMOs. A RICS-compliant rebuild valuation covering construction, demolition and site clearance, professional fees, and VAT where applicable — ideal for homeowners and buy-to-let landlords.</p></div></div></div>
+      <div class="acc-item" data-i="1"><button><span class="fi">▦</span>Blocks of flats &amp; leasehold<i class="chev"></i></button><div class="acc-body"><div><p>Freeholders, managing agents, RMCs and RTM companies have a duty to insure correctly under the lease. We assess the whole building including communal areas, car parks, lifts and external works, with a report leaseholders can rely on.</p></div></div></div>
+      <div class="acc-item" data-i="2"><button><span class="fi">▤</span>Commercial property<i class="chev"></i></button><div class="acc-body"><div><p>Offices, retail, industrial units, warehouses, hotels, schools and mixed-use buildings. Elemental costings that reflect specification, plant and services so your business can get back on its feet after a loss.</p></div></div></div>
+      <div class="acc-item" data-i="3"><button><span class="fi">❖</span>Listed &amp; heritage buildings<i class="chev"></i></button><div class="acc-body"><div><p>Period, thatched and listed properties need like-for-like materials and specialist trades. Our surveyors account for conservation requirements and the true cost of traditional construction.</p></div></div></div>
     </div>
   </div>
 </section>
 
+<section class="section container" id="process">
+  <div class="head reveal"><h2>How it works</h2><p>A simple, fixed-fee process from quote to report.</p></div>
+  <ol class="steps">
+    <li class="reveal"><span class="faq-n">(001)</span><h3>Request a quote</h3><p>Tell us the postcode, property type and size. You'll get a fixed fee straight away — no hidden extras.</p></li>
+    <li class="reveal"><span class="faq-n">(002)</span><h3>Assessment</h3><p>A RICS surveyor carries out a desktop assessment or a site inspection, measuring the gross internal area and recording construction and specification.</p></li>
+    <li class="reveal"><span class="faq-n">(003)</span><h3>Costing</h3><p>We apply current BCIS rebuild cost data, regional adjustments, demolition, site clearance, professional fees and VAT.</p></li>
+    <li class="reveal"><span class="faq-n">(004)</span><h3>Your report</h3><p>A clear, signed reinstatement cost assessment report to share with your insurer or broker — ready to set your sum insured.</p></li>
+  </ol>
+</section>
+
 <section class="section container" id="pricing">
-  <div class="head reveal"><h2>Simple, transparent pricing</h2><p>Choose your plan and adjust anytime. All plans include a 14-day free trial with full access.</p>
-    <div class="toggle" id="billing"><button class="on" data-b="m">Monthly</button><button data-b="y">Yearly <small>−20%</small></button></div></div>
+  <div class="head reveal"><h2>Clear, fixed-fee pricing</h2><p>Indicative fees for a standard reinstatement cost assessment. Final quote depends on size, location and complexity.</p>
+    <div class="toggle" id="billing"><button class="on" data-b="m">Desktop</button><button data-b="y">Site inspection</button></div></div>
   <div class="plans">
-    <article class="plan reveal"><h3>Free</h3><p class="sub">Perfect for individuals exploring AI</p><div class="price"><span class="amt">Free</span></div><button class="btn btn-dark block" data-plan="Free">Get Started</button>
-      <ul><li>1 AI Agent</li><li>5K API calls/mo</li><li>Community support</li><li>Basic templates</li><li>Email notifications</li></ul></article>
-    <article class="plan reveal"><h3>Pro</h3><p class="sub">For teams scaling AI workflows</p><div class="price"><span class="amt" data-m="49" data-y="39">$49</span><span class="per">/month</span></div><button class="btn btn-dark block" data-plan="Pro">Start Free Trial</button>
-      <ul><li>5 AI Agents</li><li>Unlimited API calls</li><li>Priority support 24/7</li><li>Advanced analytics</li><li>Custom workflows</li><li>Team collaboration</li><li>Premium templates</li><li>Webhook integrations</li></ul></article>
-    <article class="plan reveal"><h3>Sales</h3><p class="sub">Custom solutions for enterprises</p><div class="price"><span class="amt" data-m="299" data-y="239">$299</span><span class="per">/month</span></div><button class="btn btn-dark block" data-contact>Contact Sales</button>
-      <ul><li>Unlimited Agents</li><li>Dedicated support</li><li>Custom AI training</li><li>99.9% SLA guarantee</li><li>Advanced security</li><li>White-label options</li><li>On-premise deployment</li><li>Custom integrations</li></ul></article>
+    <article class="plan reveal"><h3>Home</h3><p class="sub">Houses, bungalows and individual flats</p><div class="price"><span class="pre">from</span><span class="amt" data-m="195" data-y="395">£195</span><span class="per">+ VAT</span></div><button class="btn btn-dark block" data-plan="Home">Get a quote</button>
+      <ul><li>RICS-compliant methodology</li><li>Signed RCA report</li><li>BCIS rebuild cost data</li><li>Demolition &amp; professional fees included</li><li>Typical turnaround 3–5 working days</li></ul></article>
+    <article class="plan featured reveal"><span class="tag">Most requested</span><h3>Block</h3><p class="sub">Residential blocks for freeholders &amp; agents</p><div class="price"><span class="pre">from</span><span class="amt" data-m="495" data-y="895">£495</span><span class="per">+ VAT</span></div><button class="btn btn-dark block" data-plan="Block">Get a quote</button>
+      <ul><li>Everything in Home</li><li>Whole-building assessment</li><li>Communal areas, lifts &amp; external works</li><li>Report suitable for leaseholders</li><li>Annual index-linked updates</li><li>Portfolio discounts available</li></ul></article>
+    <article class="plan reveal"><h3>Commercial</h3><p class="sub">Commercial, mixed-use &amp; heritage</p><div class="price"><span class="amt">Bespoke</span></div><button class="btn btn-dark block" data-contact>Speak to a surveyor</button>
+      <ul><li>Elemental cost analysis</li><li>Plant, services &amp; fit-out</li><li>Listed &amp; conservation buildings</li><li>Multi-site portfolios</li><li>Dedicated surveyor</li><li>Insurer &amp; lender ready</li></ul></article>
   </div>
-  <p class="note">Prices shown do not include applicable tax. * Usage limits apply.</p>
+  <p class="note">Indicative fees shown exclude VAT. Larger, unusual or remote properties may be priced individually.</p>
+</section>
+
+<section class="section container" id="who">
+  <div class="head reveal"><h2>Who we help</h2><p>Anyone responsible for insuring a building in England, Scotland, Wales or Northern Ireland.</p></div>
+  <div class="who">
+    <div class="reveal"><h3>Homeowners</h3><p>Check your sum insured is right before renewal — rebuild costs often differ greatly from market value.</p></div>
+    <div class="reveal"><h3>Landlords</h3><p>Protect buy-to-let and HMO portfolios with accurate rebuild figures for every property.</p></div>
+    <div class="reveal"><h3>Freeholders &amp; RMCs</h3><p>Meet your lease obligations and give leaseholders confidence the building is insured correctly.</p></div>
+    <div class="reveal"><h3>Managing agents</h3><p>Fast, consistent reports across your whole managed portfolio, with reminders when reassessment is due.</p></div>
+    <div class="reveal"><h3>Businesses</h3><p>Avoid the average clause reducing your claim payout if your premises are under-insured.</p></div>
+    <div class="reveal"><h3>Insurance brokers</h3><p>Refer clients for independent, RICS-standard valuations that support accurate placement.</p></div>
+  </div>
 </section>
 
 <section class="section container narrow" id="faq">
-  <div class="head reveal"><h2>Frequently asked questions</h2><p>Everything you need to know about the product and billing. Can't find the answer you're looking for? <a href="#" data-contact>Contact us.</a></p></div>
+  <div class="head reveal"><h2>Frequently asked questions</h2><p>Everything you need to know about reinstatement cost assessments. Can't find your answer? <a href="#" data-contact>Speak to a surveyor.</a></p></div>
   <div class="faq" id="faq-list"></div>
+</section>
+
+<section class="container cta reveal">
+  <h2>Is your property insured for the right amount?</h2>
+  <p>Get a fixed-fee RICS reinstatement cost assessment today.</p>
+  <a class="btn btn-light" href="#quote">Get my quote</a>
 </section>
 </main>
 
 <footer class="container footer">
-  <div class="f-brand"><svg viewBox="0 0 24 24" width="20" height="20"><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 2v20M2 12h20M4.9 4.9l14.2 14.2M19.1 4.9 4.9 19.1"/></g></svg><strong>Lume</strong><p>We are a team of developers who are passionate about creating amazing experiences with AI.</p></div>
-  <div><h4>Product</h4><a href="#features">Features</a><a href="#pricing">Pricing</a><a href="#">Integrations</a><a href="#">API</a></div>
-  <div><h4>Company</h4><a href="#">About</a><a href="#">Careers</a><a href="#" data-contact>Contact</a><a href="#">Privacy</a></div>
-  <div class="f-news"><h4>Stay updated</h4><p>Get the latest updates on AI agents and productivity tools.</p>
+  <div class="f-brand"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><path d="M3 11 12 3l9 8"/><path d="M5 10v10h14V10"/><path d="m9 15 2 2 4-4"/></g></svg><strong>Reinstatement Cost Assessment</strong><p>RICS-certified rebuild cost assessments for UK homeowners, landlords, freeholders, managing agents and businesses.</p></div>
+  <div><h4>Services</h4><a href="#services">Residential</a><a href="#services">Blocks of flats</a><a href="#services">Commercial</a><a href="#services">Listed buildings</a></div>
+  <div><h4>Company</h4><a href="#process">How it works</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="#" data-contact>Contact</a></div>
+  <div class="f-news"><h4>Reassessment reminders</h4><p>We'll remind you when your rebuild valuation is due for review.</p>
     <form class="news" id="news-form" novalidate><input type="email" placeholder="Enter your email" required><button aria-label="Subscribe">→</button></form><small id="news-msg">No spam. Unsubscribe anytime.</small></div>
-  <div class="f-bottom"><span>© <span id="yr"></span> Lume. All rights reserved.</span><span><a href="#">Terms</a><a href="#">Privacy</a><a href="#">Cookies</a></span></div>
+  <div class="f-bottom"><span>© <span id="yr"></span> reinstatementcostassessment.org. All rights reserved.</span><span><a href="#">Terms</a><a href="#">Privacy</a><a href="#">Cookies</a></span></div>
 </footer>
 
 <dialog id="modal"><form method="dialog" class="modal" id="modal-form">
   <button class="x" value="cancel" formnovalidate aria-label="Close">×</button>
-  <h3 id="modal-title">Contact Sales</h3><p class="sub" id="modal-sub">Tell us about your team and we'll be in touch within one business day.</p>
+  <h3 id="modal-title">Speak to a surveyor</h3><p class="sub" id="modal-sub">Tell us about your property and a RICS surveyor will be in touch within one business day.</p>
   <label>Name<input name="name" required></label>
-  <label>Work email<input name="email" type="email" required></label>
-  <label id="msg-label">Message<textarea name="message" rows="3"></textarea></label>
+  <label>Email<input name="email" type="email" required></label>
+  <label>Phone (optional)<input name="phone" type="tel"></label>
+  <label id="msg-label">Property details<textarea name="message" rows="3" placeholder="Address, property type, approximate size…"></textarea></label>
   <button class="btn btn-dark block" value="ok">Submit</button>
 </form></dialog>
 <div class="toast" id="toast"></div>
