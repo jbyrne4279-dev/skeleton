@@ -51,20 +51,19 @@ $('#quote').onsubmit = e => {
   }
   msg.className = 'form-msg';
   msg.textContent = '';
-  openModal('Your quote', `${type.value} at ${pc.value.trim().toUpperCase()} — leave your details and we'll send your fixed-fee quote within one business day.`);
+  openModal('Your quote', `${type.value} at ${pc.value.trim().toUpperCase()} — leave your details and we'll send your quote within one business day.`);
 };
 
 // Services accordion + sample report screen
 const row = (k, v) => `<li><span>${k}</span><b>${v}</b></li>`;
-const report = (title, items, total) => `<p class="scr-title">${title}</p>
+const report = (title, items) => `<p class="scr-title">${title}</p>
   <div class="scr-cols"><div class="scr-card"><h5>Rebuild cost summary</h5><ul>${items.map(i => row(...i)).join('')}</ul></div>
-  <div class="scr-card"><h5>Cost breakdown</h5><div class="bars">${[85, 22, 30, 18].map((h, i) => `<div style="height:${h}%;animation-delay:${i * 80}ms"></div>`).join('')}</div><div class="bar-l"><span>Build</span><span>Demo</span><span>Fees</span><span>Ext.</span></div></div></div>
-  <p class="scr-total">Recommended sum insured <b>${total}</b></p>`;
+  <div class="scr-card"><h5>Cost breakdown</h5><div class="bars">${[85, 22, 30, 18].map((h, i) => `<div style="height:${h}%;animation-delay:${i * 80}ms"></div>`).join('')}</div><div class="bar-l"><span>Build</span><span>Demo</span><span>Fees</span><span>Ext.</span></div></div></div>`;
 const screens = [
-  () => report('Sample · 3-bed detached house', [['Gross internal area', '142 m²'], ['Construction', 'Brick / tile'], ['Demolition & clearance', 'Included'], ['Professional fees', 'Included'], ['Region', 'South East']], '£412,000'),
-  () => report('Sample · 24-unit residential block', [['Gross internal area', '1,960 m²'], ['Construction', 'Concrete frame'], ['Communal & lifts', 'Included'], ['External works', 'Included'], ['Region', 'North West']], '£5,240,000'),
-  () => report('Sample · light industrial unit', [['Gross internal area', '820 m²'], ['Construction', 'Steel portal'], ['Plant & services', 'Included'], ['Demolition & clearance', 'Included'], ['Region', 'Yorkshire']], '£1,380,000'),
-  () => report('Sample · Grade II listed cottage', [['Gross internal area', '118 m²'], ['Construction', 'Natural stone'], ['Specialist trades', 'Included'], ['Like-for-like materials', 'Included'], ['Region', 'South West']], '£598,000'),
+  () => report('Sample · 3-bed detached house', [['Gross internal area', '142 m²'], ['Construction', 'Brick / tile'], ['Demolition & clearance', 'Included'], ['Professional fees', 'Included'], ['Region', 'South East']]),
+  () => report('Sample · 24-unit residential block', [['Gross internal area', '1,960 m²'], ['Construction', 'Concrete frame'], ['Communal & lifts', 'Included'], ['External works', 'Included'], ['Region', 'North West']]),
+  () => report('Sample · light industrial unit', [['Gross internal area', '820 m²'], ['Construction', 'Steel portal'], ['Plant & services', 'Included'], ['Demolition & clearance', 'Included'], ['Region', 'Yorkshire']]),
+  () => report('Sample · Grade II listed cottage', [['Gross internal area', '118 m²'], ['Construction', 'Natural stone'], ['Specialist trades', 'Included'], ['Like-for-like materials', 'Included'], ['Region', 'South West']]),
 ];
 const setFeat = i => {
   $$('#feat-acc .acc-item').forEach((el, j) => el.classList.toggle('open', i === j));
@@ -73,13 +72,7 @@ const setFeat = i => {
 $$('#feat-acc .acc-item').forEach((el, i) => $('button', el).onclick = () => setFeat(i));
 setFeat(0);
 
-// Pricing toggle: desktop vs site inspection
-$$('#billing button').forEach(b => b.onclick = () => {
-  $$('#billing button').forEach(x => x.classList.toggle('on', x === b));
-  const y = b.dataset.b === 'y';
-  $$('.amt[data-m]').forEach(a => a.textContent = '£' + (y ? a.dataset.y : a.dataset.m));
-});
-$$('[data-plan]').forEach(b => b.onclick = () => openModal(`${b.dataset.plan} assessment`, "Tell us about the property and we'll confirm your fixed fee within one business day."));
+$$('[data-plan]').forEach(b => b.onclick = () => openModal(`${b.dataset.plan} assessment`, "Tell us about the property and we'll be in touch with a quote within one business day."));
 
 // FAQ
 const faqs = [

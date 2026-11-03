@@ -95,6 +95,7 @@ h2{font-size:clamp(28px,3.4vw,38px);letter-spacing:-.03em;font-weight:600}
 .plan:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
 .plan:nth-child(3){margin-top:18px}
 .plan h3{font-size:22px;font-weight:600}
+.plan .sub{margin-bottom:22px}
 .sub{color:var(--muted);font-size:14px;margin-top:8px}
 .price{margin:26px 0 20px;display:flex;align-items:baseline;gap:6px}
 .amt{font-size:46px;font-weight:600;letter-spacing:-.04em}
