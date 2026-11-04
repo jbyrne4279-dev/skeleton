@@ -158,11 +158,13 @@ dialog::backdrop{background:rgba(0,0,0,.4);backdrop-filter:blur(3px)}
 .mark{width:34px;height:34px}
 .wm{display:flex;flex-direction:column;justify-content:center;line-height:1}
 .wm-name{display:flex;align-items:flex-start;font-size:20px;font-weight:700;letter-spacing:-.035em;color:var(--fg)}
-.wm-name small{font-size:9px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin:2px 0 0 4px}
+.wm-name small{position:relative;font-size:9px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin:2px 0 0 7px;line-height:1}
+.wm-name small::before{content:"";position:absolute;right:calc(100% + 1px);top:0;width:12px;height:2px;border-radius:2px;background:var(--accent)}
 .wm-tag{margin-top:4px;font-size:8.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
 .wm-lg{margin:6px 0 14px}
 .wm-lg .wm-name{font-size:26px}
-.wm-lg .wm-name small{font-size:10px;margin-top:4px}
+.wm-lg .wm-name small{font-size:10px;margin:4px 0 0 9px}
+.wm-lg .wm-name small::before{width:15px}
 .wm-lg .wm-tag{font-size:10px;margin-top:6px}
 .f-brand .mark{margin-bottom:10px}
 .badge{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:500;padding:6px 12px;border:1px solid var(--line);border-radius:999px;margin-bottom:20px;background:var(--soft)}
@@ -299,3 +301,20 @@ html{scroll-padding-top:72px}
 @media (max-width:520px){
   .strip{grid-template-columns:1fr 1fr}
 }
+
+/* Open state for Services + FAQ items: electric orange marker */
+.acc-item,.faq-item{position:relative;padding:0 14px 0 18px;border-radius:2px;transition:background .25s}
+.acc-item::before,.faq-item::before{content:"";position:absolute;left:0;top:-1px;bottom:-1px;width:3px;border-radius:3px;background:#ff5a1f;transform:scaleY(0);transform-origin:top;transition:transform .3s ease}
+.acc-item.open::before,.faq-item.open::before{transform:scaleY(1)}
+.acc-item.open,.faq-item.open{background:linear-gradient(90deg,rgba(255,90,31,.07),rgba(255,90,31,0) 70%)}
+.acc-item.open .fi{border-color:#ff5a1f;background:#ff5a1f;color:#fff}
+.acc-item.open .chev{color:#ff5a1f}
+.faq-item.open>button{color:var(--fg)}
+.faq-item.open .pm::before,.faq-item.open .pm::after{background:#ff5a1f}
+@media (max-width:900px){.acc-item,.faq-item{padding:0 10px 0 14px}.acc-body p{padding-left:34px}}
+
+/* Footer brand: mark sits left of the wordmark */
+.f-brand{display:grid;grid-template-columns:auto 1fr;column-gap:12px;align-items:center;align-content:start}
+.f-brand .mark{width:44px;height:44px;margin:0}
+.f-brand .wm-lg{margin:0}
+.f-brand p{grid-column:1/-1;margin-top:16px}
