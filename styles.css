@@ -161,9 +161,15 @@ dialog::backdrop{background:rgba(0,0,0,.4);backdrop-filter:blur(3px)}
 /* RCA Ltd additions */
 .logo{gap:10px;font-size:19px;white-space:nowrap}
 .mark{flex:none;display:block}
-.wm b{font-weight:700;letter-spacing:-.02em}
-.logo-thin{font-weight:400;color:var(--muted);margin-left:4px}
-.logo-tag{font-size:12px;font-weight:500;color:var(--muted);padding-left:10px;border-left:1px solid var(--line);letter-spacing:0}
+.mark{width:34px;height:34px}
+.wm{display:flex;flex-direction:column;justify-content:center;line-height:1}
+.wm-name{display:flex;align-items:flex-start;font-size:20px;font-weight:700;letter-spacing:-.035em;color:var(--fg)}
+.wm-name small{font-size:9px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin:2px 0 0 4px}
+.wm-tag{margin-top:4px;font-size:8.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.wm-lg{margin:6px 0 14px}
+.wm-lg .wm-name{font-size:26px}
+.wm-lg .wm-name small{font-size:10px;margin-top:4px}
+.wm-lg .wm-tag{font-size:10px;margin-top:6px}
 .f-brand .mark{margin-bottom:10px}
 .badge{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:500;padding:6px 12px;border:1px solid var(--line);border-radius:999px;margin-bottom:20px;background:var(--soft)}
 .badge i{width:7px;height:7px;border-radius:50%;background:#2f9e6a}
@@ -201,7 +207,6 @@ dialog::backdrop{background:rgba(0,0,0,.4);backdrop-filter:blur(3px)}
 .cta p{opacity:.85;margin:12px 0 24px}
 .btn-light{background:#fff;color:#0b0b0c}
 .btn-light:hover{opacity:.9}
-@media (max-width:1100px){.logo-tag{display:none}}
 @media (max-width:900px){
   .strip,.steps{grid-template-columns:1fr 1fr}
   .who{grid-template-columns:1fr}
