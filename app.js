@@ -58,27 +58,16 @@ addEventListener('scroll', () => $('#nav').classList.toggle('scrolled', scrollY 
 
 // Services accordion + photo for each service
 const setFeat = i => {
-  $$('#feat-acc .acc-item').forEach((el, j) => el.classList.toggle('open', i === j));
+  $$('#feat-acc .acc-item').forEach((el, j) => { el.classList.toggle('open', i === j); $('button', el).setAttribute('aria-expanded', String(i === j)); });
   $$('#screen .ph').forEach((ph, j) => ph.classList.toggle('on', i === j));
 };
 $$('#feat-acc .acc-item').forEach((el, i) => $('button', el).onclick = () => setFeat(i));
 setFeat(0);
 
 // FAQ
-const faqs = [
-  ['What is a rebuild cost assessment (RCA report)?', 'A rebuild cost assessment, often called an RCA report or reinstatement cost assessment, calculates how much it would cost to completely rebuild your property if it were destroyed. That includes demolition, site clearance, professional fees and VAT where applicable. It is the figure your buildings insurance sum insured should be based on.'],
-  ['Is the rebuild cost the same as market value?', 'No. Market value includes the land and reflects local demand, while rebuild cost reflects labour, materials and construction method. A city-centre flat may have a rebuild cost well below its market value, while a rural stone cottage can cost more to rebuild than it would sell for.'],
-  ['Why does under-insurance matter?', 'If your sum insured is too low, insurers can apply the average clause and reduce any claim proportionally, even for partial damage. Insured for 60% of the true rebuild cost? You may only receive 60% of your claim. If you over-insure, you pay higher premiums for cover you can never claim.'],
-  ['Are your assessments RICS certified?', 'Yes. Assessments are carried out by RICS-regulated surveyors following RICS guidance, using current BCIS (Building Cost Information Service) rebuild cost data adjusted for your region and specification.'],
-  ['Do I need a desktop assessment or a site inspection?', 'A desktop assessment uses floor plans, measurements and photographs and suits most standard homes. A site inspection is recommended for blocks of flats, commercial premises, listed buildings and anything with unusual construction or a high value.'],
-  ['How often should I get a new assessment?', 'RICS recommends a full rebuild cost assessment at least every three years, with the figure index-linked annually in between. You should also reassess after any extension, conversion or major refurbishment.'],
-  ['I own a leasehold flat. Do I need one?', 'Usually the freeholder or management company insures the whole building, so the assessment should cover the entire block. We work with freeholders, RMCs, RTM companies and managing agents to provide whole-building reports.'],
-  ['How long does it take?', 'Most residential desktop reports are delivered within 3 to 5 working days. Site inspections are typically booked within a week, with the report following shortly after. Let us know if you have a renewal deadline.'],
-];
-$('#faq-list').innerHTML = faqs.map(([q, a], i) => `<div class="faq-item${i ? '' : ' open'}"><button aria-expanded="${!i}"><span class="faq-n">(${String(i + 1).padStart(3, '0')})</span>${q}<span class="pm"></span></button><div class="acc-body"><div><p>${a}</p></div></div></div>`).join('');
 $$('.faq-item').forEach(item => $('button', item).onclick = () => {
   const open = !item.classList.contains('open');
-  $$('.faq-item').forEach(x => { x.classList.remove('open'); $('button', x).setAttribute('aria-expanded', false); });
+  $$('.faq-item').forEach(x => { x.classList.remove('open'); $('button', x).setAttribute('aria-expanded', 'false'); });
   item.classList.toggle('open', open);
   $('button', item).setAttribute('aria-expanded', open);
 });
@@ -125,4 +114,4 @@ $('#news-form').onsubmit = e => {
 };
 
 
-$('#yr').textContent = new Date().getFullYear();
+$('#yr').textContent = String(new Date().getFullYear());
