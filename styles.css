@@ -164,17 +164,17 @@ dialog::backdrop{background:rgba(0,0,0,.4);backdrop-filter:blur(3px)}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
 @keyframes pulse{50%{transform:scale(1.08)}}
 
-/* Reinstatement Cost Assessment additions */
-.logo{font-size:17px}
-.logo svg{color:var(--accent)}
+/* RCA Ltd additions */
+.logo{gap:10px;font-size:19px}
+.mark{flex:none;display:block}
+.wm b{font-weight:700;letter-spacing:-.02em}
 .logo-thin{font-weight:400;color:var(--muted);margin-left:4px}
+.logo-tag{font-size:12px;font-weight:500;color:var(--muted);padding-left:10px;border-left:1px solid var(--line);letter-spacing:0}
+.f-brand .mark{margin-bottom:10px}
 .badge{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:500;padding:6px 12px;border:1px solid var(--line);border-radius:999px;margin-bottom:20px;background:var(--soft)}
 .badge i{width:7px;height:7px;border-radius:50%;background:#2f9e6a}
-.quote-row{display:flex;gap:8px;flex-wrap:wrap}
-.quote-row input{width:170px;text-transform:uppercase}
-.quote-row input::placeholder{text-transform:none}
-.quote-row select{padding:10px 12px;font-size:13px;cursor:pointer}
-.quote-row .btn{font-size:13px}
+.hero-cta{margin:4px 0 18px}
+.btn.lg{padding:14px 28px;font-size:15px}
 .tick{color:#2f9e6a;font-weight:600}
 .strip{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding-top:28px;padding-bottom:28px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .fact{display:flex;align-items:flex-start;gap:14px}
@@ -204,6 +204,7 @@ dialog::backdrop{background:rgba(0,0,0,.4);backdrop-filter:blur(3px)}
 .cta p{opacity:.85;margin:12px 0 24px}
 .btn-light{background:#fff;color:#0b0b0c}
 .btn-light:hover{opacity:.9}
+@media (max-width:1100px){.logo-tag{display:none}}
 @media (max-width:900px){
   .strip,.steps{grid-template-columns:1fr 1fr}
   .who{grid-template-columns:1fr}
@@ -211,6 +212,4 @@ dialog::backdrop{background:rgba(0,0,0,.4);backdrop-filter:blur(3px)}
 }
 @media (max-width:520px){
   .strip,.steps{grid-template-columns:1fr}
-  .quote-row input,.quote-row select,.quote-row .btn{width:100%}
-  .logo-thin{display:none}
-}
+  }

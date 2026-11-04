@@ -1,7 +1,6 @@
 const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 const isEmail = v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim());
-const isPostcode = v => /^[A-Z]{1,2}\d[A-Z\d]?\s*\d[A-Z]{2}$/i.test(v.trim());
 
 function toast(msg) {
   const t = $('#toast');
@@ -37,23 +36,6 @@ $$('#menu a').forEach(a => a.addEventListener('click', () => $('#menu').classLis
 // Sticky nav border
 addEventListener('scroll', () => $('#nav').classList.toggle('scrolled', scrollY > 10), { passive: true });
 
-// Hero quote
-$('#quote').onsubmit = e => {
-  e.preventDefault();
-  const pc = $('#q-postcode'), type = $('#q-type'), msg = $('#hero-msg');
-  const pcOk = isPostcode(pc.value), typeOk = !!type.value;
-  pc.classList.toggle('err', !pcOk);
-  type.classList.toggle('err', !typeOk);
-  if (!pcOk || !typeOk) {
-    msg.className = 'form-msg err';
-    msg.textContent = !pcOk ? 'Please enter a valid UK postcode.' : 'Please choose a property type.';
-    return;
-  }
-  msg.className = 'form-msg';
-  msg.textContent = '';
-  const where = `${type.value} at ${pc.value.trim().toUpperCase()}`;
-  openModal('Get your quote', `${where}. Leave your details and we'll send your quote within one business day.`, `${where}\n`);
-};
 
 // Services accordion + sample report screen
 const row = (k, v) => `<li><span>${k}</span><b>${v}</b></li>`;
@@ -77,14 +59,14 @@ $$('[data-plan]').forEach(b => b.onclick = () => openModal(`${b.dataset.plan} as
 
 // FAQ
 const faqs = [
-  ['What is a reinstatement cost assessment?', 'A reinstatement cost assessment (RCA), also called a rebuild cost valuation, calculates how much it would cost to completely rebuild your property if it were destroyed — including demolition, site clearance, professional fees and VAT where applicable. It is the figure your buildings insurance sum insured should be based on.'],
+  ['What is a rebuild cost assessment (RCA report)?', 'A rebuild cost assessment, often called an RCA report or reinstatement cost assessment, calculates how much it would cost to completely rebuild your property if it were destroyed. That includes demolition, site clearance, professional fees and VAT where applicable. It is the figure your buildings insurance sum insured should be based on.'],
   ['Is the rebuild cost the same as market value?', 'No. Market value includes the land and reflects local demand, while rebuild cost reflects labour, materials and construction method. A city-centre flat may have a rebuild cost well below its market value, while a rural stone cottage can cost more to rebuild than it would sell for.'],
-  ['Why does under-insurance matter?', 'If your sum insured is too low, insurers can apply the average clause and reduce any claim proportionally — even for partial damage. Insured for 60% of the true rebuild cost? You may only receive 60% of your claim. Over-insuring, meanwhile, means paying higher premiums for no benefit.'],
+  ['Why does under-insurance matter?', 'If your sum insured is too low, insurers can apply the average clause and reduce any claim proportionally, even for partial damage. Insured for 60% of the true rebuild cost? You may only receive 60% of your claim. If you over-insure, you pay higher premiums for cover you can never claim.'],
   ['Are your assessments RICS certified?', 'Yes. Assessments are carried out by RICS-regulated surveyors following RICS guidance, using current BCIS (Building Cost Information Service) rebuild cost data adjusted for your region and specification.'],
-  ['Desktop or site inspection — which do I need?', 'A desktop assessment uses floor plans, measurements and photographs and suits most standard homes. A site inspection is recommended for blocks of flats, commercial premises, listed buildings and anything with unusual construction or a high value.'],
-  ['How often should I get a new assessment?', 'RICS recommends a full reinstatement cost assessment at least every three years, with the figure index-linked annually in between — and after any extension, conversion or major refurbishment.'],
-  ['I own a leasehold flat — do I need one?', 'Usually the freeholder or management company insures the whole building, so the assessment should cover the entire block. We work with freeholders, RMCs, RTM companies and managing agents to provide whole-building reports.'],
-  ['How long does it take?', 'Most residential desktop reports are delivered within 3–5 working days. Site inspections are typically booked within a week, with the report following shortly after. Let us know if you have a renewal deadline.'],
+  ['Do I need a desktop assessment or a site inspection?', 'A desktop assessment uses floor plans, measurements and photographs and suits most standard homes. A site inspection is recommended for blocks of flats, commercial premises, listed buildings and anything with unusual construction or a high value.'],
+  ['How often should I get a new assessment?', 'RICS recommends a full rebuild cost assessment at least every three years, with the figure index-linked annually in between. You should also reassess after any extension, conversion or major refurbishment.'],
+  ['I own a leasehold flat. Do I need one?', 'Usually the freeholder or management company insures the whole building, so the assessment should cover the entire block. We work with freeholders, RMCs, RTM companies and managing agents to provide whole-building reports.'],
+  ['How long does it take?', 'Most residential desktop reports are delivered within 3 to 5 working days. Site inspections are typically booked within a week, with the report following shortly after. Let us know if you have a renewal deadline.'],
 ];
 $('#faq-list').innerHTML = faqs.map(([q, a], i) => `<div class="faq-item${i ? '' : ' open'}"><button aria-expanded="${!i}"><span class="faq-n">(${String(i + 1).padStart(3, '0')})</span>${q}<span class="pm"></span></button><div class="acc-body"><div><p>${a}</p></div></div></div>`).join('');
 $$('.faq-item').forEach(item => $('button', item).onclick = () => {
@@ -106,6 +88,12 @@ function openModal(title, sub, prefill = '') {
   f.name.focus();
 }
 document.addEventListener('click', e => {
+  if (e.target.closest('[data-report]')) {
+    e.preventDefault();
+    $('#menu').classList.remove('open');
+    openModal('Get your rebuild cost assessment', "Tell us about the property and we'll come back with your RCA report quote within one business day.");
+    return;
+  }
   if (e.target.closest('[data-contact]')) {
     e.preventDefault();
     openModal('Speak to a surveyor', 'Tell us about your property and a RICS surveyor will be in touch within one business day.');
@@ -126,7 +114,7 @@ $('#news-form').onsubmit = e => {
   const inp = $('input', e.target), msg = $('#news-msg');
   if (!isEmail(inp.value)) { inp.classList.add('err'); msg.textContent = 'Please enter a valid email.'; return; }
   inp.classList.remove('err'); inp.value = '';
-  msg.textContent = "Thanks — we'll remind you when it's time to reassess.";
+  msg.textContent = "Thanks. We'll remind you when it's time to reassess.";
 };
 
 // Reveal on scroll
