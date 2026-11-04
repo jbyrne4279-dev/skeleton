@@ -51,7 +51,8 @@ $('#quote').onsubmit = e => {
   }
   msg.className = 'form-msg';
   msg.textContent = '';
-  openModal('Your quote', `${type.value} at ${pc.value.trim().toUpperCase()} — leave your details and we'll send your quote within one business day.`);
+  const where = `${type.value} at ${pc.value.trim().toUpperCase()}`;
+  openModal('Get your quote', `${where}. Leave your details and we'll send your quote within one business day.`, `${where}\n`);
 };
 
 // Services accordion + sample report screen
@@ -72,7 +73,7 @@ const setFeat = i => {
 $$('#feat-acc .acc-item').forEach((el, i) => $('button', el).onclick = () => setFeat(i));
 setFeat(0);
 
-$$('[data-plan]').forEach(b => b.onclick = () => openModal(`${b.dataset.plan} assessment`, "Tell us about the property and we'll be in touch with a quote within one business day."));
+$$('[data-plan]').forEach(b => b.onclick = () => openModal(`${b.dataset.plan} assessment`, "Tell us about the property and we'll be in touch with a quote within one business day.", `${b.dataset.plan} assessment: `));
 
 // FAQ
 const faqs = [
@@ -95,11 +96,14 @@ $$('.faq-item').forEach(item => $('button', item).onclick = () => {
 
 // Modal
 const modal = $('#modal');
-function openModal(title, sub, showMsg = true) {
+function openModal(title, sub, prefill = '') {
+  const f = $('#modal-form');
+  f.reset();
   $('#modal-title').textContent = title;
   $('#modal-sub').textContent = sub;
-  $('#msg-label').hidden = !showMsg;
+  f.message.value = prefill;
   modal.showModal();
+  f.name.focus();
 }
 document.addEventListener('click', e => {
   if (e.target.closest('[data-contact]')) {
