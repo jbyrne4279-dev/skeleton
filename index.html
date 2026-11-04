@@ -16,7 +16,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"RCA Ltd","url":"https://rca-ltd.com/","description":"RICS rebuild cost assessments (RCA reports) for UK homeowners, landlords, freeholders, managing agents and commercial property owners.","areaServed":{"@type":"Country","name":"United Kingdom"},"serviceType":"Rebuild cost assessment"}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=11">
+<link rel="stylesheet" href="styles.css?v=12">
 <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
@@ -38,6 +38,17 @@
       <button class="btn btn-dark sm" data-report>Get report</button>
     </nav>
   </div>
+  <nav class="m-menu" id="m-menu" aria-label="Mobile menu">
+    <a href="#services">Services</a>
+    <a href="#process">How it works</a>
+    <a href="#options">Assessments</a>
+    <a href="#who">Who we help</a>
+    <a href="#faq">FAQ</a>
+    <div class="m-menu-cta">
+      <button class="btn btn-dark block lg" data-report>Get report</button>
+      <button class="btn btn-ghost block lg" data-contact>Speak to a surveyor</button>
+    </div>
+  </nav>
 </header>
 
 <main>
@@ -199,6 +210,8 @@
   <div class="f-bottom"><span>© <span id="yr"></span> RCA Ltd · rca-ltd.com. All rights reserved.</span><span><a href="#">Terms</a><a href="#">Privacy</a><a href="#">Cookies</a></span></div>
 </footer>
 
+<div class="m-bar" id="m-bar"><button class="btn btn-dark block lg" data-report>Get report</button></div>
+
 <dialog id="modal"><form method="dialog" class="modal" id="modal-form">
   <button class="x" value="cancel" formnovalidate aria-label="Close">×</button>
   <h3 id="modal-title">Speak to a surveyor</h3><p class="sub" id="modal-sub">Tell us about your property and a RICS surveyor will be in touch within one business day.</p>
@@ -208,6 +221,6 @@
   <button class="btn btn-dark block" value="ok">Submit</button>
 </form></dialog>
 <div class="toast" id="toast"></div>
-<script src="app.js?v=11"></script>
+<script src="app.js?v=12"></script>
 </body>
 </html>

@@ -36,11 +36,21 @@ document.addEventListener('click', e => { if (!e.target.closest('.dd')) $$('.dd.
 document.addEventListener('keydown', e => { if (e.key === 'Escape') $$('.dd.open').forEach(d => d.classList.remove('open')); });
 
 // Mobile menu
-$('#burger').onclick = () => {
-  const open = $('#menu').classList.toggle('open');
+const setMenu = open => {
+  document.documentElement.classList.toggle('m-open', open);
   $('#burger').setAttribute('aria-expanded', open);
+  $('#burger').setAttribute('aria-label', open ? 'Close menu' : 'Menu');
 };
-$$('#menu a').forEach(a => a.addEventListener('click', () => $('#menu').classList.remove('open')));
+$('#burger').onclick = () => setMenu(!document.documentElement.classList.contains('m-open'));
+$$('#m-menu a, #m-menu button').forEach(a => a.addEventListener('click', () => setMenu(false)));
+addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+matchMedia('(min-width: 901px)').addEventListener('change', e => { if (e.matches) setMenu(false); });
+
+// Sticky mobile Get report bar: show once the hero button has scrolled away
+if ('IntersectionObserver' in window) {
+  new IntersectionObserver(([e]) => $('#m-bar').classList.toggle('show', !e.isIntersecting && e.boundingClientRect.top < 0))
+    .observe($('.hero-cta'));
+}
 
 // Sticky nav border
 addEventListener('scroll', () => $('#nav').classList.toggle('scrolled', scrollY > 10), { passive: true });
