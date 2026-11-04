@@ -56,20 +56,10 @@ if ('IntersectionObserver' in window) {
 addEventListener('scroll', () => $('#nav').classList.toggle('scrolled', scrollY > 10), { passive: true });
 
 
-// Services accordion + sample report screen
-const row = (k, v) => `<li><span>${k}</span><b>${v}</b></li>`;
-const report = (title, items) => `<p class="scr-title">${title}</p>
-  <div class="scr-cols"><div class="scr-card"><h5>Rebuild cost summary</h5><ul>${items.map(i => row(...i)).join('')}</ul></div>
-  <div class="scr-card"><h5>Cost breakdown</h5><div class="bars">${[85, 22, 30, 18].map((h, i) => `<div style="height:${h}%;animation-delay:${i * 80}ms"></div>`).join('')}</div><div class="bar-l"><span>Build</span><span>Demo</span><span>Fees</span><span>Ext.</span></div></div></div>`;
-const screens = [
-  () => report('Sample · 3-bed detached house', [['Gross internal area', '142 m²'], ['Construction', 'Brick / tile'], ['Demolition & clearance', 'Included'], ['Professional fees', 'Included'], ['Region', 'South East']]),
-  () => report('Sample · 24-unit residential block', [['Gross internal area', '1,960 m²'], ['Construction', 'Concrete frame'], ['Communal & lifts', 'Included'], ['External works', 'Included'], ['Region', 'North West']]),
-  () => report('Sample · light industrial unit', [['Gross internal area', '820 m²'], ['Construction', 'Steel portal'], ['Plant & services', 'Included'], ['Demolition & clearance', 'Included'], ['Region', 'Yorkshire']]),
-  () => report('Sample · Grade II listed cottage', [['Gross internal area', '118 m²'], ['Construction', 'Natural stone'], ['Specialist trades', 'Included'], ['Like-for-like materials', 'Included'], ['Region', 'South West']]),
-];
+// Services accordion + photo for each service
 const setFeat = i => {
   $$('#feat-acc .acc-item').forEach((el, j) => el.classList.toggle('open', i === j));
-  $('#screen').innerHTML = screens[i]();
+  $$('#screen .ph').forEach((ph, j) => ph.classList.toggle('on', i === j));
 };
 $$('#feat-acc .acc-item').forEach((el, i) => $('button', el).onclick = () => setFeat(i));
 setFeat(0);
