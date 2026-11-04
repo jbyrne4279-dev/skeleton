@@ -2,6 +2,15 @@ const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 const isEmail = v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim());
 
+// If any later script error stops set-up, still show all content
+addEventListener('error', () => document.documentElement.classList.add('no-reveal'));
+
+// Reveal on scroll (set up first so content always appears)
+if ('IntersectionObserver' in window) {
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 });
+  $$('.reveal').forEach(el => io.observe(el));
+} else document.documentElement.classList.add('no-reveal');
+
 function toast(msg) {
   const t = $('#toast');
   t.textContent = msg;
@@ -117,8 +126,5 @@ $('#news-form').onsubmit = e => {
   msg.textContent = "Thanks. We'll remind you when it's time to reassess.";
 };
 
-// Reveal on scroll
-const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 });
-$$('.reveal').forEach(el => io.observe(el));
 
 $('#yr').textContent = new Date().getFullYear();
