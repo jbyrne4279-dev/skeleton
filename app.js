@@ -64,8 +64,6 @@ const setFeat = i => {
 $$('#feat-acc .acc-item').forEach((el, i) => $('button', el).onclick = () => setFeat(i));
 setFeat(0);
 
-$$('[data-plan]').forEach(b => b.onclick = () => openModal(`${b.dataset.plan} assessment`, "Tell us about the property and we'll be in touch with a quote within one business day.", `${b.dataset.plan} assessment: `));
-
 // FAQ
 const faqs = [
   ['What is a rebuild cost assessment (RCA report)?', 'A rebuild cost assessment, often called an RCA report or reinstatement cost assessment, calculates how much it would cost to completely rebuild your property if it were destroyed. That includes demolition, site clearance, professional fees and VAT where applicable. It is the figure your buildings insurance sum insured should be based on.'],

@@ -16,7 +16,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"RCA Ltd","url":"https://rca-ltd.com/","description":"RICS rebuild cost assessments (RCA reports) for UK homeowners, landlords, freeholders, managing agents and commercial property owners.","areaServed":{"@type":"Country","name":"United Kingdom"},"serviceType":"Rebuild cost assessment"}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=16">
+<link rel="stylesheet" href="styles.css?v=17">
 <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
@@ -31,8 +31,6 @@
         <div class="dd-panel"><p class="dd-h">Owners</p><a href="#who">Homeowners</a><a href="#who">Landlords</a><a href="#who">Freeholders</a><p class="dd-h">Professionals</p><a href="#who">Managing agents</a><a href="#who">RMCs &amp; RTMs</a><a href="#who">Insurance brokers</a></div></div>
       <div class="dd"><button class="dd-btn">Resources <i class="chev"></i></button>
         <div class="dd-panel"><p class="dd-h">Learn</p><a href="#process">How it works</a><a href="#faq">FAQ</a><a href="#faq">Under-insurance explained</a></div></div>
-      <div class="dd"><button class="dd-btn">Assessments <i class="chev"></i></button>
-        <div class="dd-panel"><p class="dd-h">Options</p><a href="#options">Home</a><a href="#options">Block</a><a href="#options">Commercial</a></div></div>
       <span class="sep"></span>
       <button class="btn btn-ghost sm" data-contact>Speak to a surveyor</button>
       <button class="btn btn-dark sm" data-report>Get report</button>
@@ -41,7 +39,6 @@
   <nav class="m-menu" id="m-menu" aria-label="Mobile menu">
     <a href="#services">Services</a>
     <a href="#process">How it works</a>
-    <a href="#options">Assessments</a>
     <a href="#who">Who we help</a>
     <a href="#faq">FAQ</a>
     <div class="m-menu-cta">
@@ -170,16 +167,10 @@
   </ol>
 </section>
 
-<section class="section container" id="options">
-  <div class="head reveal"><h2>Choose your assessment</h2><p>Every assessment is tailored to the property. Tell us about yours and we'll recommend a desktop assessment or a site inspection.</p></div>
-  <div class="plans">
-    <article class="plan reveal"><h3>Home</h3><p class="sub">Houses, bungalows and individual flats</p><button class="btn btn-dark block" data-plan="Home">Get a quote</button>
-      <ul><li>RICS-compliant methodology</li><li>Signed RCA report</li><li>BCIS rebuild cost data</li><li>Demolition &amp; professional fees included</li><li>Desktop or site inspection</li></ul></article>
-    <article class="plan featured reveal"><span class="tag">Most requested</span><h3>Block</h3><p class="sub">Residential blocks for freeholders &amp; agents</p><button class="btn btn-dark block" data-plan="Block">Get a quote</button>
-      <ul><li>Everything in Home</li><li>Whole-building assessment</li><li>Communal areas, lifts &amp; external works</li><li>Report suitable for leaseholders</li><li>Annual index-linked updates</li><li>Portfolio assessments</li></ul></article>
-    <article class="plan reveal"><h3>Commercial</h3><p class="sub">Commercial, mixed-use &amp; heritage</p><button class="btn btn-dark block" data-contact>Speak to a surveyor</button>
-      <ul><li>Elemental cost analysis</li><li>Plant, services &amp; fit-out</li><li>Listed &amp; conservation buildings</li><li>Multi-site portfolios</li><li>Dedicated surveyor</li><li>Insurer &amp; lender ready</li></ul></article>
-  </div>
+<section class="container cta reveal">
+  <h2>Is your property insured for the right amount?</h2>
+  <p>Get a RICS rebuild cost assessment today.</p>
+  <button class="btn btn-dark lg" data-report>Get report</button>
 </section>
 
 <section class="section container" id="who">
@@ -199,17 +190,12 @@
   <div class="faq" id="faq-list"></div>
 </section>
 
-<section class="container cta reveal">
-  <h2>Is your property insured for the right amount?</h2>
-  <p>Get a RICS rebuild cost assessment today.</p>
-  <button class="btn btn-dark lg" data-report>Get report</button>
-</section>
 </main>
 
 <footer class="container footer">
   <div class="f-brand"><svg class="mark" viewBox="0 0 32 32" width="34" height="34" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#c2552b"/><path d="M9 7.5v17h17Z" fill="none" stroke="#fff" stroke-width="2.4" stroke-linejoin="round"/><path d="M13 16.8v3.7h3.7Z" fill="#fff"/><path d="M9 11.5h3M9 15.5h2M9 19.5h3" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg><span class="wm wm-lg"><span class="wm-name">RCA<small>Ltd</small></span><span class="wm-tag">Rebuild Cost Assessments</span></span><p>RICS-certified rebuild cost assessments for UK homeowners, landlords, freeholders, managing agents and businesses.</p></div>
   <div><h4>Services</h4><a href="#services">Residential</a><a href="#services">Blocks of flats</a><a href="#services">Commercial</a><a href="#services">Listed buildings</a></div>
-  <div><h4>Company</h4><a href="#process">How it works</a><a href="#options">Assessments</a><a href="#faq">FAQ</a><a href="#" data-contact>Contact</a></div>
+  <div><h4>Company</h4><a href="#process">How it works</a><a href="#who">Who we help</a><a href="#faq">FAQ</a><a href="#" data-contact>Contact</a></div>
   <div class="f-news"><h4>Reassessment reminders</h4><p>We'll remind you when your rebuild valuation is due for review.</p>
     <form class="news" id="news-form" novalidate><input type="email" placeholder="Enter your email" required><button aria-label="Subscribe">→</button></form><small id="news-msg">No spam. Unsubscribe anytime.</small></div>
   <div class="f-bottom"><span>© <span id="yr"></span> RCA Ltd · rca-ltd.com. All rights reserved.</span><span><a href="#">Terms</a><a href="#">Privacy</a><a href="#">Cookies</a></span></div>
@@ -226,6 +212,6 @@
   <button class="btn btn-dark block" value="ok">Submit</button>
 </form></dialog>
 <div class="toast" id="toast"></div>
-<script src="app.js?v=16"></script>
+<script src="app.js?v=17"></script>
 </body>
 </html>
