@@ -191,7 +191,9 @@ dialog::backdrop{background:rgba(0,0,0,.4);backdrop-filter:blur(3px)}
 .bar-l{display:flex;gap:10px;padding:6px 6px 0;font-size:9px;color:var(--muted)}
 .bar-l span{flex:1;text-align:center}
 .steps{list-style:none;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.steps li{border-top:2px solid var(--accent);padding-top:20px}
+.steps li{display:flex;flex-direction:column}
+.step-ic{margin-bottom:20px}
+.steps .faq-n{display:block;border-top:2px solid var(--accent);padding-top:20px}
 .steps h3{font-size:18px;font-weight:600;margin:10px 0 8px}
 .steps p,.who p{color:var(--muted);font-size:14px;line-height:1.6}
 .who{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
