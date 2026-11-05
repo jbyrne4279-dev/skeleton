@@ -79,7 +79,7 @@ h2{font-size:clamp(28px,3.4vw,38px);letter-spacing:-.03em;font-weight:600}
 .faq-item .acc-body p{padding:0 0 22px 60px}
 .faq-item.open .acc-body{grid-template-rows:1fr}
 
-.footer{display:grid;grid-template-columns:2fr 1fr 1fr 2fr;gap:32px;padding-top:80px;padding-bottom:104px;font-size:13px}
+.footer{display:grid;grid-template-columns:2fr 1fr 1fr 2fr;gap:32px;padding-top:80px;padding-bottom:56px;font-size:13px}
 .f-brand strong{display:block;font-size:22px;font-weight:600;margin:4px 0 12px}
 .f-brand p,.f-news p{color:var(--muted);line-height:1.6;max-width:300px}
 .footer h4{font-size:13px;margin-bottom:16px}
@@ -194,7 +194,7 @@ html{scroll-padding-top:72px}
   .m-bar.show{transform:none}
   .m-open .m-bar{transform:translateY(110%)}
   .m-bar .btn{width:100%;padding:14px 28px;font-size:16px;box-shadow:none}
-  .footer{padding-bottom:96px}
+  .footer{padding-bottom:40px}
   .btn.lg{min-height:52px;font-size:16px}
 
   /* Spacing */
@@ -353,9 +353,7 @@ html{scroll-padding-top:72px}
 .legal ul{padding-left:20px;margin-bottom:12px}
 .legal a:not(.btn){color:var(--fg);text-decoration:underline;text-underline-offset:3px}
 .legal-meta{font-size:14px!important}
-.sub-footer{display:block;padding-top:0;padding-bottom:24px}
-.sub-footer .f-bottom{margin-top:0}
-@media (max-width:900px){.sub-page .burger{display:none}.sub-footer{padding-bottom:24px}}
+@media (max-width:900px){.sub-page .burger{display:none}}
 .faq{counter-reset:faq}
 .faq-item button::before{counter-increment:faq;content:"(0" counter(faq,decimal-leading-zero) ")";font-family:"JetBrains Mono",monospace;font-size:12px;font-weight:400;color:var(--muted);flex:none}
 @media (max-width:900px){.faq-item button::before{display:none}}
@@ -423,4 +421,27 @@ html{scroll-padding-top:72px}
   .svc-link img{height:100%;aspect-ratio:auto}
   .svc-link span{padding:14px 16px}
   .acc-more{margin-left:34px}
+}
+
+/* Footer: orange gradient band at the very bottom of every page */
+.f-band{position:relative;overflow:hidden;isolation:isolate;color:#fff;padding:28px 0 112px;
+  background:radial-gradient(55% 150% at 88% 115%,rgba(255,110,50,.65),rgba(255,110,50,0) 62%),
+             radial-gradient(45% 120% at 8% -25%,rgba(255,222,200,.45),rgba(255,222,200,0) 60%),
+             linear-gradient(118deg,#e07441 0%,#d45d2e 42%,#c2552b 70%,#a8441c 100%);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.28)}
+.f-band::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background-image:linear-gradient(rgba(255,255,255,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.09) 1px,transparent 1px);
+  background-size:28px 28px;-webkit-mask-image:linear-gradient(to bottom,transparent,#000 70%);mask-image:linear-gradient(to bottom,transparent,#000 70%)}
+.f-band .f-bottom{position:relative;display:flex;justify-content:space-between;align-items:center;gap:16px;margin:0 auto;padding-top:0;padding-bottom:0;border:0;color:rgba(255,255,255,.9);font-size:12px}
+.f-band .f-bottom a{color:#fff;margin-left:22px;opacity:.92;transition:opacity .2s}
+.f-band .f-bottom a:hover{opacity:1;text-decoration:underline;text-underline-offset:3px}
+.f-mark{position:absolute;left:50%;bottom:-.2em;z-index:-1;transform:translateX(-50%);white-space:nowrap;pointer-events:none;user-select:none;
+  font-size:clamp(64px,15vw,220px);font-weight:700;letter-spacing:-.05em;line-height:1;color:rgba(255,255,255,.13)}
+.sub-footer .f-band{padding-bottom:40px}
+@media (max-width:900px){
+  .f-band{padding:24px 0 104px}
+  .f-band .f-bottom{flex-direction:column;align-items:flex-start;gap:12px}
+  .f-band .f-bottom a{margin:0 18px 0 0}
+  .f-mark{font-size:clamp(56px,17vw,140px)}
+  .sub-footer .f-band{padding-bottom:36px}
 }
