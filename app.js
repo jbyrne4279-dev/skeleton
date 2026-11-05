@@ -87,12 +87,12 @@ document.addEventListener('click', e => {
   if (e.target.closest('[data-report]')) {
     e.preventDefault();
     $('#menu').classList.remove('open');
-    openModal('Get your rebuild cost assessment', "Tell us about the property and we'll come back with your RCA report quote within one business day.");
+    openModal('Get Rebuild Cost Assessment Report', "Tell us about the property and we'll come back with your RCA report quote within one business day.");
     return;
   }
   if (e.target.closest('[data-contact]')) {
     e.preventDefault();
-    openModal('Speak to a surveyor', 'Tell us about your property and a RICS surveyor will be in touch within one business day.');
+    openModal('Get Rebuild Cost Assessment Report', 'Tell us about your property and a RICS surveyor will be in touch within one business day.');
   }
 });
 modal.addEventListener('click', e => { if (e.target === modal) modal.close(); });
