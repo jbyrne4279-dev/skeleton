@@ -78,7 +78,9 @@ function openModal(title, sub, prefill = '') {
   $('#modal-sub').textContent = sub;
   f.message.value = prefill;
   modal.showModal();
-  f.name.focus();
+  modal.scrollTop = 0;
+  if (matchMedia('(min-width: 901px) and (min-height: 561px)').matches) f.name.focus();
+  else $('#modal-title').focus({ preventScroll: true });
 }
 document.addEventListener('click', e => {
   if (e.target.closest('[data-report]')) {
