@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /404.html
 
-Sitemap: https://rca-ltd.com/sitemap.xml
+Sitemap: https://rebuildcostassessment.london/sitemap.xml
