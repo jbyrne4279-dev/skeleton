@@ -475,3 +475,18 @@ html{scroll-padding-top:72px}
 .nav::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
   background-image:linear-gradient(rgba(11,11,12,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(11,11,12,.055) 1px,transparent 1px);
   background-size:22px 22px;background-position:center top}
+
+/* Guide additions */
+.inc-grid{grid-template-columns:repeat(4,1fr)}
+@media (max-width:1024px){.inc-grid{grid-template-columns:repeat(2,1fr)}.inc-grid li,.inc-grid li:nth-child(n+4){grid-column:auto}}
+@media (max-width:900px){.inc-grid{grid-template-columns:1fr}}
+.vs-table{width:100%;border-collapse:collapse;margin-top:auto;padding-top:18px;font-size:13px;line-height:1.45}
+.g-vs p+.vs-table{margin-top:18px}
+.vs-table th,.vs-table td{text-align:left;vertical-align:top;padding:9px 10px;border-bottom:1px solid var(--line)}
+.vs-table thead th{font-size:12px;color:var(--fg);background:var(--soft)}
+.vs-table thead th:nth-child(2){color:var(--accent);background:#fff3ec}
+.vs-table tbody th{font-weight:600;color:var(--fg);width:30%}
+.vs-table td{color:var(--muted)}
+.vs-table td:nth-child(2){color:var(--fg)}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.g-x li::before{background:#2b2b30 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M3.5 3.5l5 5M8.5 3.5l-5 5' stroke='%23fff' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E") center/11px no-repeat;box-shadow:none}
