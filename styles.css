@@ -172,9 +172,9 @@ dialog::backdrop{background:rgba(0,0,0,.4);backdrop-filter:blur(3px)}
 .m-bar{position:fixed;right:28px;bottom:28px;z-index:40;opacity:0;visibility:hidden;transform:translateY(16px);transition:opacity .25s,transform .25s,visibility .25s}
 .m-bar.show{opacity:1;visibility:visible;transform:none}
 .m-bar .btn{width:auto;padding:15px 26px;font-size:15px;box-shadow:0 16px 34px -14px rgba(0,0,0,.55),0 0 0 4px rgba(255,90,31,.16)}
-/* Email icon (orange) beside the sticky Get report button */
-.m-bar .btn::after{content:"";flex:none;width:20px;height:20px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ff5a1f' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='5' width='18' height='14' rx='2.5'/%3E%3Cpath d='m4 7 8 6 8-6'/%3E%3C/svg%3E") center/contain no-repeat;transition:transform .2s}
-.m-bar .btn:hover::after{transform:translateY(-1px) rotate(-6deg)}
+/* Orange email icon on every Get report button (sized to the button text) */
+[data-report]::after{content:"";flex:none;width:1.3em;height:1.3em;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ff5a1f' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='5' width='18' height='14' rx='2.5'/%3E%3Cpath d='m4 7 8 6 8-6'/%3E%3C/svg%3E") center/contain no-repeat;transition:transform .2s}
+[data-report]:hover::after{transform:translateY(-1px) rotate(-6deg)}
 html{scroll-padding-top:72px}
 @media (max-width:900px){
   /* Header + full-screen menu */
@@ -469,3 +469,4 @@ html{scroll-padding-top:72px}
 .form-msg:empty{display:none}
 .form-msg.err{color:#c62828}
 .btn:disabled{opacity:.65;cursor:progress}
+.head h2{text-wrap:balance}
