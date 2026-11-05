@@ -463,3 +463,9 @@ html{scroll-padding-top:72px}
 .dd-t small{font-size:12px;font-weight:400;color:var(--muted)}
 .dd-btn{padding:10px 12px}
 .dd-btn:focus-visible{outline:2px solid #ff5a1f;outline-offset:2px}
+
+/* Form status messages */
+.form-msg{margin:0;font-size:13px;line-height:1.45;color:var(--muted)}
+.form-msg:empty{display:none}
+.form-msg.err{color:#c62828}
+.btn:disabled{opacity:.65;cursor:progress}

@@ -91,17 +91,27 @@ $$('.faq-item').forEach(item => $('button', item).onclick = () => {
   $('button', item).setAttribute('aria-expanded', open);
 });
 
+// Send a form to Formspree in the background (falls back to a normal POST without JavaScript)
+async function sendForm(f) {
+  const page = f.elements.namedItem('page');
+  if (page) page.value = location.href;
+  const res = await fetch(f.action, { method: 'POST', body: new FormData(f), headers: { Accept: 'application/json' } });
+  if (!res.ok) throw new Error('Form not sent: ' + res.status);
+}
+const field = (f, n) => f.elements.namedItem(n);
+
 // Enquiry pop-up
 const modal = $('#modal');
 function openModal(title, sub, prefill = '') {
   const f = $('#modal-form');
   f.reset();
+  $('#modal-msg').textContent = '';
   $('#modal-title').textContent = title;
   $('#modal-sub').textContent = sub;
-  f.message.value = prefill;
+  field(f, 'message').value = prefill;
   modal.showModal();
   modal.scrollTop = 0;
-  if (matchMedia('(min-width: 901px) and (min-height: 561px)').matches) f.name.focus();
+  if (matchMedia('(min-width: 901px) and (min-height: 561px)').matches) field(f, 'name').focus();
   else $('#modal-title').focus({ preventScroll: true });
 }
 if (modal) {
@@ -112,24 +122,47 @@ if (modal) {
     openModal('Get Rebuild Cost Assessment Report', "Tell us about the property and we'll come back with your RCA report quote within one business day.", btn.dataset.service ? `${btn.dataset.service}: ` : '');
   });
   modal.addEventListener('click', e => { if (e.target === modal) modal.close(); });
-  $('#modal-form').addEventListener('submit', e => {
-    if (e.submitter?.value !== 'ok') return;
-    const f = e.target;
-    if (!f.name.value.trim() || !isEmail(f.email.value)) { e.preventDefault(); f.reportValidity(); return; }
-    toast(`Thanks, ${f.name.value.trim()}! A surveyor will be in touch soon.`);
-    f.reset();
+  $('#modal .x').addEventListener('click', () => modal.close());
+  $('#modal-form').addEventListener('submit', async e => {
+    e.preventDefault();
+    const f = e.target, msg = $('#modal-msg'), btn = $('[type=submit]', f);
+    const name = field(f, 'name'), email = field(f, 'email');
+    msg.className = 'form-msg'; msg.textContent = '';
+    if (!name.value.trim()) { f.reportValidity(); return; }
+    if (!isEmail(email.value)) { msg.className = 'form-msg err'; msg.textContent = 'Please enter a valid email address.'; email.focus(); return; }
+    btn.disabled = true; btn.textContent = 'Sending…';
+    try {
+      await sendForm(f);
+      const who = name.value.trim();
+      modal.close();
+      f.reset();
+      toast(`Thanks, ${who}! We'll be in touch within one business day.`);
+    } catch {
+      msg.className = 'form-msg err';
+      msg.textContent = 'Sorry, your message did not send. Please check your connection and try again.';
+    } finally {
+      btn.disabled = false; btn.textContent = 'Submit';
+    }
   });
 }
 
 // Reminder sign-up
 const newsForm = $('#news-form');
-if (newsForm) newsForm.onsubmit = e => {
+if (newsForm) newsForm.addEventListener('submit', async e => {
   e.preventDefault();
-  const inp = $('input', e.target), msg = $('#news-msg');
+  const f = e.target, inp = field(f, 'email'), msg = $('#news-msg'), btn = $('[type=submit]', f);
   if (!isEmail(inp.value)) { inp.classList.add('err'); msg.textContent = 'Please enter a valid email.'; return; }
-  inp.classList.remove('err'); inp.value = '';
-  msg.textContent = "Thanks. We'll remind you when it's time to reassess.";
-};
+  inp.classList.remove('err'); btn.disabled = true;
+  try {
+    await sendForm(f);
+    f.reset();
+    msg.textContent = "Thanks. We'll remind you when it's time to reassess.";
+  } catch {
+    msg.textContent = 'Sorry, that did not send. Please try again.';
+  } finally {
+    btn.disabled = false;
+  }
+});
 
 const yr = $('#yr');
 if (yr) yr.textContent = String(new Date().getFullYear());
