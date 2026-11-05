@@ -39,8 +39,6 @@ h1{font-size:clamp(38px,4.6vw,56px);line-height:1.08;letter-spacing:-.035em;font
 input,textarea,select{border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-size:13px;background:var(--card);outline:none;transition:border-color .15s,box-shadow .15s}
 input:focus,textarea:focus,select:focus{border-color:var(--muted);box-shadow:0 0 0 3px var(--soft)}
 input.err,select.err{border-color:#e5484d}
-.proof{display:flex;align-items:center;gap:20px;font-size:12px;flex-wrap:wrap;margin-top:10px}
-.proof em{font-style:normal;color:var(--muted)}
 .hero-art{aspect-ratio:1/1.02;border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
 .hero-art svg{width:100%;height:100%;display:block}
 .trail{animation:dash 6s linear infinite}
@@ -82,7 +80,7 @@ h2{font-size:clamp(28px,3.4vw,38px);letter-spacing:-.03em;font-weight:600}
 .faq-item .acc-body p{padding:0 0 22px 60px}
 .faq-item.open .acc-body{grid-template-rows:1fr}
 
-.footer{display:grid;grid-template-columns:2fr 1fr 1fr 2fr;gap:32px;padding-top:80px;padding-bottom:24px;font-size:13px}
+.footer{display:grid;grid-template-columns:2fr 1fr 1fr 2fr;gap:32px;padding-top:80px;padding-bottom:104px;font-size:13px}
 .f-brand strong{display:block;font-size:22px;font-weight:600;margin:4px 0 12px}
 .f-brand p,.f-news p{color:var(--muted);line-height:1.6;max-width:300px}
 .footer h4{font-size:13px;margin-bottom:16px}
@@ -143,7 +141,6 @@ dialog::backdrop{background:rgba(0,0,0,.4);backdrop-filter:blur(3px)}
 .badge i{width:7px;height:7px;border-radius:50%;background:#2f9e6a}
 .hero-cta{margin:4px 0 18px}
 .btn.lg{padding:14px 28px;font-size:15px}
-.tick{color:#2f9e6a;font-weight:600}
 .strip{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding-top:28px;padding-bottom:28px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .fact{display:flex;align-items:flex-start;gap:14px}
 .fact-ic{flex:none;width:56px;height:56px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(145deg,#fdf1ea,#fbe3d6);box-shadow:inset 0 0 0 1px #f6d4c1,0 6px 16px -10px rgba(194,85,43,.6)}
@@ -172,7 +169,13 @@ dialog::backdrop{background:rgba(0,0,0,.4);backdrop-filter:blur(3px)}
 }
 
 /* ---------- Mobile ---------- */
-.m-menu,.m-bar{display:none}
+.m-menu{display:none}
+/* Sticky Get report: floating pill on desktop, full-width bar on phones (mobile block below) */
+.m-bar{position:fixed;right:28px;bottom:28px;z-index:40;opacity:0;visibility:hidden;transform:translateY(16px);transition:opacity .25s,transform .25s,visibility .25s}
+.m-bar.show{opacity:1;visibility:visible;transform:none}
+.m-bar .btn{width:auto;padding:15px 26px;font-size:15px;box-shadow:0 16px 34px -14px rgba(0,0,0,.55),0 0 0 4px rgba(255,90,31,.16)}
+.m-bar .btn::after{content:"→";transition:transform .2s}
+.m-bar .btn:hover::after{transform:translateX(3px)}
 html{scroll-padding-top:72px}
 @media (max-width:900px){
   /* Header + full-screen menu */
@@ -191,9 +194,10 @@ html{scroll-padding-top:72px}
   .m-menu-cta{margin-top:auto;padding-top:28px;display:flex;flex-direction:column;gap:10px}
 
   /* Sticky Get report bar */
-  .m-bar{display:block;position:fixed;left:0;right:0;bottom:0;z-index:40;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .25s}
+  .m-bar{display:block;position:fixed;left:0;right:0;bottom:0;z-index:40;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);border-top:1px solid var(--line);opacity:1;visibility:visible;transform:translateY(110%);transition:transform .25s}
   .m-bar.show{transform:none}
   .m-open .m-bar{transform:translateY(110%)}
+  .m-bar .btn{width:100%;padding:14px 28px;font-size:16px;box-shadow:none}
   .footer{padding-bottom:96px}
   .btn.lg{min-height:52px;font-size:16px}
 
@@ -208,7 +212,6 @@ html{scroll-padding-top:72px}
   h1{font-size:clamp(32px,9vw,42px)}
   .lead{font-size:16px;margin:14px 0 20px}
   .hero-cta .btn{width:100%}
-  .proof{flex-direction:column;align-items:flex-start;gap:8px;font-size:14px}
   .hero-art{aspect-ratio:1/1}
 
   /* Fact strip: three columns, icon on top */
