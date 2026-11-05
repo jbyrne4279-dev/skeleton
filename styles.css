@@ -129,14 +129,13 @@ dialog::backdrop{background:rgba(0,0,0,.4);backdrop-filter:blur(3px)}
 .logo{gap:10px;font-size:19px;white-space:nowrap}
 .mark{flex:none;display:block}
 .mark{width:34px;height:34px}
-.wm{display:flex;flex-direction:column;justify-content:center;line-height:1}
-.wm-name{display:flex;align-items:baseline;font-size:20px;font-weight:700;letter-spacing:-.035em;line-height:1;color:var(--fg)}
+.wm{display:flex;flex-direction:column;justify-content:center;line-height:1;font-size:20px}
+.wm-name{display:flex;align-items:baseline;font-size:1em;font-weight:700;letter-spacing:-.035em;line-height:1;color:var(--fg)}
 .wm-name small{font-size:1em;font-weight:700;letter-spacing:-.035em;text-transform:uppercase;color:var(--accent);line-height:1}
 .wm-name small::before{content:"";display:inline-block;width:.3em;height:.11em;margin:0 .1em 0 .09em;border-radius:1px;background:currentColor;vertical-align:.31em}
-.wm-tag{margin-top:4px;font-size:8.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
-.wm-lg{margin:6px 0 14px}
-.wm-lg .wm-name{font-size:26px}
-.wm-lg .wm-tag{font-size:10px;margin-top:6px}
+/* Tagline spans exactly from the R to the last N of RCA-LONDON (values measured for Inter Tight, scale with .wm font-size) */
+.wm-tag{margin:.47em -.0595em 0 .0588em;font-size:.425em;font-weight:600;letter-spacing:.0595em;white-space:nowrap;text-transform:uppercase;color:var(--muted)}
+.wm-lg{margin:6px 0 14px;font-size:26px}
 .f-brand .mark{margin-bottom:10px}
 .hero-cta{margin:4px 0 18px}
 .btn.lg{padding:14px 28px;font-size:15px}
@@ -173,8 +172,9 @@ dialog::backdrop{background:rgba(0,0,0,.4);backdrop-filter:blur(3px)}
 .m-bar{position:fixed;right:28px;bottom:28px;z-index:40;opacity:0;visibility:hidden;transform:translateY(16px);transition:opacity .25s,transform .25s,visibility .25s}
 .m-bar.show{opacity:1;visibility:visible;transform:none}
 .m-bar .btn{width:auto;padding:15px 26px;font-size:15px;box-shadow:0 16px 34px -14px rgba(0,0,0,.55),0 0 0 4px rgba(255,90,31,.16)}
-.m-bar .btn::after{content:"→";transition:transform .2s}
-.m-bar .btn:hover::after{transform:translateX(3px)}
+/* Email icon (orange) beside the sticky Get report button */
+.m-bar .btn::after{content:"";flex:none;width:20px;height:20px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ff5a1f' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='5' width='18' height='14' rx='2.5'/%3E%3Cpath d='m4 7 8 6 8-6'/%3E%3C/svg%3E") center/contain no-repeat;transition:transform .2s}
+.m-bar .btn:hover::after{transform:translateY(-1px) rotate(-6deg)}
 html{scroll-padding-top:72px}
 @media (max-width:900px){
   /* Header + full-screen menu */
@@ -449,3 +449,17 @@ html{scroll-padding-top:72px}
   .f-mark{font-size:clamp(56px,17vw,140px)}
   .sub-footer .f-band{padding-bottom:36px}
 }
+
+/* Services dropdown: easier to use */
+.dd-panel{min-width:300px;padding:8px;border-radius:14px}
+.dd-panel::before{content:"";position:absolute;left:-16px;right:-16px;top:-16px;height:16px}
+.dd-panel .dd-h{padding:8px 12px 6px}
+.dd-panel a{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:10px;font-size:14px;font-weight:500;color:var(--fg)}
+.dd-panel a:hover,.dd-panel a:focus-visible{background:var(--soft);outline:none}
+.dd-panel .dd-ic{width:38px;height:38px;border-radius:10px;box-shadow:inset 0 0 0 1px #f6d4c1;transition:box-shadow .2s}
+.dd-panel .dd-ic svg{width:22px;height:22px}
+.dd-panel a:hover .dd-ic,.dd-panel a:focus-visible .dd-ic,.dd-panel a[aria-current] .dd-ic{box-shadow:inset 0 0 0 1.5px #ff5a1f}
+.dd-t{display:flex;flex-direction:column;line-height:1.3}
+.dd-t small{font-size:12px;font-weight:400;color:var(--muted)}
+.dd-btn{padding:10px 12px}
+.dd-btn:focus-visible{outline:2px solid #ff5a1f;outline-offset:2px}

@@ -22,19 +22,33 @@ function toast(msg) {
 
 // Nav dropdowns
 const hoverable = matchMedia('(hover: hover) and (min-width: 901px)');
+const setDd = (dd, open) => {
+  clearTimeout(dd._t);
+  dd.classList.toggle('open', open);
+  const btn = $('.dd-btn', dd);
+  if (btn) btn.setAttribute('aria-expanded', String(open));
+};
+const closeAllDd = except => $$('.dd.open').forEach(d => { if (d !== except) setDd(d, false); });
 $$('.dd').forEach(dd => {
-  const close = () => dd.classList.remove('open');
   $('.dd-btn', dd).onclick = e => {
     e.stopPropagation();
-    const was = dd.classList.contains('open') && !hoverable.matches;
-    $$('.dd.open').forEach(d => d.classList.remove('open'));
-    dd.classList.toggle('open', !was);
+    const open = !dd.classList.contains('open');
+    closeAllDd(dd);
+    setDd(dd, open);
+    if (open && e.detail === 0) { const first = $('.dd-panel a', dd); if (first) first.focus(); }
   };
-  dd.addEventListener('mouseenter', () => { if (hoverable.matches) { $$('.dd.open').forEach(d => d.classList.remove('open')); dd.classList.add('open'); } });
-  dd.addEventListener('mouseleave', () => { if (hoverable.matches) close(); });
+  // Hover: open straight away, close only after a short pause so small slips do not shut it
+  dd.addEventListener('mouseenter', () => { if (hoverable.matches) { closeAllDd(dd); setDd(dd, true); } });
+  dd.addEventListener('mouseleave', () => { if (hoverable.matches) dd._t = setTimeout(() => setDd(dd, false), 300); });
+  dd.addEventListener('focusout', e => { if (!dd.contains(e.relatedTarget)) setDd(dd, false); });
 });
-document.addEventListener('click', e => { if (!e.target.closest('.dd')) $$('.dd.open').forEach(d => d.classList.remove('open')); });
-document.addEventListener('keydown', e => { if (e.key === 'Escape') $$('.dd.open').forEach(d => d.classList.remove('open')); });
+document.addEventListener('click', e => { if (!e.target.closest('.dd')) closeAllDd(); });
+document.addEventListener('keydown', e => {
+  if (e.key !== 'Escape') return;
+  const openDd = $('.dd.open');
+  closeAllDd();
+  if (openDd && openDd.contains(document.activeElement)) $('.dd-btn', openDd).focus();
+});
 
 // Mobile menu
 const burger = $('#burger');
