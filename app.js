@@ -13,6 +13,7 @@ if ('IntersectionObserver' in window) {
 
 function toast(msg) {
   const t = $('#toast');
+  if (!t) return;
   t.textContent = msg;
   t.classList.add('show');
   clearTimeout(t._h);
@@ -36,30 +37,37 @@ document.addEventListener('click', e => { if (!e.target.closest('.dd')) $$('.dd.
 document.addEventListener('keydown', e => { if (e.key === 'Escape') $$('.dd.open').forEach(d => d.classList.remove('open')); });
 
 // Mobile menu
+const burger = $('#burger');
 const setMenu = open => {
   document.documentElement.classList.toggle('m-open', open);
-  $('#burger').setAttribute('aria-expanded', open);
-  $('#burger').setAttribute('aria-label', open ? 'Close menu' : 'Menu');
+  if (!burger) return;
+  burger.setAttribute('aria-expanded', open);
+  burger.setAttribute('aria-label', open ? 'Close menu' : 'Menu');
 };
-$('#burger').onclick = () => setMenu(!document.documentElement.classList.contains('m-open'));
-$$('#m-menu a, #m-menu button').forEach(a => a.addEventListener('click', () => setMenu(false)));
-addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
-matchMedia('(min-width: 901px)').addEventListener('change', e => { if (e.matches) setMenu(false); });
-
-// Sticky Get report button (desktop pill / mobile bar): show once the hero button has scrolled away
-if ('IntersectionObserver' in window) {
-  new IntersectionObserver(([e]) => $('#m-bar').classList.toggle('show', !e.isIntersecting && e.boundingClientRect.top < 0))
-    .observe($('.hero-cta'));
+if (burger) {
+  burger.onclick = () => setMenu(!document.documentElement.classList.contains('m-open'));
+  $$('#m-menu a, #m-menu button').forEach(a => a.addEventListener('click', () => setMenu(false)));
+  addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+  matchMedia('(min-width: 901px)').addEventListener('change', e => { if (e.matches) setMenu(false); });
 }
 
+// Sticky Get report button (desktop pill / mobile bar): show once the hero button has scrolled away
+const heroCta = $('.hero-cta'), mBar = $('#m-bar');
+if (heroCta && mBar && 'IntersectionObserver' in window) {
+  new IntersectionObserver(([e]) => mBar.classList.toggle('show', !e.isIntersecting && e.boundingClientRect.top < 0))
+    .observe(heroCta);
+}
 
-// Services accordion + photo for each service
-const setFeat = i => {
-  $$('#feat-acc .acc-item').forEach((el, j) => { el.classList.toggle('open', i === j); $('button', el).setAttribute('aria-expanded', String(i === j)); });
-  $$('#screen .ph').forEach((ph, j) => ph.classList.toggle('on', i === j));
-};
-$$('#feat-acc .acc-item').forEach((el, i) => $('button', el).onclick = () => setFeat(i));
-setFeat(0);
+// Services accordion + photo for each service (home page)
+const accItems = $$('#feat-acc .acc-item');
+if (accItems.length) {
+  const setFeat = i => {
+    accItems.forEach((el, j) => { el.classList.toggle('open', i === j); $('button', el).setAttribute('aria-expanded', String(i === j)); });
+    $$('#screen .ph').forEach((ph, j) => ph.classList.toggle('on', i === j));
+  };
+  accItems.forEach((el, i) => $('button', el).onclick = () => setFeat(i));
+  setFeat(0);
+}
 
 // FAQ
 $$('.faq-item').forEach(item => $('button', item).onclick = () => {
@@ -69,7 +77,7 @@ $$('.faq-item').forEach(item => $('button', item).onclick = () => {
   $('button', item).setAttribute('aria-expanded', open);
 });
 
-// Modal
+// Enquiry pop-up
 const modal = $('#modal');
 function openModal(title, sub, prefill = '') {
   const f = $('#modal-form');
@@ -82,24 +90,26 @@ function openModal(title, sub, prefill = '') {
   if (matchMedia('(min-width: 901px) and (min-height: 561px)').matches) f.name.focus();
   else $('#modal-title').focus({ preventScroll: true });
 }
-document.addEventListener('click', e => {
-  if (e.target.closest('[data-report]')) {
+if (modal) {
+  document.addEventListener('click', e => {
+    const btn = e.target.closest('[data-report]');
+    if (!btn) return;
     e.preventDefault();
-    $('#menu').classList.remove('open');
-    openModal('Get Rebuild Cost Assessment Report', "Tell us about the property and we'll come back with your RCA report quote within one business day.");
-  }
-});
-modal.addEventListener('click', e => { if (e.target === modal) modal.close(); });
-$('#modal-form').addEventListener('submit', e => {
-  if (e.submitter?.value !== 'ok') return;
-  const f = e.target;
-  if (!f.name.value.trim() || !isEmail(f.email.value)) { e.preventDefault(); f.reportValidity(); return; }
-  toast(`Thanks, ${f.name.value.trim()}! A surveyor will be in touch soon.`);
-  f.reset();
-});
+    openModal('Get Rebuild Cost Assessment Report', "Tell us about the property and we'll come back with your RCA report quote within one business day.", btn.dataset.service ? `${btn.dataset.service}: ` : '');
+  });
+  modal.addEventListener('click', e => { if (e.target === modal) modal.close(); });
+  $('#modal-form').addEventListener('submit', e => {
+    if (e.submitter?.value !== 'ok') return;
+    const f = e.target;
+    if (!f.name.value.trim() || !isEmail(f.email.value)) { e.preventDefault(); f.reportValidity(); return; }
+    toast(`Thanks, ${f.name.value.trim()}! A surveyor will be in touch soon.`);
+    f.reset();
+  });
+}
 
 // Reminder sign-up
-$('#news-form').onsubmit = e => {
+const newsForm = $('#news-form');
+if (newsForm) newsForm.onsubmit = e => {
   e.preventDefault();
   const inp = $('input', e.target), msg = $('#news-msg');
   if (!isEmail(inp.value)) { inp.classList.add('err'); msg.textContent = 'Please enter a valid email.'; return; }
@@ -107,5 +117,5 @@ $('#news-form').onsubmit = e => {
   msg.textContent = "Thanks. We'll remind you when it's time to reassess.";
 };
 
-
-$('#yr').textContent = String(new Date().getFullYear());
+const yr = $('#yr');
+if (yr) yr.textContent = String(new Date().getFullYear());
