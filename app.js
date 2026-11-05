@@ -46,14 +46,11 @@ $$('#m-menu a, #m-menu button').forEach(a => a.addEventListener('click', () => s
 addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
 matchMedia('(min-width: 901px)').addEventListener('change', e => { if (e.matches) setMenu(false); });
 
-// Sticky mobile Get report bar: show once the hero button has scrolled away
+// Sticky Get report button (desktop pill / mobile bar): show once the hero button has scrolled away
 if ('IntersectionObserver' in window) {
   new IntersectionObserver(([e]) => $('#m-bar').classList.toggle('show', !e.isIntersecting && e.boundingClientRect.top < 0))
     .observe($('.hero-cta'));
 }
-
-// Sticky nav border
-addEventListener('scroll', () => $('#nav').classList.toggle('scrolled', scrollY > 10), { passive: true });
 
 
 // Services accordion + photo for each service
