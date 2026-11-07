@@ -164,5 +164,18 @@ if (newsForm) newsForm.addEventListener('submit', async e => {
   }
 });
 
+// Hero image carousel: loops forever
+const hc = $$('#hero-car .hc-img'), hcCap = $('#hc-cap');
+if (hc.length > 1 && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  let i = 0;
+  setInterval(() => {
+    hc[i].classList.remove('on');
+    i = (i + 1) % hc.length;
+    hc[i].classList.add('on');
+    hcCap.style.opacity = 0;
+    setTimeout(() => { hcCap.textContent = hc[i].dataset.cap; hcCap.style.opacity = 1; }, 400);
+  }, 4000);
+}
+
 const yr = $('#yr');
 if (yr) yr.textContent = String(new Date().getFullYear());
